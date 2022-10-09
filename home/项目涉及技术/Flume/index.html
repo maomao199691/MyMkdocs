@@ -5,16 +5,16 @@
 <head>
 <meta charset="utf-8"/>
 <meta content="width=device-width,initial-scale=1" name="viewport"/>
-<link href="assets/images/favicon.png" rel="icon"/>
+<link href="../../../assets/images/favicon.png" rel="icon"/>
 <meta content="mkdocs-1.4.0, mkdocs-material-8.5.6" name="generator"/>
-<title>大数据技术之高频面试题 - 大数据成神之路</title>
-<link href="assets/stylesheets/main.20d9efc8.min.css" rel="stylesheet"/>
-<link href="assets/stylesheets/palette.cbb835fc.min.css" rel="stylesheet"/>
+<title>Flume - 大数据成神之路</title>
+<link href="../../../assets/stylesheets/main.20d9efc8.min.css" rel="stylesheet"/>
+<link href="../../../assets/stylesheets/palette.cbb835fc.min.css" rel="stylesheet"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
 <link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&amp;display=fallback" rel="stylesheet"/>
 <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
-<script>__md_scope=new URL(".",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
-<link href="assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
+<script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+<link href="../../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
             html.glightbox-open { overflow: initial; height: 100%; }
             .gdesc-inner { font-size: 0.75rem; }
             .gslide-title { margin-top: 0px; user-select: text; }
@@ -22,22 +22,19 @@
             .gslide-image img { background: white; }
             
                 .gscrollbar-fixer { padding-right: 15px; }
-                </style><script src="assets/javascripts/glightbox.min.js"></script></head>
+                </style><script src="../../../assets/javascripts/glightbox.min.js"></script></head>
 <body data-md-color-accent="" data-md-color-primary="orange" data-md-color-scheme="default" dir="ltr">
 <script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var key of Object.keys(palette.color))document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
 <input autocomplete="off" class="md-toggle" data-md-toggle="drawer" id="__drawer" type="checkbox"/>
 <input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
 <label class="md-overlay" for="__drawer"></label>
 <div data-md-component="skip">
-<a class="md-skip" href="#_1">
-          Skip to content
-        </a>
 </div>
 <div data-md-component="announce">
 </div>
 <header class="md-header" data-md-component="header">
 <nav aria-label="Header" class="md-header__inner md-grid">
-<a aria-label="大数据成神之路" class="md-header__button md-logo" data-md-component="logo" href="." title="大数据成神之路">
+<a aria-label="大数据成神之路" class="md-header__button md-logo" data-md-component="logo" href="../../.." title="大数据成神之路">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"></path></svg>
 </a>
 <label class="md-header__button md-icon" for="__drawer">
@@ -53,7 +50,7 @@
 <div class="md-header__topic" data-md-component="header-topic">
 <span class="md-ellipsis">
             
-              大数据技术之高频面试题
+              Flume
             
           </span>
 </div>
@@ -89,7 +86,7 @@
 <div class="md-sidebar__inner">
 <nav aria-label="Navigation" class="md-nav md-nav--primary" data-md-level="0">
 <label class="md-nav__title" for="__drawer">
-<a aria-label="大数据成神之路" class="md-nav__button md-logo" data-md-component="logo" href="." title="大数据成神之路">
+<a aria-label="大数据成神之路" class="md-nav__button md-logo" data-md-component="logo" href="../../.." title="大数据成神之路">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"></path></svg>
 </a>
     大数据成神之路
@@ -117,14 +114,13 @@
           Home
         </label>
 <ul class="md-nav__list" data-md-scrollfix="">
-<li class="md-nav__item md-nav__item--active">
-<input class="md-nav__toggle md-toggle" data-md-toggle="toc" id="__toc" type="checkbox"/>
-<a class="md-nav__link md-nav__link--active" href=".">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../..">
         大数据技术之高频面试题
       </a>
 </li>
-<li class="md-nav__item md-nav__item--nested">
-<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_1_2" id="__nav_1_2" type="checkbox"/>
+<li class="md-nav__item md-nav__item--active md-nav__item--nested">
+<input checked="" class="md-nav__toggle md-toggle" data-md-toggle="__nav_1_2" id="__nav_1_2" type="checkbox"/>
 <label class="md-nav__link" for="__nav_1_2">
           项目涉及技术
           <span class="md-nav__icon md-icon"></span>
@@ -136,82 +132,83 @@
         </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="home/%E9%A1%B9%E7%9B%AE%E6%B6%89%E5%8F%8A%E6%8A%80%E6%9C%AF/Linux%26Shell/">
+<a class="md-nav__link" href="../Linux%26Shell/">
         Linux&amp;Shell
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="home/%E9%A1%B9%E7%9B%AE%E6%B6%89%E5%8F%8A%E6%8A%80%E6%9C%AF/Hadoop/">
+<a class="md-nav__link" href="../Hadoop/">
         Hadoop
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="home/%E9%A1%B9%E7%9B%AE%E6%B6%89%E5%8F%8A%E6%8A%80%E6%9C%AF/Zookeeper/">
+<a class="md-nav__link" href="../Zookeeper/">
         Zookeeper
       </a>
 </li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="home/%E9%A1%B9%E7%9B%AE%E6%B6%89%E5%8F%8A%E6%8A%80%E6%9C%AF/Flume/">
+<li class="md-nav__item md-nav__item--active">
+<input class="md-nav__toggle md-toggle" data-md-toggle="toc" id="__toc" type="checkbox"/>
+<a class="md-nav__link md-nav__link--active" href="./">
         Flume
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="home/%E9%A1%B9%E7%9B%AE%E6%B6%89%E5%8F%8A%E6%8A%80%E6%9C%AF/Kafka/">
+<a class="md-nav__link" href="../Kafka/">
         Kafka
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="home/%E9%A1%B9%E7%9B%AE%E6%B6%89%E5%8F%8A%E6%8A%80%E6%9C%AF/Hive/">
+<a class="md-nav__link" href="../Hive/">
         Hive
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="home/%E9%A1%B9%E7%9B%AE%E6%B6%89%E5%8F%8A%E6%8A%80%E6%9C%AF/Datax/">
+<a class="md-nav__link" href="../Datax/">
         Datax
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="home/%E9%A1%B9%E7%9B%AE%E6%B6%89%E5%8F%8A%E6%8A%80%E6%9C%AF/Maxwell/">
+<a class="md-nav__link" href="../Maxwell/">
         Maxwell
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="home/%E9%A1%B9%E7%9B%AE%E6%B6%89%E5%8F%8A%E6%8A%80%E6%9C%AF/DolphinScheduler/">
+<a class="md-nav__link" href="../DolphinScheduler/">
         DolphinScheduler
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="home/%E9%A1%B9%E7%9B%AE%E6%B6%89%E5%8F%8A%E6%8A%80%E6%9C%AF/Scala/">
+<a class="md-nav__link" href="../Scala/">
         Scala
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="home/%E9%A1%B9%E7%9B%AE%E6%B6%89%E5%8F%8A%E6%8A%80%E6%9C%AF/SparkCore%26SQL/">
+<a class="md-nav__link" href="../SparkCore%26SQL/">
         Spark Core&amp;SQL
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="home/%E9%A1%B9%E7%9B%AE%E6%B6%89%E5%8F%8A%E6%8A%80%E6%9C%AF/SparkStreaming/">
+<a class="md-nav__link" href="../SparkStreaming/">
         Spark Streaming
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="home/%E9%A1%B9%E7%9B%AE%E6%B6%89%E5%8F%8A%E6%8A%80%E6%9C%AF/Flink/">
+<a class="md-nav__link" href="../Flink/">
         Flink
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="home/%E9%A1%B9%E7%9B%AE%E6%B6%89%E5%8F%8A%E6%8A%80%E6%9C%AF/HBase/">
+<a class="md-nav__link" href="../HBase/">
         HBase
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="home/%E9%A1%B9%E7%9B%AE%E6%B6%89%E5%8F%8A%E6%8A%80%E6%9C%AF/Sqoop/">
+<a class="md-nav__link" href="../Sqoop/">
         Sqoop
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="home/%E9%A1%B9%E7%9B%AE%E6%B6%89%E5%8F%8A%E6%8A%80%E6%9C%AF/Azkaban/">
+<a class="md-nav__link" href="../Azkaban/">
         Azkaban
       </a>
 </li>
@@ -219,77 +216,77 @@
 </nav>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="home/%E5%85%B6%E4%BB%96/%E9%A1%B9%E7%9B%AE%E6%9E%B6%E6%9E%84/">
+<a class="md-nav__link" href="../../%E5%85%B6%E4%BB%96/%E9%A1%B9%E7%9B%AE%E6%9E%B6%E6%9E%84/">
         项目架构
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="home/%E5%85%B6%E4%BB%96/%E6%95%B0%E4%BB%93%E5%BB%BA%E6%A8%A1/">
+<a class="md-nav__link" href="../../%E5%85%B6%E4%BB%96/%E6%95%B0%E4%BB%93%E5%BB%BA%E6%A8%A1/">
         数仓建模
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="home/%E5%85%B6%E4%BB%96/%E7%94%9F%E4%BA%A7%E7%BB%8F%E9%AA%8C%E2%80%94%E4%B8%9A%E5%8A%A1/">
+<a class="md-nav__link" href="../../%E5%85%B6%E4%BB%96/%E7%94%9F%E4%BA%A7%E7%BB%8F%E9%AA%8C%E2%80%94%E4%B8%9A%E5%8A%A1/">
         生产经验—业务
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="home/%E5%85%B6%E4%BB%96/%E7%94%9F%E4%BA%A7%E7%BB%8F%E9%AA%8C%E2%80%94%E6%B5%8B%E8%AF%95%E4%B8%8A%E7%BA%BF%E7%9B%B8%E5%85%B3/">
+<a class="md-nav__link" href="../../%E5%85%B6%E4%BB%96/%E7%94%9F%E4%BA%A7%E7%BB%8F%E9%AA%8C%E2%80%94%E6%B5%8B%E8%AF%95%E4%B8%8A%E7%BA%BF%E7%9B%B8%E5%85%B3/">
         生产经验—测试上线相关
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="home/%E5%85%B6%E4%BB%96/%E7%94%9F%E4%BA%A7%E7%BB%8F%E9%AA%8C%E2%80%94%E6%8A%80%E6%9C%AF/">
+<a class="md-nav__link" href="../../%E5%85%B6%E4%BB%96/%E7%94%9F%E4%BA%A7%E7%BB%8F%E9%AA%8C%E2%80%94%E6%8A%80%E6%9C%AF/">
         生产经验—技术
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="home/%E5%85%B6%E4%BB%96/%E7%94%9F%E4%BA%A7%E7%BB%8F%E9%AA%8C%E2%80%94%E7%83%AD%E7%82%B9%E9%97%AE%E9%A2%98/">
+<a class="md-nav__link" href="../../%E5%85%B6%E4%BB%96/%E7%94%9F%E4%BA%A7%E7%BB%8F%E9%AA%8C%E2%80%94%E7%83%AD%E7%82%B9%E9%97%AE%E9%A2%98/">
         生产经验—热点问题
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="home/%E5%85%B6%E4%BB%96/%E5%AE%9E%E6%97%B6%E6%95%B0%E4%BB%93%E9%A1%B9%E7%9B%AE/">
+<a class="md-nav__link" href="../../%E5%85%B6%E4%BB%96/%E5%AE%9E%E6%97%B6%E6%95%B0%E4%BB%93%E9%A1%B9%E7%9B%AE/">
         实时数仓项目
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="home/%E5%85%B6%E4%BB%96/JavaSE/">
+<a class="md-nav__link" href="../../%E5%85%B6%E4%BB%96/JavaSE/">
         JavaSE
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="home/%E5%85%B6%E4%BB%96/Redis/">
+<a class="md-nav__link" href="../../%E5%85%B6%E4%BB%96/Redis/">
         Redis
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="home/%E5%85%B6%E4%BB%96/MySql/">
+<a class="md-nav__link" href="../../%E5%85%B6%E4%BB%96/MySql/">
         MySql
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="home/%E5%85%B6%E4%BB%96/JVM/">
+<a class="md-nav__link" href="../../%E5%85%B6%E4%BB%96/JVM/">
         JVM
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="home/%E5%85%B6%E4%BB%96/JUC/">
+<a class="md-nav__link" href="../../%E5%85%B6%E4%BB%96/JUC/">
         JUC
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="home/%E5%85%B6%E4%BB%96/%E9%9D%A2%E8%AF%95%E8%AF%B4%E6%98%8E/">
+<a class="md-nav__link" href="../../%E5%85%B6%E4%BB%96/%E9%9D%A2%E8%AF%95%E8%AF%B4%E6%98%8E/">
         面试说明
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="home/%E5%85%B6%E4%BB%96/LeetCode%E9%A2%98%E7%9B%AE%E7%B2%BE%E9%80%89/">
+<a class="md-nav__link" href="../../%E5%85%B6%E4%BB%96/LeetCode%E9%A2%98%E7%9B%AE%E7%B2%BE%E9%80%89/">
         LeetCode题目精选
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="home/%E5%85%B6%E4%BB%96/%E6%89%8B%E5%86%99HQL%E9%A2%98%E7%9B%AE%E7%BB%83%E4%B9%A0/">
+<a class="md-nav__link" href="../../%E5%85%B6%E4%BB%96/%E6%89%8B%E5%86%99HQL%E9%A2%98%E7%9B%AE%E7%BB%83%E4%B9%A0/">
         手写HQL题目练习
       </a>
 </li>
@@ -311,48 +308,36 @@
 </div>
 <div class="md-content" data-md-component="content">
 <article class="md-content__inner md-typeset">
-<a class="md-content__button md-icon" href="https://github.com/maomao199691/Python_Code.git/edit/master/docs/index.md" title="Edit this page">
+<a class="md-content__button md-icon" href="https://github.com/maomao199691/Python_Code.git/edit/master/docs/home/项目涉及技术/Flume.md" title="Edit this page">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25Z"></path></svg>
 </a>
-<h1 id="_1">大数据技术之高频面试题</h1>
-<p>此文档用作大数据学科复习使用</p>
-<p>其中涵盖了离线数仓和实时数仓基本概念以及重要考点</p>
-<p>涉及技术包括：</p>
-<ul>
-<li>Linux&amp;Shell</li>
-<li>Hadoop</li>
-<li>Zookeeper</li>
-<li>Flume</li>
-<li>Kafka</li>
-<li>Hive</li>
-<li>Datax</li>
-<li>Maxwell</li>
-<li>DolphinScheduler</li>
-<li>Scala</li>
-<li>Spark Core&amp;SQL</li>
-<li>Spark Streaming</li>
-<li>Flink</li>
-<li>HBase</li>
-<li>Sqoop</li>
-<li>Azkaban</li>
-</ul>
-<p><center><strong>离线数仓架构</strong></center></p>
-<p><a class="glightbox" data-desc-position="bottom" data-description="" data-height="auto" data-title="" data-width="100%" href="https://s2.loli.net/2022/10/09/atr6m2UIonRNA7B.png"><img alt="Image title" src="https://s2.loli.net/2022/10/09/atr6m2UIonRNA7B.png" width="900"/></a></p>
-<p><center><strong>实时数仓架构</strong></center></p>
-<p><a class="glightbox" data-desc-position="bottom" data-description="" data-height="auto" data-title="" data-width="100%" href="https://s2.loli.net/2022/09/04/3z7fOTqmuvaVESn.png"><img alt="Image title" src="https://s2.loli.net/2022/09/04/3z7fOTqmuvaVESn.png" width="900"/></a></p>
+<h1>Flume</h1>
 </article>
 </div>
 </div>
 </main>
 <footer class="md-footer">
 <nav aria-label="Footer" class="md-footer__inner md-grid">
-<a aria-label="Next: Linux&amp;Shell" class="md-footer__link md-footer__link--next" href="home/%E9%A1%B9%E7%9B%AE%E6%B6%89%E5%8F%8A%E6%8A%80%E6%9C%AF/Linux%26Shell/" rel="next">
+<a aria-label="Previous: Zookeeper" class="md-footer__link md-footer__link--prev" href="../Zookeeper/" rel="prev">
+<div class="md-footer__button md-icon">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"></path></svg>
+</div>
+<div class="md-footer__title">
+<div class="md-ellipsis">
+<span class="md-footer__direction">
+                Previous
+              </span>
+              Zookeeper
+            </div>
+</div>
+</a>
+<a aria-label="Next: Kafka" class="md-footer__link md-footer__link--next" href="../Kafka/" rel="next">
 <div class="md-footer__title">
 <div class="md-ellipsis">
 <span class="md-footer__direction">
                 Next
               </span>
-              Linux&amp;Shell
+              Kafka
             </div>
 </div>
 <div class="md-footer__button md-icon">
@@ -385,7 +370,7 @@
 <div class="md-dialog" data-md-component="dialog">
 <div class="md-dialog__inner md-typeset"></div>
 </div>
-<script id="__config" type="application/json">{"base": ".", "features": [], "search": "assets/javascripts/workers/search.5bf1dace.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}}</script>
-<script src="assets/javascripts/bundle.078830c0.min.js"></script>
+<script id="__config" type="application/json">{"base": "../../..", "features": [], "search": "../../../assets/javascripts/workers/search.5bf1dace.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}}</script>
+<script src="../../../assets/javascripts/bundle.078830c0.min.js"></script>
 <script>document$.subscribe(() => {const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom"});})</script></body>
 </html>
