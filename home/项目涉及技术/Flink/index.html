@@ -29,6 +29,9 @@
 <input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
 <label class="md-overlay" for="__drawer"></label>
 <div data-md-component="skip">
+<a class="md-skip" href="#flink">
+          Skip to content
+        </a>
 </div>
 <div data-md-component="announce">
 </div>
@@ -137,6 +140,11 @@
       </a>
 </li>
 <li class="md-nav__item">
+<a class="md-nav__link" href="../JavaSE/">
+        JavaSE
+      </a>
+</li>
+<li class="md-nav__item">
 <a class="md-nav__link" href="../Hadoop/">
         Hadoop
       </a>
@@ -193,13 +201,40 @@
 </li>
 <li class="md-nav__item md-nav__item--active">
 <input class="md-nav__toggle md-toggle" data-md-toggle="toc" id="__toc" type="checkbox"/>
+<label class="md-nav__link md-nav__link--active" for="__toc">
+          Flink
+          <span class="md-nav__icon md-icon"></span>
+</label>
 <a class="md-nav__link md-nav__link--active" href="./">
         Flink
       </a>
+<nav aria-label="Table of contents" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#flink_1">
+    Flink 简单介绍
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#flink-spark-streaming">
+    Flink 跟 Spark Streaming 的区别
+  </a>
+</li>
+</ul>
+</nav>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="../HBase/">
         HBase
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../ClickHouse/">
+        ClickHouse
       </a>
 </li>
 <li class="md-nav__item">
@@ -217,7 +252,7 @@
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="../../%E5%85%B6%E4%BB%96/%E9%A1%B9%E7%9B%AE%E6%9E%B6%E6%9E%84/">
-        项目架构
+        数仓架构
       </a>
 </li>
 <li class="md-nav__item">
@@ -302,6 +337,22 @@
 <div class="md-sidebar__scrollwrap">
 <div class="md-sidebar__inner">
 <nav aria-label="Table of contents" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#flink_1">
+    Flink 简单介绍
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#flink-spark-streaming">
+    Flink 跟 Spark Streaming 的区别
+  </a>
+</li>
+</ul>
 </nav>
 </div>
 </div>
@@ -311,7 +362,19 @@
 <a class="md-content__button md-icon" href="https://github.com/maomao199691/Python_Code.git/edit/master/docs/home/项目涉及技术/Flink.md" title="Edit this page">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25Z"></path></svg>
 </a>
-<h1>Flink</h1>
+<h1 id="flink">Flink</h1>
+<h2 id="flink_1">Flink 简单介绍</h2>
+<p>​   Flink 是一个框架和分布式处理引擎，用于对无界和有界数据流进行有状态计算。并且Flink 提供了数据分布、容错机制以及资源管理等核心功能。Flink 提供了诸多高抽象层的 API 以便用户编写分布式任务：</p>
+<p>​   DataSet API，对静态数据进行批处理操作，将静态数据抽象成分布式的数据集，用户可以方便地使用 Flink 提供的各种操作符对分布式数据集进行处理，支持 Java、Scala 和 Python。</p>
+<p>​   DataStream API，对数据流进行流处理操作，将流式的数据抽象成分布式的数据流，用户可以方便地对分布式数据流进行各种操作，支持 Java 和 Scala。</p>
+<p>​   Table API，对结构化数据进行查询操作，将结构化数据抽象成关系表，并通过类 SQL 的 DSL 对关系表进行各种查询操作，支持 Java 和 Scala。</p>
+<p>​   </p>
+<h2 id="flink-spark-streaming">Flink 跟 Spark Streaming 的区别</h2>
+<p>​   这个问题是一个非常宏观的问题，因为两个框架的不同点非常多。重要点：<strong>Flink 是标准的实时处理引擎，基于事件驱动。而 Spark Streaming 是微批（Micro-Batch）的模型。</strong></p>
+<p>​   下面分为几个方面介绍两个框架的主要区别：</p>
+<p>​   （1）架构模型 Spark Steaming 在运行时的主要角色包括：Master、Worker、Driver、Executor，Flink 在运行时主要包含：Jobmanager、Taskmanager 和 Slot。</p>
+<p>​   （2）任务调度 Spark Streaming 连续不断的生成微小的数据批次，构建有向无环图 DAG，Spark Streaming 会依次创建 DStreamGraph、JobGenerator、JobScheduler。Flink 根据用户提交的代码生成 StreamGraph，经过优化生成 JobGraph，然后提交给 JobManager 进行处理，JobManager 会根据 JobGraph 生成 ExecutionGraph，ExecutionGraph 是 Flink 调度最核心的数据结构，JobManager 根据 ExecutionGraph 对 Job 进行调度。</p>
+<p>​   （3）时间机制 Spark Streaming 支持的时间机制有限，只支持处理时间。Flink 支持了流处理程序在时间上的三个定义：处理时间、事件时间、注入时间。同时也支持 watermark 机制来处理滞后数据。</p>
 </article>
 </div>
 </div>

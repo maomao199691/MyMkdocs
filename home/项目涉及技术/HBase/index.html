@@ -29,6 +29,9 @@
 <input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
 <label class="md-overlay" for="__drawer"></label>
 <div data-md-component="skip">
+<a class="md-skip" href="#hbase">
+          Skip to content
+        </a>
 </div>
 <div data-md-component="announce">
 </div>
@@ -137,6 +140,11 @@
       </a>
 </li>
 <li class="md-nav__item">
+<a class="md-nav__link" href="../JavaSE/">
+        JavaSE
+      </a>
+</li>
+<li class="md-nav__item">
 <a class="md-nav__link" href="../Hadoop/">
         Hadoop
       </a>
@@ -198,8 +206,75 @@
 </li>
 <li class="md-nav__item md-nav__item--active">
 <input class="md-nav__toggle md-toggle" data-md-toggle="toc" id="__toc" type="checkbox"/>
+<label class="md-nav__link md-nav__link--active" for="__toc">
+          HBase
+          <span class="md-nav__icon md-icon"></span>
+</label>
 <a class="md-nav__link md-nav__link--active" href="./">
         HBase
+      </a>
+<nav aria-label="Table of contents" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#hbase_1">
+    HBase存储结构
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#hbase_2">
+    HBase架构
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#hbase_3">
+    HBase读流程
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#hbase_4">
+    HBase 写流程
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#memstore-flush">
+    MemStore Flush
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#storefile-compaction">
+    StoreFile Compaction
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#region-split">
+    Region Split
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#rowkey">
+    RowKey设计原则
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#rowkey_1">
+    RowKey如何设计
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#phoenix">
+    Phoenix二级索引
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../ClickHouse/">
+        ClickHouse
       </a>
 </li>
 <li class="md-nav__item">
@@ -217,7 +292,7 @@
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="../../%E5%85%B6%E4%BB%96/%E9%A1%B9%E7%9B%AE%E6%9E%B6%E6%9E%84/">
-        项目架构
+        数仓架构
       </a>
 </li>
 <li class="md-nav__item">
@@ -302,6 +377,62 @@
 <div class="md-sidebar__scrollwrap">
 <div class="md-sidebar__inner">
 <nav aria-label="Table of contents" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#hbase_1">
+    HBase存储结构
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#hbase_2">
+    HBase架构
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#hbase_3">
+    HBase读流程
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#hbase_4">
+    HBase 写流程
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#memstore-flush">
+    MemStore Flush
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#storefile-compaction">
+    StoreFile Compaction
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#region-split">
+    Region Split
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#rowkey">
+    RowKey设计原则
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#rowkey_1">
+    RowKey如何设计
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#phoenix">
+    Phoenix二级索引
+  </a>
+</li>
+</ul>
 </nav>
 </div>
 </div>
@@ -311,7 +442,144 @@
 <a class="md-content__button md-icon" href="https://github.com/maomao199691/Python_Code.git/edit/master/docs/home/项目涉及技术/HBase.md" title="Edit this page">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25Z"></path></svg>
 </a>
-<h1>HBase</h1>
+<h1 id="hbase">HBase</h1>
+<h2 id="hbase_1">HBase存储结构</h2>
+<p><center><strong>HBase存储架构图</strong></center></p>
+<p><a class="glightbox" data-desc-position="bottom" data-description="" data-height="auto" data-title="" data-width="100%" href="https://s2.loli.net/2022/10/11/cUDwKnAjRC9JLye.png"><img alt="trigger" src="https://s2.loli.net/2022/10/11/cUDwKnAjRC9JLye.png" width="width"/></a></p>
+<h2 id="hbase_2">HBase架构</h2>
+<p><center><strong>HBase架构图</strong></center></p>
+<p><a class="glightbox" data-desc-position="bottom" data-description="" data-height="auto" data-title="" data-width="100%" href="https://s2.loli.net/2022/10/11/Fp2g6mjRQuBPXaz.png"><img alt="trigger" src="https://s2.loli.net/2022/10/11/Fp2g6mjRQuBPXaz.png" width="width"/></a></p>
+<p><strong>架构角色：</strong></p>
+<ul>
+<li>Hmaster：所有 Region Serve 的管理者</li>
+<li>RegionServer：Region 的管理者<ul>
+<li>Region：表的横向切分</li>
+<li>Mem：一个列族表示一个</li>
+<li>Blockcache：缓冲块</li>
+<li>Hfile：落盘文件</li>
+<li>Wal：预写日志</li>
+</ul>
+</li>
+</ul>
+<h2 id="hbase_3">HBase读流程</h2>
+<p><strong>1）整体流程</strong></p>
+<p><center><strong>HBase读流程</strong></center></p>
+<p><a class="glightbox" data-desc-position="bottom" data-description="" data-height="auto" data-title="" data-width="100%" href="https://s2.loli.net/2022/10/11/HBCSQKsckgIy3ml.png"><img alt="trigger" src="https://s2.loli.net/2022/10/11/HBCSQKsckgIy3ml.png" width="width"/></a></p>
+<p><strong>2）Merge细节</strong></p>
+<p><center><strong>Merge细节</strong></center></p>
+<p><a class="glightbox" data-desc-position="bottom" data-description="" data-height="auto" data-title="" data-width="100%" href="https://s2.loli.net/2022/10/11/6EtvOrHg1lKb5LF.png"><img alt="trigger" src="https://s2.loli.net/2022/10/11/6EtvOrHg1lKb5LF.png" width="width"/></a></p>
+<p><strong>读流程：</strong></p>
+<p>  1. Client 先访问 zookeeper，获取 hbase:meta 表位于哪个 Region Server。</p>
+<p>  2. 访问对应的 Region Server，获取 hbase:meta 表，根据读请求的 namespace:table/rowkey，查询目标位于哪个 Region  Server 中的哪个 Region 中。并将该 table 的 region 信息以及 meta 表的位置信息缓存在客户端的 meta cache，方便下次访问。</p>
+<p>  3. 与目标 Region Server 进行通讯。</p>
+<p>  4. 分别在 memStore 和 Store File（HFile）中查询目标数据，并将查到的所有数据进行合并。此处所有数据是指同一条数据的不同版本（time  stamp）或者不同的类型（Put/Delete）。</p>
+<p>  5. 将查询到的数据块（Block，HFile 数据存储单元，默认大小为 64KB）缓存到 Block Cache。</p>
+<p>  6. 将合并后的最终结果返回给客户端。</p>
+<h2 id="hbase_4">HBase 写流程</h2>
+<p><center><strong>HBase写流程</strong></center></p>
+<p><a class="glightbox" data-desc-position="bottom" data-description="" data-height="auto" data-title="" data-width="100%" href="https://s2.loli.net/2022/10/11/iFalK4xDM2ftrXC.png"><img alt="trigger" src="https://s2.loli.net/2022/10/11/iFalK4xDM2ftrXC.png" width="width"/></a></p>
+<p><strong>写流程：</strong></p>
+<p>  1. Clinet 先访问 zookeeper，获取 hbase:meta 表位于哪个 Region Server。</p>
+<p>  2. 访问对应 Region Server，获取 Hbase:meta 表，根据写请求的 namespace:table/rowkey，查询出目标数据位于哪个 Region Serber 中的哪个 Region 中。并将该 table 的 region 信息以及 meta 表的位置信息缓存在客户端的 meta cache，方便下次访问。</p>
+<p>  3. 与目标 Region Serber 进行通讯。</p>
+<p>  4. 将数据顺序写入（追加）到 WAL。</p>
+<p>  5. 将数据写入对应的 MemStore，数据会在 MemStore 进行排序。</p>
+<p>  6. 向客户端发送 ack。</p>
+<p>  7. 等达到 MemStore 的刷写时机后，将数据刷写到 HFile。</p>
+<h2 id="memstore-flush">MemStore Flush</h2>
+<p><center><strong>MemStore Flush</strong></center></p>
+<p><a class="glightbox" data-desc-position="bottom" data-description="" data-height="auto" data-title="" data-width="100%" href="https://s2.loli.net/2022/10/11/Yz5lbop89CEkF1S.png"><img alt="trigger" src="https://s2.loli.net/2022/10/11/Yz5lbop89CEkF1S.png" width="width"/></a></p>
+<p><strong>MemStore 刷写时机：</strong></p>
+<p>  （1）当某个 memstore 的大小达到了 </p>
+<p>    <font color="red">hbase.hregion.memstore.flush.size（默认 128M）</font></p>
+<p>  其所在 region 的所有 memstore 都会刷写。</p>
+<p>  当 memstore 的大小达到了  </p>
+<p>    <font color="red">hbase.hregion.memsotre.flush.size（默认值 128M）</font></p>
+<p>    <font color="red">* hbase.hregion.memstore.block.multiplier（默认值 4）</font> </p>
+<p>  时，会阻止继续往该 memstore 写数据。</p>
+<p>  （2）当 region server 中 memstore 的总大小达到  </p>
+<p>    <font color="red">java_heapsize </font></p>
+<p>    <font color="red">* hbase.regionserver.global.memstore.size（默认值 0.4）</font></p>
+<p>    <font color="red">* hbase.regionserver.global.memstore.size.lower.limit（默认值 0.095）</font></p>
+<p>  ，region 会按照其所有 memstore 的大小顺序（由大到小）一次进行刷写。直到 region server 中所有 memstore 的总大小减小到上述值以下。</p>
+<p>  当 region server 中 memstore 的总大小达到  </p>
+<p>    <font color="red">java_heapsize * hbase.regionserver.global.memstore.size（默认值 0.4）</font></p>
+<p>  时，会阻止继续往所有的 memstore 写数据。</p>
+<p>  （3）到达自动刷写的时间，也会触发 memsote flush。自动刷新的时间间隔由该属性进行配置  <font color="red">hbase.regionserver.optionalcacheflushinterval（默认 1 小时）</font>。</p>
+<p>  （4）当 WAL 文件的数量超过  <font color="red">hbase.regionserver.max.logs</font>，region 会按照时间顺序一次进行刷写，直到WAL 文件数量减小到  <font color="red">hbase.regtionserver.max.log</font>以下（该属性名已经废弃，现无需手动设置，最大值为 32）.</p>
+<h2 id="storefile-compaction">StoreFile Compaction</h2>
+<p>  由于 memstore 每次刷写都会生成一个新的 HFile，且同一个字段的不同版本（timestamp）和不同类型（Put/Delete）有可能会分布在不同的 HFile 中，因此查询时需要遍历所有的 HFile。为了减少 HFile 的个数，以及清理掉过期和删除的数据，会进行 StoreFile Compaction。</p>
+<p>  Compaction 分为两种，分别是  <font color="red">Minor Compaction</font> 和 <font color="red">Major Compaction</font>。Minor Compaction 会将临近的若干个较小的 HFile 合并成一个较大的 HFile，并<font color="red">清理掉部分过期和删除的数据</font>。</p>
+<p><center><strong>StoreFile Compaction</strong></center></p>
+<p><a class="glightbox" data-desc-position="bottom" data-description="" data-height="auto" data-title="" data-width="100%" href="https://s2.loli.net/2022/10/11/nWogLyQI57vMZcE.png"><img alt="trigger" src="https://s2.loli.net/2022/10/11/nWogLyQI57vMZcE.png" width="width"/></a></p>
+<h2 id="region-split">Region Split</h2>
+<p>​   默认情况下，每个Table起初只有一个Region，随着数据的不断写入，Region会自动进行拆分。刚拆分时，两个子Region都位于当前的Region Server，但处于负载均衡的考虑，HMaster有可能会将某个Region转移给其他的Region Server。</p>
+<p>  Region Split 时机：</p>
+<p>  （1）当1个region中的某个Store下所有StoreFile的总大小超过 <font color="red">hbase.hregion.max.filesize （10G）</font>，该Region就会进行拆分（0.94版本之前）。</p>
+<p>  （2）当 1 个 region 中的某个 Store 下所有 StoreFile 的总大小超过  <font color="red">Ming(initialSize * R ^ 3,hbase.hregion.max.filesize)</font>，该 Region 就会进行拆分。其中 initialSize 的默认值 为 2 * hbase.hregion.memstore.flush.size，R 为当前 Region Server 中属于该 Table 的 Region 个数（0.94 版本之后）。</p>
+<p>  具体的切分策略为：</p>
+<p>  第一次 split：1^3 * 256 = 256MB</p>
+<p>  第二次 split：2^3 * 256 = 2048MB</p>
+<p>  第三次 split：3^3 * 256 = 6912MB</p>
+<p>  第四次 split：4^3 * 256 = 16384MB &gt; 10GB，因此取较小的值 10GB</p>
+<p>  后面每次 split 的size 都是 10GB 了。</p>
+<p>  （3）Hbase 2.0 引入了新的 split策略：如果当前RegionServer上该表只有一个Region，按照2 * hbase.hregion.memstore.flush.size分裂，否则按照hbase.hregion.max.filesize分裂。</p>
+<p><center><strong>Region Split</strong></center></p>
+<p><a class="glightbox" data-desc-position="bottom" data-description="" data-height="auto" data-title="" data-width="100%" href="https://s2.loli.net/2022/10/11/M2HlJri5gP97eTQ.png"><img alt="trigger" src="https://s2.loli.net/2022/10/11/M2HlJri5gP97eTQ.png" width="width"/></a></p>
+<h2 id="rowkey">RowKey设计原则</h2>
+<p>  （1）rowkey长度原则</p>
+<p>  （2）rowkey散列原则</p>
+<p>  （3）rowkey唯一原则</p>
+<h2 id="rowkey_1">RowKey如何设计</h2>
+<p>使用场景:</p>
+<p>电信案例:查询某个人(手机号)某年<a href="时间">某月某日</a>的通话详情。</p>
+<p><strong>1）预分区</strong></p>
+<p>  （1）评估未来半年到一年的数据增长,不让其自动分区(10G)</p>
+<p>  （2）确定分区键  </p>
+<p>    00| 01| 02| ...</p>
+<p>    000| 001| ...</p>
+<p><strong>2）设计RowKey</strong></p>
+<p>  （1）确定分区号   (散列性)</p>
+<p>    00_ 01_ 02_...</p>
+<p>    手机号%分区数      不够散列</p>
+<p>    （手机号+年月日）%分区数   按照月份、年进行查询  不方便</p>
+<p>    （手机号+年月）%分区数</p>
+<p>  （2）拼接字段     （唯一性、长度）</p>
+<p>    XX_手机号_时间戳</p>
+<p>    XX_手机号_年月日 时分秒</p>
+<p>    XX_时间戳_手机号</p>
+<p>    XX_年月日 时分秒_手机号</p>
+<p>  （3）校验</p>
+<p>    13412341234 2021-09-07</p>
+<p>    XX_手机号_年月日 时分秒</p>
+<p>     startRow:05_13412341234_2021-09-07</p>
+<p>    stopRow :05_13412341234_2021-09-08</p>
+<p>        05_13412341234_2021-09-07|</p>
+<p>    XX_年月日 时分秒_手机号</p>
+<p>     startRow:05_2021-09-07 00:00:00_13412341234</p>
+<p>    stopRow :05_2021-09-08 00:00:00_13412341234</p>
+<p>    13412341234 2021-09  2021-11</p>
+<p>    XX_手机号_年月日 时分秒</p>
+<p>     startRow:05_13412341234_2021-09</p>
+<p>     stopRow :05_13412341234_2021-09|</p>
+<p>       05_13412341234_2021-10</p>
+<p>    startRow:03_13412341234_2021-10</p>
+<p>     stopRow :03_13412341234_2021-11</p>
+<p>    startRow:04_13412341234_2021-11</p>
+<p>    stopRow :04_13412341234_2021-12    </p>
+<h2 id="phoenix">Phoenix二级索引</h2>
+<p>1）一级索引   </p>
+<p>  RowKey</p>
+<p>2）原理</p>
+<p>  协处理器(HBase) coprocessor</p>
+<p>3）种类及用法</p>
+<p>  （1）全局:另外创建一张表专门存储索引</p>
+<p>  读多写少  索引RowKey  zs_1001</p>
+<p>  （2）本地:将索引数据直接写入原表(原Region)</p>
+<p>  写多读少  索引RowKey  没有预分区 __zs_1001</p>
+<p>            预分区 分区键_zs_1001</p>
+<script async="" crossorigin="anonymous" data-category="General" data-category-id="DIC_kwDOILD1rs4CR4oA" data-emit-metadata="0" data-input-position="bottom" data-lang="zh-CN" data-mapping="pathname" data-reactions-enabled="1" data-repo="maomao199691/discuss" data-repo-id="R_kgDOILD1rg" data-strict="0" data-theme="light" src="https://giscus.app/client.js">
+</script>
 </article>
 </div>
 </div>
@@ -331,13 +599,13 @@
             </div>
 </div>
 </a>
-<a aria-label="Next: Sqoop" class="md-footer__link md-footer__link--next" href="../Sqoop/" rel="next">
+<a aria-label="Next: ClickHouse" class="md-footer__link md-footer__link--next" href="../ClickHouse/" rel="next">
 <div class="md-footer__title">
 <div class="md-ellipsis">
 <span class="md-footer__direction">
                 Next
               </span>
-              Sqoop
+              ClickHouse
             </div>
 </div>
 <div class="md-footer__button md-icon">

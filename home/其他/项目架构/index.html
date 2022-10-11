@@ -7,7 +7,7 @@
 <meta content="width=device-width,initial-scale=1" name="viewport"/>
 <link href="../../../assets/images/favicon.png" rel="icon"/>
 <meta content="mkdocs-1.4.0, mkdocs-material-8.5.6" name="generator"/>
-<title>项目架构 - 大数据成神之路</title>
+<title>数仓架构 - 大数据成神之路</title>
 <link href="../../../assets/stylesheets/main.20d9efc8.min.css" rel="stylesheet"/>
 <link href="../../../assets/stylesheets/palette.cbb835fc.min.css" rel="stylesheet"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
@@ -29,6 +29,9 @@
 <input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
 <label class="md-overlay" for="__drawer"></label>
 <div data-md-component="skip">
+<a class="md-skip" href="#_1">
+          Skip to content
+        </a>
 </div>
 <div data-md-component="announce">
 </div>
@@ -50,7 +53,7 @@
 <div class="md-header__topic" data-md-component="header-topic">
 <span class="md-ellipsis">
             
-              项目架构
+              数仓架构
             
           </span>
 </div>
@@ -137,6 +140,11 @@
       </a>
 </li>
 <li class="md-nav__item">
+<a class="md-nav__link" href="../../%E9%A1%B9%E7%9B%AE%E6%B6%89%E5%8F%8A%E6%8A%80%E6%9C%AF/JavaSE/">
+        JavaSE
+      </a>
+</li>
+<li class="md-nav__item">
 <a class="md-nav__link" href="../../%E9%A1%B9%E7%9B%AE%E6%B6%89%E5%8F%8A%E6%8A%80%E6%9C%AF/Hadoop/">
         Hadoop
       </a>
@@ -202,6 +210,11 @@
       </a>
 </li>
 <li class="md-nav__item">
+<a class="md-nav__link" href="../../%E9%A1%B9%E7%9B%AE%E6%B6%89%E5%8F%8A%E6%8A%80%E6%9C%AF/ClickHouse/">
+        ClickHouse
+      </a>
+</li>
+<li class="md-nav__item">
 <a class="md-nav__link" href="../../%E9%A1%B9%E7%9B%AE%E6%B6%89%E5%8F%8A%E6%8A%80%E6%9C%AF/Sqoop/">
         Sqoop
       </a>
@@ -216,9 +229,75 @@
 </li>
 <li class="md-nav__item md-nav__item--active">
 <input class="md-nav__toggle md-toggle" data-md-toggle="toc" id="__toc" type="checkbox"/>
+<label class="md-nav__link md-nav__link--active" for="__toc">
+          数仓架构
+          <span class="md-nav__icon md-icon"></span>
+</label>
 <a class="md-nav__link md-nav__link--active" href="./">
-        项目架构
+        数仓架构
       </a>
+<nav aria-label="Table of contents" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_2">
+    架构方案
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_3">
+    数仓概念
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_4">
+    系统数据流程设计
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_5">
+    框架版本选型
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_6">
+    服务器选型
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_7">
+    集群规模
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_8">
+    人员配置参考
+  </a>
+<nav aria-label="人员配置参考" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_9">
+    整体架构
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_10">
+    你们部门的职级等级，晋升规则
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_11">
+    人员配置参考
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="../%E6%95%B0%E4%BB%93%E5%BB%BA%E6%A8%A1/">
@@ -302,6 +381,66 @@
 <div class="md-sidebar__scrollwrap">
 <div class="md-sidebar__inner">
 <nav aria-label="Table of contents" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_2">
+    架构方案
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_3">
+    数仓概念
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_4">
+    系统数据流程设计
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_5">
+    框架版本选型
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_6">
+    服务器选型
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_7">
+    集群规模
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_8">
+    人员配置参考
+  </a>
+<nav aria-label="人员配置参考" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_9">
+    整体架构
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_10">
+    你们部门的职级等级，晋升规则
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_11">
+    人员配置参考
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
 </nav>
 </div>
 </div>
@@ -311,7 +450,363 @@
 <a class="md-content__button md-icon" href="https://github.com/maomao199691/Python_Code.git/edit/master/docs/home/其他/项目架构.md" title="Edit this page">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25Z"></path></svg>
 </a>
-<h1>项目架构</h1>
+<h1 id="_1">数仓架构</h1>
+<h2 id="_2">架构方案</h2>
+<p>​   云上数据仓库：云上数据仓库解决方案：<a href="https://www.aliyun.com/solution/datavexpo/datawarehouse">https://www.aliyun.com/solution/datavexpo/datawarehouse</a></p>
+<p><a class="glightbox" data-desc-position="bottom" data-description="" data-height="auto" data-title="" data-width="100%" href="https://s2.loli.net/2022/10/11/UNhGgHAxf3L1amd.png"><img alt="trigger" src="https://s2.loli.net/2022/10/11/UNhGgHAxf3L1amd.png" width="width"/></a></p>
+<p><a class="glightbox" data-desc-position="bottom" data-description="" data-height="auto" data-title="" data-width="100%" href="https://s2.loli.net/2022/10/11/KrucgIW4eDNJiv3.png"><img alt="trigger" src="https://s2.loli.net/2022/10/11/KrucgIW4eDNJiv3.png" width="width"/></a></p>
+<h2 id="_3">数仓概念</h2>
+<p>​   <strong>数据仓库的输入数据源和输出系统分别是什么？</strong></p>
+<p>​   （1）输入系统：埋点产生的用户行为数据、JavaEE后台产生的业务数据、个别公司有爬虫数据。</p>
+<p>​   （2）输出系统：报表系统、用户画像系统、推荐系统。</p>
+<h2 id="_4">系统数据流程设计</h2>
+<p><a class="glightbox" data-desc-position="bottom" data-description="" data-height="auto" data-title="" data-width="100%" href="https://s2.loli.net/2022/10/11/dhGRA9bEs5T7pHi.png"><img alt="trigger" src="https://s2.loli.net/2022/10/11/dhGRA9bEs5T7pHi.png"/></a></p>
+<h2 id="_5">框架版本选型</h2>
+<p>​   1）Apache：运维麻烦，组件间兼容性需要自己调研。（一般大厂使用，技术实力雄厚，有专业的运维人员）。</p>
+<p>​   2）CDH6.3.2：国内使用最多的版本，但 CM不开源，但其实对中、小公司使用来说没有影响（建议使用）10000美金一个节点   CDP7.0。</p>
+<p>​   3）HDP：开源，可以进行二次开发，但是没有CDH稳定，国内使用较少。</p>
+<p>​   <strong>4）云服务选择</strong></p>
+<p>​   （1）阿里云的EMR、MaxCompute、DataWorks</p>
+<p>​   （2）亚马逊云EMR</p>
+<p>​   （3）腾讯云EMR</p>
+<p>​   （4）华为云EMR</p>
+<p>​                               <strong>Apache 框架版本</strong></p>
+<table>
+<thead>
+<tr>
+<th>产品</th>
+<th>旧版本</th>
+<th>新版本</th>
+<th>版本新增</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Hadoop</td>
+<td>2.7.2</td>
+<td><font color="red">3.1.3</font>（3.3.4）</td>
+<td>HDFS 的 Web 端口号由 50070 变为 9870</td>
+</tr>
+<tr>
+<td>Zookeeper</td>
+<td>3.4.10</td>
+<td>3.5.7（3.8.0）</td>
+<td></td>
+</tr>
+<tr>
+<td>MySql</td>
+<td>5.6.24</td>
+<td>5.7.16（8.0.30）</td>
+<td>①原生json支持：不要遍历所有字符串、通过虚拟列的功能对json的数据进行索引<br/>②多源复制：多主一从<br/>③InnoDB优化：为innoDB_buffer_pool_size、innoDB_log_file_size、innoDB_flush_method 提供了更加适合的默认值</td>
+</tr>
+<tr>
+<td>Hive</td>
+<td>1.2.1</td>
+<td><font color="red">3.1.2</font></td>
+<td></td>
+</tr>
+<tr>
+<td>Flume</td>
+<td>1.7.0</td>
+<td>1.9.0（1.10.1）</td>
+<td></td>
+</tr>
+<tr>
+<td>Kafka</td>
+<td>0.11-0.2</td>
+<td><font color="red">2.11-2.4.1、3.0.0</font></td>
+<td>①Kafka0.9 版本之前。offset 保存在 Zookeeper中；从 0.9 版本开始，consumer 自己维护了一个 offset<br/>②允许使用者从最近的副本中获取</td>
+</tr>
+<tr>
+<td>Kafka Eagle</td>
+<td>1.3.7</td>
+<td>2.0.8（3.0.1）</td>
+<td></td>
+</tr>
+<tr>
+<td>DolphinScheduler</td>
+<td></td>
+<td><font color="red">2.0.3</font></td>
+<td>集成了给用户打电话的功能</td>
+</tr>
+<tr>
+<td>Spark</td>
+<td>2.1.1</td>
+<td><font color="red">3.0.0</font>（3.2.2）</td>
+<td>不支持 scala 2.11.x，升级为 2.12.x</td>
+</tr>
+<tr>
+<td>Maxwell</td>
+<td></td>
+<td>1.29.2（1.38.0）</td>
+<td></td>
+</tr>
+<tr>
+<td>DataX</td>
+<td></td>
+<td>3.0</td>
+<td></td>
+</tr>
+<tr>
+<td>Superset</td>
+<td></td>
+<td>1.3.2（2.0.0）</td>
+<td></td>
+</tr>
+<tr>
+<td>Atlas</td>
+<td></td>
+<td>2.1.0（2.2.0）</td>
+<td></td>
+</tr>
+<tr>
+<td>Persto</td>
+<td></td>
+<td>0.276</td>
+<td></td>
+</tr>
+<tr>
+<td>Ranger</td>
+<td></td>
+<td>2.3.0</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h2 id="_6">服务器选型</h2>
+<p>​   服务器使用物理机还是云主机？</p>
+<p><strong>1）机器成本考虑：</strong></p>
+<p>​   （1）物理机：以128G内存，20核物理CPU，40线程，8THDD和2TSSD硬盘，单台报价4W出头，惠普品牌。一般物理机寿命5年左右。</p>
+<p>​   （2）云主机，以阿里云为例，差不多相同配置，每年5W。</p>
+<p><strong>2）运维成本考虑：</strong></p>
+<p>​   （1）物理机：需要有专业的运维人员（1万*13个月）、电费（商业用户）、安装空调、场地。</p>
+<p>​   （2）云主机：很多运维工作都由阿里云已经完成，运维相对较轻松。</p>
+<p><strong>3）企业选择</strong></p>
+<p>​   （1）金融有钱公司选择阿里云（上海）。</p>
+<p>​   （2）中小公司、为了融资上市，选择阿里云，拉到融资后买物理机。</p>
+<p>​   （3）有长期打算，资金比较足，选择物理机。</p>
+<h2 id="_7">集群规模</h2>
+<p><strong>1）硬盘方面考虑</strong></p>
+<p>1、用户行为数据
+  （1）每天活跃用户 150万，每人一天平均 150万 * 100条=<font color="red">15000万条</font>
+  （2）每条日志1k左右，每天1.5亿条：150000000/1024/1024=<font color="red">约150G</font>
+  （3）数仓ODS层采用gzip存储：150g压缩为15g左右
+  （4）数仓DWD层采用snappy+orc存储：15g左右
+  （5）数仓DWS层聚合存储（为了快速运算，不压缩）：75g左右
+  （6）数仓ADS层数据量很小：忽略不计
+  （7）保存3副本：105 * 3=315g
+  （8）半年内不扩容服务器来算：315g * 180天=约55T
+  （9）预留20%~30%Buf=<font color="red">75T（27%Buf）</font>
+2、Kafka中数据
+  （1）每天约150G数据 * 副本(2)=300g
+  （2）保存3天 * 300G=900g
+  （3）预留30%buf=<font color="red">1.3T</font>
+3、Flume中默认缓存的数据比较小：忽略不计
+4、业务数据
+  （1）每天活跃用户150万，每天下单的用户15万，每人每天产生的业务数据10条，每条日志1k左右：15万 * 10条=1.5g左右
+  （2）数仓五层存储：1.5g * 3=4.5g
+  （3）保存3副本：4.5g * 3=13.5g
+  （4）半年内不扩容服务器来算：13.5 * 180=约2.4T
+  （5）预留20% ~ 30%Buf=3.4T
+5、集群总规模：75T+1.3T+3.4T=<font color="red">约80T</font>
+6、<font color="red">约8T * 10台服务器</font></p>
+<p><strong>2）CPU方面考虑</strong></p>
+<p>​   20 核物理 CPU  40线程 * 7 = 280 线程  （指标 100-200）</p>
+<p><strong>3）内存方面考虑</strong></p>
+<p>​   内存 128g * 10台 = 1280g （计算任务内存1000g，其他安装框架需要内存）</p>
+<p>​   128m =》 1g 内存</p>
+<p>​   124g数据、1000内存</p>
+<table>
+<thead>
+<tr>
+<th align="center">1</th>
+<th align="center">2</th>
+<th align="center">3</th>
+<th align="center">4</th>
+<th align="center">5</th>
+<th align="center">6</th>
+<th align="center">7</th>
+<th align="center">8</th>
+<th align="center">9</th>
+<th align="center">10</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center">nn</td>
+<td align="center">nn</td>
+<td align="center">dn</td>
+<td align="center">dn</td>
+<td align="center">dn</td>
+<td align="center">dn</td>
+<td align="center">dn</td>
+<td align="center">Journal Node</td>
+<td align="center">Journal Node</td>
+<td align="center">Journal Node</td>
+</tr>
+<tr>
+<td align="center">rm</td>
+<td align="center">rm</td>
+<td align="center">nm</td>
+<td align="center">nm</td>
+<td align="center">nm</td>
+<td align="center">nm</td>
+<td align="center">nm</td>
+<td align="center">/</td>
+<td align="center">/</td>
+<td align="center">/</td>
+</tr>
+<tr>
+<td align="center">/</td>
+<td align="center">/</td>
+<td align="center">/</td>
+<td align="center">/</td>
+<td align="center">/</td>
+<td align="center">/</td>
+<td align="center">/</td>
+<td align="center">zk</td>
+<td align="center">zk</td>
+<td align="center">zk</td>
+</tr>
+<tr>
+<td align="center">hive</td>
+<td align="center">hive</td>
+<td align="center">hive</td>
+<td align="center">hive</td>
+<td align="center">hive</td>
+<td align="center">hive</td>
+<td align="center">hive</td>
+<td align="center">/</td>
+<td align="center">/</td>
+<td align="center">/</td>
+</tr>
+<tr>
+<td align="center">/</td>
+<td align="center">/</td>
+<td align="center">/</td>
+<td align="center">/</td>
+<td align="center">kafka</td>
+<td align="center">kafka</td>
+<td align="center">kafka</td>
+<td align="center">/</td>
+<td align="center">/</td>
+<td align="center">/</td>
+</tr>
+<tr>
+<td align="center">spark</td>
+<td align="center">spark</td>
+<td align="center">spark</td>
+<td align="center">spark</td>
+<td align="center">spark</td>
+<td align="center">spark</td>
+<td align="center">spark</td>
+<td align="center">/</td>
+<td align="center">/</td>
+<td align="center">/</td>
+</tr>
+<tr>
+<td align="center">datax</td>
+<td align="center">datax</td>
+<td align="center">datax</td>
+<td align="center">datax</td>
+<td align="center">datax</td>
+<td align="center">datax</td>
+<td align="center">datax</td>
+<td align="center">/</td>
+<td align="center">/</td>
+<td align="center">/</td>
+</tr>
+<tr>
+<td align="center">DS-master</td>
+<td align="center">DS-master</td>
+<td align="center">DS-worker</td>
+<td align="center">DS-worker</td>
+<td align="center">DS-worker</td>
+<td align="center">DS-worker</td>
+<td align="center">DS-worker</td>
+<td align="center">//</td>
+<td align="center">//</td>
+<td align="center">//</td>
+</tr>
+<tr>
+<td align="center">maxwell</td>
+<td align="center">/</td>
+<td align="center">/</td>
+<td align="center">/</td>
+<td align="center">/</td>
+<td align="center">/</td>
+<td align="center">/</td>
+<td align="center">/</td>
+<td align="center">/</td>
+<td align="center">/</td>
+</tr>
+<tr>
+<td align="center">supset</td>
+<td align="center">/</td>
+<td align="center">/</td>
+<td align="center">/</td>
+<td align="center">/</td>
+<td align="center">/</td>
+<td align="center">/</td>
+<td align="center">/</td>
+<td align="center">/</td>
+<td align="center">/</td>
+</tr>
+<tr>
+<td align="center">mysql</td>
+<td align="center">/</td>
+<td align="center">/</td>
+<td align="center">/</td>
+<td align="center">/</td>
+<td align="center">/</td>
+<td align="center">/</td>
+<td align="center">/</td>
+<td align="center">/</td>
+<td align="center">/</td>
+</tr>
+<tr>
+<td align="center">flume</td>
+<td align="center">flume</td>
+<td align="center">/</td>
+<td align="center">/</td>
+<td align="center">/</td>
+<td align="center">/</td>
+<td align="center">/</td>
+<td align="center">/</td>
+<td align="center">/</td>
+<td align="center">/</td>
+</tr>
+</tbody>
+</table>
+<p>​   （1）消耗内存的分开；</p>
+<p>​   （2）kafka、zk、flume 传输数据比较紧密的放在一起</p>
+<p>​   （3）客户端尽量放在一到两台服务器上，方便外部访问</p>
+<p>​   （4）有依赖关系的尽量放到同一台服务器（例如：Hive 和 DS）</p>
+<h2 id="_8">人员配置参考</h2>
+<h3 id="_9">整体架构</h3>
+<p>​   属于<strong>研发部</strong>/技术部/数据部，我们属于<strong>大数据组</strong>，其他还有后端项目组，前端组、测试组、UI组等。其他的还有产品部、运营部、人事部、财务部、行政部等。</p>
+<p>​   大数据开发工程师=&gt;大数据组组长=》项目经理=&gt;部门经理=》技术总监CTO =》 架构师</p>
+<h3 id="_10">你们部门的职级等级，晋升规则</h3>
+<p>​   职级就分初级，中级，高级。晋升规则不一定，看公司效益和职位空缺。</p>
+<p>​   京东：T1、T2应届生；T3 14k左右   T4 18K左右  T5  24k-28k左右</p>
+<p>​   阿里：p5、p6、p7、p8</p>
+<p>​   字节：</p>
+<p><a class="glightbox" data-desc-position="bottom" data-description="" data-height="auto" data-title="" data-width="100%" href="https://s2.loli.net/2022/10/11/A89fFstCeZJWNGl.png"><img alt="trigger" src="https://s2.loli.net/2022/10/11/A89fFstCeZJWNGl.png" width="width"/></a></p>
+<h3 id="_11">人员配置参考</h3>
+<p>​   小型公司（1-3人左右）：组长1人，剩余组员无明确分工，并且可能兼顾javaEE和前端。</p>
+<p>​   中小型公司（3~6人左右）：组长1人，离线2人左右，实时1人左右（离线一般多于实时），组长兼顾和JavaEE、前端。</p>
+<p>​   中型公司（5~10人左右）：组长1人，离线3~5人左右（离线处理、数仓），实时2人左右，组长和技术大牛兼顾和javaEE、前端。</p>
+<p>​   中大型公司（10~20人左右）：组长1人，离线5~10人（离线处理、数仓），实时5人左右，JavaEE1人左右（负责对接JavaEE业务），前端1人（有或者没有人单独负责前端）。（发展比较良好的中大型公司可能大数据部门已经细化拆分，分成多个大数据组，分别负责不同业务）</p>
+<p>​   上面只是参考配置，因为公司之间差异很大，例如ofo大数据部门只有5个人左右，因此根据所选公司规模确定一个合理范围，在面试前必须将这个人员配置考虑清楚，回答时要非常确定。</p>
+<p>​   IOS多少人？安卓多少人？前端多少人？JavaEE多少人？测试多少人？</p>
+<p>​   （IOS、安卓） 1-2个人   前端3个人； JavaEE一般是大数据的1-1.5倍，测试：有的有，1个左右，有的没有。  产品经理1个、产品助理1-2个，运营1-3个</p>
+<p>​   公司划分：</p>
+<p>​   0-50 小公司</p>
+<p>​   50-500 中等</p>
+<p>​   500-1000 大公司</p>
+<p>​   1000以上 大厂 领军的存在</p>
+<script async="" crossorigin="anonymous" data-category="General" data-category-id="DIC_kwDOILD1rs4CR4oA" data-emit-metadata="0" data-input-position="bottom" data-lang="zh-CN" data-mapping="pathname" data-reactions-enabled="1" data-repo="maomao199691/discuss" data-repo-id="R_kgDOILD1rg" data-strict="0" data-theme="light" src="https://giscus.app/client.js">
+</script>
 </article>
 </div>
 </div>

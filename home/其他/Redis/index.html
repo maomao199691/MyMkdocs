@@ -29,6 +29,9 @@
 <input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
 <label class="md-overlay" for="__drawer"></label>
 <div data-md-component="skip">
+<a class="md-skip" href="#redis">
+          Skip to content
+        </a>
 </div>
 <div data-md-component="announce">
 </div>
@@ -137,6 +140,11 @@
       </a>
 </li>
 <li class="md-nav__item">
+<a class="md-nav__link" href="../../%E9%A1%B9%E7%9B%AE%E6%B6%89%E5%8F%8A%E6%8A%80%E6%9C%AF/JavaSE/">
+        JavaSE
+      </a>
+</li>
+<li class="md-nav__item">
 <a class="md-nav__link" href="../../%E9%A1%B9%E7%9B%AE%E6%B6%89%E5%8F%8A%E6%8A%80%E6%9C%AF/Hadoop/">
         Hadoop
       </a>
@@ -202,6 +210,11 @@
       </a>
 </li>
 <li class="md-nav__item">
+<a class="md-nav__link" href="../../%E9%A1%B9%E7%9B%AE%E6%B6%89%E5%8F%8A%E6%8A%80%E6%9C%AF/ClickHouse/">
+        ClickHouse
+      </a>
+</li>
+<li class="md-nav__item">
 <a class="md-nav__link" href="../../%E9%A1%B9%E7%9B%AE%E6%B6%89%E5%8F%8A%E6%8A%80%E6%9C%AF/Sqoop/">
         Sqoop
       </a>
@@ -216,7 +229,7 @@
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="../%E9%A1%B9%E7%9B%AE%E6%9E%B6%E6%9E%84/">
-        项目架构
+        数仓架构
       </a>
 </li>
 <li class="md-nav__item">
@@ -256,9 +269,26 @@
 </li>
 <li class="md-nav__item md-nav__item--active">
 <input class="md-nav__toggle md-toggle" data-md-toggle="toc" id="__toc" type="checkbox"/>
+<label class="md-nav__link md-nav__link--active" for="__toc">
+          Redis
+          <span class="md-nav__icon md-icon"></span>
+</label>
 <a class="md-nav__link md-nav__link--active" href="./">
         Redis
       </a>
+<nav aria-label="Table of contents" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_1">
+    缓存穿透、缓存雪崩、缓存击穿
+  </a>
+</li>
+</ul>
+</nav>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="../MySql/">
@@ -302,6 +332,17 @@
 <div class="md-sidebar__scrollwrap">
 <div class="md-sidebar__inner">
 <nav aria-label="Table of contents" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_1">
+    缓存穿透、缓存雪崩、缓存击穿
+  </a>
+</li>
+</ul>
 </nav>
 </div>
 </div>
@@ -311,7 +352,70 @@
 <a class="md-content__button md-icon" href="https://github.com/maomao199691/Python_Code.git/edit/master/docs/home/其他/Redis.md" title="Edit this page">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25Z"></path></svg>
 </a>
-<h1>Redis</h1>
+<h1 id="redis">Redis</h1>
+<h2 id="_1">缓存穿透、缓存雪崩、缓存击穿</h2>
+<p>  （1）缓存穿透是指查询一个一定不存在的数据。由于缓存命不中时会去查询数据库，查不到数据则不写入缓存，这将导致这个不存在的数据每次请求都要到数据库去查询，造成缓存穿透。</p>
+<p>  解决方案：</p>
+<p>  ①  是将空对象也缓存起来，并给它设置一个很短的过期时间，最长不超过 5 分钟</p>
+<p>  ②  采用布隆过滤器，将所有可能存在的数据哈希到一个足够大的 bitmap 中，一个一定不存在的数据会被这个 bitmap 拦截掉，从而避免了对底层存储系统的查询有压力。</p>
+<p>  （2）如果缓存集中在一段时间内失效，发生大量的缓存穿透，所有的查询都落在数据库上，就会造成缓存雪崩。</p>
+<p>  解决方案：</p>
+<p>  尽量让失效的时间点部分不在同一个时间点</p>
+<p>  （3）缓存击穿，是指一个 key 非常热点，在不停的扛着大并发，当这个 key 在失效的瞬间，持续的大并发就穿破缓存，直接请求数据库，就像在一个屏障上凿开了一个洞。</p>
+<p>  解决方案：</p>
+<p>   可以设置 key 永不过期</p>
+<h1 id="_2">哨兵模式</h1>
+<p>  主从复制中反客为主的自动版，如果主机 Down 掉，哨兵会从从机中选择一台作为主机，并将它设置为其他丛机的主机，而且如果原来的主机再次启动的话也会成为丛机。</p>
+<h1 id="_3">数据类型</h1>
+<table>
+<thead>
+<tr>
+<th>string</th>
+<th>字符串</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>list</td>
+<td>可以重复的集合</td>
+</tr>
+<tr>
+<td>set</td>
+<td>不可以重复的集合</td>
+</tr>
+<tr>
+<td>hash</td>
+<td>类似于 Map<string,string></string,string></td>
+</tr>
+<tr>
+<td>zset(sorted set)</td>
+<td>带分数的 set</td>
+</tr>
+</tbody>
+</table>
+<h1 id="_4">持久化</h1>
+<p><strong>1）RDB 持久化</strong></p>
+<p>  ①在指定的时间间隔内持久化</p>
+<p>  ②服务 shutdown 会自动持久化</p>
+<p>  ③输入 bgsave 也会持久化</p>
+<p><strong>2）AOF：以日志形式记录每个更新操作</strong></p>
+<p>  Redis 重新启动时读取这个文件，重新执行新建、修改数据的命令恢复数据。</p>
+<p>  <strong>保存策略：</strong></p>
+<p>  推荐（并且也是默认）的措施为每秒持久化一次，这种策略可以兼顾速度和安全性。</p>
+<p>  <strong>缺点：</strong></p>
+<p>  （1）比起 RDB 占用更多的磁盘空间</p>
+<p>  （2）恢复备份速度要慢</p>
+<p>  （3）每次读写都同步的话，有一定的性能压力</p>
+<p>  （4）存在个别 Bug，造成不能恢复</p>
+<p>  <strong>选择策略：</strong></p>
+<p>  官方推荐：</p>
+<p>  如果对数据不敏感，可以选单独用 RDB；不建议单独用 AOF，应为可能出现 Bug；如果只是做出内存缓存，可以都不用。</p>
+<h1 id="_5">悲观锁</h1>
+<p>  执行操作前假设当前的操作肯定（或有很大几率）会被打断（悲观）。基于这个假设，我们在做操作前就会把相关资源锁定，不允许自己执行期间有其他操作干扰。</p>
+<h1 id="_6">乐观锁</h1>
+<p>  执行操作前假设当前操作不会被打断（乐观）。基于这个假设，我们在做操作前不会锁定资源，万一发生了其他操作的干扰，那么本次操作将被放弃。Redis 使用的就是乐观锁。</p>
+<script async="" crossorigin="anonymous" data-category="General" data-category-id="DIC_kwDOILD1rs4CR4oA" data-emit-metadata="0" data-input-position="bottom" data-lang="zh-CN" data-mapping="pathname" data-reactions-enabled="1" data-repo="maomao199691/discuss" data-repo-id="R_kgDOILD1rg" data-strict="0" data-theme="light" src="https://giscus.app/client.js">
+</script>
 </article>
 </div>
 </div>
