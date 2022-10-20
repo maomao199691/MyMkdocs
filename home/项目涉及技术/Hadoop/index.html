@@ -29,7 +29,7 @@
 <input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
 <label class="md-overlay" for="__drawer"></label>
 <div data-md-component="skip">
-<a class="md-skip" href="#chapter-1">
+<a class="md-skip" href="#hadoop">
           Skip to content
         </a>
 </div>
@@ -122,14 +122,19 @@
         大数据技术之高频面试题
       </a>
 </li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../%E5%85%B6%E4%BB%96/%E5%AE%9E%E6%97%B6%E6%95%B0%E4%BB%93%E8%A7%84%E5%88%92/">
+        实时数仓规划
+      </a>
+</li>
 <li class="md-nav__item md-nav__item--active md-nav__item--nested">
-<input checked="" class="md-nav__toggle md-toggle" data-md-toggle="__nav_1_2" id="__nav_1_2" type="checkbox"/>
-<label class="md-nav__link" for="__nav_1_2">
+<input checked="" class="md-nav__toggle md-toggle" data-md-toggle="__nav_1_3" id="__nav_1_3" type="checkbox"/>
+<label class="md-nav__link" for="__nav_1_3">
           项目涉及技术
           <span class="md-nav__icon md-icon"></span>
 </label>
 <nav aria-label="项目涉及技术" class="md-nav" data-md-level="2">
-<label class="md-nav__title" for="__nav_1_2">
+<label class="md-nav__title" for="__nav_1_3">
 <span class="md-nav__icon md-icon"></span>
           项目涉及技术
         </label>
@@ -146,9 +151,91 @@
 </li>
 <li class="md-nav__item md-nav__item--active">
 <input class="md-nav__toggle md-toggle" data-md-toggle="toc" id="__toc" type="checkbox"/>
+<label class="md-nav__link md-nav__link--active" for="__toc">
+          Hadoop
+          <span class="md-nav__icon md-icon"></span>
+</label>
 <a class="md-nav__link md-nav__link--active" href="./">
         Hadoop
       </a>
+<nav aria-label="Table of contents" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#hadoop_1">
+    Hadoop 常用端口号
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#hadoop_2">
+    Hadoop 配置文件
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#hdfs">
+    HDFS读流程和写流程
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#hdfs_1">
+    HDFS小文件处理
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#hdfsnamenode">
+    HDFS的NameNode内存
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#namenode">
+    NameNode心跳并发配置
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_1">
+    纠删码原理
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_2">
+    异构存储（冷热数据分离）
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#shuffle">
+    Shuffle及优化
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#yarn">
+    Yarn工作机制
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#yarn_1">
+    Yarn 调度器
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_3">
+    项目经验之基准测试
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#hadoop_3">
+    Hadoop宕机
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#hadoop_4">
+    Hadoop解决数据倾斜方法
+  </a>
+</li>
+</ul>
+</nav>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="../Zookeeper/">
@@ -315,6 +402,82 @@
 <div class="md-sidebar__scrollwrap">
 <div class="md-sidebar__inner">
 <nav aria-label="Table of contents" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#hadoop_1">
+    Hadoop 常用端口号
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#hadoop_2">
+    Hadoop 配置文件
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#hdfs">
+    HDFS读流程和写流程
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#hdfs_1">
+    HDFS小文件处理
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#hdfsnamenode">
+    HDFS的NameNode内存
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#namenode">
+    NameNode心跳并发配置
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_1">
+    纠删码原理
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_2">
+    异构存储（冷热数据分离）
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#shuffle">
+    Shuffle及优化
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#yarn">
+    Yarn工作机制
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#yarn_1">
+    Yarn 调度器
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_3">
+    项目经验之基准测试
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#hadoop_3">
+    Hadoop宕机
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#hadoop_4">
+    Hadoop解决数据倾斜方法
+  </a>
+</li>
+</ul>
 </nav>
 </div>
 </div>
@@ -324,8 +487,151 @@
 <a class="md-content__button md-icon" href="https://github.com/maomao199691/Python_Code.git/edit/master/docs/home/项目涉及技术/Hadoop.md" title="Edit this page">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25Z"></path></svg>
 </a>
-<h1 id="chapter-1">Chapter 1</h1>
-<p>欢迎光临！</p>
+<h1 id="hadoop">Hadoop</h1>
+<h2 id="hadoop_1">Hadoop 常用端口号</h2>
+<table>
+<thead>
+<tr>
+<th align="center">/</th>
+<th align="center">Hadoop2.x</th>
+<th align="center">Hadoop3.x</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center">访问HDFS端口</td>
+<td align="center">50070</td>
+<td align="center">9870</td>
+</tr>
+<tr>
+<td align="center">访问MR执行情况端口</td>
+<td align="center">8088</td>
+<td align="center">8088</td>
+</tr>
+<tr>
+<td align="center">历史服务器</td>
+<td align="center">19888</td>
+<td align="center">19888</td>
+</tr>
+<tr>
+<td align="center">客户端访问集群端口</td>
+<td align="center">9000</td>
+<td align="center">8020</td>
+</tr>
+</tbody>
+</table>
+<h2 id="hadoop_2">Hadoop 配置文件</h2>
+<p>配置文件：</p>
+<p>  hadoop2.x core-site.xml、hdfs-site.xml、mapred-site.xml、yarn-site.xml   slaves</p>
+<p>  hadoop3.x core-site.xml、hdfs-site.xml、mapred-site.xml、yarn-site.xml   workers</p>
+<h2 id="hdfs">HDFS读流程和写流程</h2>
+<p><center><strong>HDFS的读数据流程</strong></center></p>
+<p><a class="glightbox" data-desc-position="bottom" data-description="" data-height="auto" data-title="" data-width="100%" href="https://s2.loli.net/2022/08/20/XIJTVoSsxctfm76.png"><img alt="trigger" src="https://s2.loli.net/2022/08/20/XIJTVoSsxctfm76.png" width="width"/></a></p>
+<ol>
+<li>客户端通过DistributedFileSystem向NameNode请求下载文件，NameNode通过查询元数据，找到文件块所在的DataNode地址。</li>
+<li>挑选一台DataNode（就近原则，然后随机）服务器，请求读取数据。</li>
+<li>DataNode开始传输数据给客户端（从磁盘里面读取数据输入流，以Packet为单位来做校验）。</li>
+<li>客户端以Packet为单位接收，先在本地缓存，然后写入目标文件。</li>
+</ol>
+<p><center><strong>HDFS的读数据流程</strong></center></p>
+<p><a class="glightbox" data-desc-position="bottom" data-description="" data-height="auto" data-title="" data-width="100%" href="https://s2.loli.net/2022/08/20/BNFqlH7WrRAL85c.png"><img alt="trigger" src="https://s2.loli.net/2022/08/20/BNFqlH7WrRAL85c.png" width="width"/></a></p>
+<ol>
+<li>客户端通过Distributed FileSystem模块向NameNode请求上传文件，NameNode检查目标文件是否已存在，父目录是否存在。</li>
+<li>NameNode返回是否可以上传。</li>
+<li>客户端请求第一个 Block上传到哪几个DataNode服务器上。</li>
+<li>NameNode返回3个DataNode节点，分别为dn1、dn2、dn3。</li>
+<li>客户端通过FSDataOutputStream模块请求dn1上传数据，dn1收到请求会继续调用dn2，然后dn2调用dn3，将这个通信管道建立完成。</li>
+<li>dn1、dn2、dn3逐级应答客户端。</li>
+<li>客户端开始往dn1上传第一个Block（先从磁盘读取数据放到一个本地内存缓存），以Packet为单位，dn1收到一个Packet就会传给dn2，dn2传给dn3；dn1每传一个packet会放入一个应答队列等待应答。</li>
+<li>当一个Block传输完成之后，客户端再次请求NameNode上传第二个Block的服务器。（重复执行3-7步）。</li>
+</ol>
+<h2 id="hdfs_1">HDFS小文件处理</h2>
+<p>1）会有什么影响</p>
+<p>  （1）存储层面：</p>
+<p>    1个文件块，占用namenode多大内存150字节</p>
+<p>    128G能存储多少文件块？   128 g<em> 1024m</em>1024kb*1024byte/150字节 = 9.1亿文件块</p>
+<p>  （2）计算层面：</p>
+<p>     每个小文件都会起到一个MapTask，1个MapTask默认内存1G。浪费资源。</p>
+<p>2）怎么解决</p>
+<p>  （1）采用har归档方式，将小文件归档</p>
+<p>  （2）采用CombineTextInputFormat</p>
+<p>  （3）有小文件场景开启JVM重用；如果没有小文件，不要开启JVM重用，因为会一直占用使用到的task卡槽，直到任务完成才释放。</p>
+<p>  JVM重用可以使得JVM实例在同一个job中重新使用N次，N的值可以在Hadoop的mapred-site.xml文件中进行配置。通常在10-20之间</p>
+<h2 id="hdfsnamenode">HDFS的NameNode内存</h2>
+<p>1）Hadoop2.x系列，配置NameNode默认2000m</p>
+<p>2）Hadoop3.x系列，配置NameNode内存是动态分配的</p>
+<p>  NameNode内存最小值1G，每增加100万个block，增加1G内存。</p>
+<h2 id="namenode">NameNode心跳并发配置</h2>
+<p><center><strong>HDFS的写数据流程</strong></center></p>
+<p><a class="glightbox" data-desc-position="bottom" data-description="" data-height="auto" data-title="" data-width="100%" href="https://s2.loli.net/2022/10/12/dtGIH3iLTqgcEO2.png"><img alt="trigger" src="https://s2.loli.net/2022/10/12/dtGIH3iLTqgcEO2.png" width="width"/></a></p>
+<p>  企业经验：dfs.namenode.handler.count=
+$$
+20×〖log〗_e^(Cluster Size)，
+$$
+  比如集群规模（DataNode台数）为3台时，此参数设置为21。</p>
+<h2 id="_1">纠删码原理</h2>
+<p>  CPU资源换取存储空间。</p>
+<p><center><strong>纠删码原理</strong></center></p>
+<p><a class="glightbox" data-desc-position="bottom" data-description="" data-height="auto" data-title="" data-width="100%" href="https://s2.loli.net/2022/10/12/dtGIH3iLTqgcEO2.png"><img alt="trigger" src="https://s2.loli.net/2022/10/12/dtGIH3iLTqgcEO2.png" width="width"/></a></p>
+<h2 id="_2">异构存储（冷热数据分离）</h2>
+<p>  期望经常使用的数据存储在固态硬盘或者内存镜像硬盘；不经常使用的历史数据存储在老旧的破旧硬盘。</p>
+<p><center><strong>异构存储</strong></center></p>
+<p><a class="glightbox" data-desc-position="bottom" data-description="" data-height="auto" data-title="" data-width="100%" href="https://s2.loli.net/2022/10/12/jB3Z81sOCT2eLbp.png"><img alt="trigger" src="https://s2.loli.net/2022/10/12/jB3Z81sOCT2eLbp.png" width="width"/></a></p>
+<p><center><strong>存储类型和存储策略</strong></center></p>
+<p><a class="glightbox" data-desc-position="bottom" data-description="" data-height="auto" data-title="" data-width="100%" href="https://s2.loli.net/2022/10/12/b3cjuO7Zw4zTCDR.png"><img alt="trigger" src="https://s2.loli.net/2022/10/12/b3cjuO7Zw4zTCDR.png" width="width"/></a></p>
+<h2 id="shuffle">Shuffle及优化</h2>
+<p><strong>1、Shuffle过程</strong></p>
+<p><center><strong>MapReduce优化(上)</strong></center></p>
+<p><a class="glightbox" data-desc-position="bottom" data-description="" data-height="auto" data-title="" data-width="100%" href="https://s2.loli.net/2022/10/12/xAgw9a6Nzqp1dG5.png"><img alt="trigger" src="https://s2.loli.net/2022/10/12/xAgw9a6Nzqp1dG5.png" width="width"/></a></p>
+<p><center><strong>MapReduce优化(下)</strong></center></p>
+<p><a class="glightbox" data-desc-position="bottom" data-description="" data-height="auto" data-title="" data-width="100%" href="https://s2.loli.net/2022/10/12/OmsegxnFb7JL4Yf.png"><img alt="trigger" src="https://s2.loli.net/2022/10/12/OmsegxnFb7JL4Yf.png" width="width"/></a></p>
+<h2 id="yarn">Yarn工作机制</h2>
+<p><center><strong>Yarn工作机制</strong></center></p>
+<p><a class="glightbox" data-desc-position="bottom" data-description="" data-height="auto" data-title="" data-width="100%" href="https://s2.loli.net/2022/10/12/CQcwKREL9WPHoGm.png"><img alt="trigger" src="https://s2.loli.net/2022/10/12/CQcwKREL9WPHoGm.png" width="width"/></a></p>
+<p><center><strong>Yarn生产环境核心参数</strong></center></p>
+<p><a class="glightbox" data-desc-position="bottom" data-description="" data-height="auto" data-title="" data-width="100%" href="https://s2.loli.net/2022/10/12/NgSlDMGnrK4a81o.png"><img alt="trigger" src="https://s2.loli.net/2022/10/12/NgSlDMGnrK4a81o.png" width="width"/></a></p>
+<h2 id="yarn_1">Yarn 调度器</h2>
+<p>1）Hadoop调度器重要分为三类：</p>
+<p>  FIFO 、Capacity Scheduler（容量调度器）和Fair Sceduler（公平调度器）。</p>
+<p>  Apache默认的资源调度器是容量调度器；</p>
+<p>  CDH默认的资源调度器是公平调度器。</p>
+<p>2）区别：</p>
+<p>  <strong>FIFO</strong><strong>调度器：</strong>支持单队列 、先进先出  生产环境不会用。</p>
+<p>  <strong>容量调度器：</strong>支持多队列。队列资源分配，优先选择资源占用率最低的队列分配资源；作业资源分配，按照作业的优先级和提交时间顺序分配资源；容器资源分配，本地原则（同一节点/同一机架/不同节点不同机架）</p>
+<p>  <strong>公平调度器：</strong>支持多队列，保证每个任务公平享有队列资源。资源不够时可以按照缺额分配。</p>
+<p>3）在生产环境下怎么选择？</p>
+<p>  大厂：如果对并发度要求比较高，选择公平，要求服务器性能必须OK；</p>
+<p>  中小公司，集群服务器资源不太充裕选择容量。</p>
+<p>4）在生产环境怎么创建队列？</p>
+<p>  （1）调度器默认就1个default队列，不能满足生产要求。</p>
+<p>  （2）按照框架：hive /spark/ flink 每个框架的任务放入指定的队列（企业用的不是特别多）</p>
+<p>  （3）按照部门：业务部门1、业务部门2</p>
+<p>  （4）按照业务模块：登录注册、购物车、下单</p>
+<p>5）创建多队列的好处？</p>
+<p>  （1）因为担心员工不小心，写递归死循环代码，把所有资源全部耗尽。</p>
+<p>  （2）实现任务的<strong>降级</strong>使用，特殊时期保证重要的任务队列资源充足。</p>
+<p>    业务部门1（重要）=》业务部门2（比较重要）=》下单（一般）=》购物车（一般）=》登录注册（次要）</p>
+<h2 id="_3">项目经验之基准测试</h2>
+<p><strong>  硬盘的读写速度</strong>和<strong>网络带宽</strong>影响<strong>集群吞吐量</strong>的两个核心因素。</p>
+<h2 id="hadoop_3">Hadoop宕机</h2>
+<p>  （1）如果MR造成系统宕机。此时要控制Yarn同时运行的任务数，和每个任务申请的最大内存。调整参数：yarn.scheduler.maximum-allocation-mb（单个任务可申请的最多物理内存量，默认是8192MB）</p>
+<p>  （2）如果写入文件过快造成NameNode宕机。那么调高Kafka的存储大小，控制从Kafka到HDFS的写入速度。例如，可以调整Flume每批次拉取数据量的大小参数batchsize。</p>
+<h2 id="hadoop_4">Hadoop解决数据倾斜方法</h2>
+<p><strong>1）提前在 map 进行 combine ，减少传输的数据量</strong></p>
+<p>  在Mapper加上combiner相当于提前进行reduce，即把一个Mapper中的相同key进行了聚合，减少shuffle过程中传输的数据量，以及Reducer端的计算量。</p>
+<p>  如果导致数据倾斜的key大量分布在不同的mapper的时候，这种方法就不是很有效了。</p>
+<p><strong>2）导致数据倾斜的 key 大量分布在不同的 mapper</strong></p>
+<p>  （1）局部聚合加全局聚合。</p>
+<p>    第一次在map阶段对那些导致了数据倾斜的key 加上1到n的随机前缀，这样本来相同的key 也会被分到多个Reducer中进行局部聚合，数量就会大大降低。</p>
+<p>    第二次mapreduce，去掉key的随机前缀，进行全局聚合。</p>
+<p>    思想：二次mr，第一次将key随机散列到不同reducer进行处理达到负载均衡目的。第二次再根据去掉key的随机前缀，按原key进行reduce处理。</p>
+<p>    这个方法进行两次mapreduce，性能稍差。</p>
+<p>  （2）增加Reducer，提升并行度</p>
+<p>     JobConf.setNumReduceTasks(int)</p>
+<p>  （3）实现自定义分区</p>
+<p>    根据数据分布情况，自定义散列函数，将key均匀分配到不同Reducer</p>
+<script async="" crossorigin="anonymous" data-category="General" data-category-id="DIC_kwDOILD1rs4CR4oA" data-emit-metadata="0" data-input-position="bottom" data-lang="zh-CN" data-mapping="pathname" data-reactions-enabled="1" data-repo="maomao199691/discuss" data-repo-id="R_kgDOILD1rg" data-strict="0" data-theme="light" src="https://giscus.app/client.js">
+</script>
 </article>
 </div>
 </div>
@@ -386,5 +692,8 @@
 </div>
 <script id="__config" type="application/json">{"base": "../../..", "features": [], "search": "../../../assets/javascripts/workers/search.5bf1dace.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}}</script>
 <script src="../../../assets/javascripts/bundle.078830c0.min.js"></script>
+<script src="../../../javascripts/mathjax.js"></script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 <script>document$.subscribe(() => {const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom"});})</script></body>
 </html>

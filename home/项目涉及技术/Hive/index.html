@@ -29,6 +29,9 @@
 <input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
 <label class="md-overlay" for="__drawer"></label>
 <div data-md-component="skip">
+<a class="md-skip" href="#hive">
+          Skip to content
+        </a>
 </div>
 <div data-md-component="announce">
 </div>
@@ -119,14 +122,19 @@
         大数据技术之高频面试题
       </a>
 </li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../%E5%85%B6%E4%BB%96/%E5%AE%9E%E6%97%B6%E6%95%B0%E4%BB%93%E8%A7%84%E5%88%92/">
+        实时数仓规划
+      </a>
+</li>
 <li class="md-nav__item md-nav__item--active md-nav__item--nested">
-<input checked="" class="md-nav__toggle md-toggle" data-md-toggle="__nav_1_2" id="__nav_1_2" type="checkbox"/>
-<label class="md-nav__link" for="__nav_1_2">
+<input checked="" class="md-nav__toggle md-toggle" data-md-toggle="__nav_1_3" id="__nav_1_3" type="checkbox"/>
+<label class="md-nav__link" for="__nav_1_3">
           项目涉及技术
           <span class="md-nav__icon md-icon"></span>
 </label>
 <nav aria-label="项目涉及技术" class="md-nav" data-md-level="2">
-<label class="md-nav__title" for="__nav_1_2">
+<label class="md-nav__title" for="__nav_1_3">
 <span class="md-nav__icon md-icon"></span>
           项目涉及技术
         </label>
@@ -163,9 +171,86 @@
 </li>
 <li class="md-nav__item md-nav__item--active">
 <input class="md-nav__toggle md-toggle" data-md-toggle="toc" id="__toc" type="checkbox"/>
+<label class="md-nav__link md-nav__link--active" for="__toc">
+          Hive
+          <span class="md-nav__icon md-icon"></span>
+</label>
 <a class="md-nav__link md-nav__link--active" href="./">
         Hive
       </a>
+<nav aria-label="Table of contents" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#hivehqlmr">
+    Hive的架构及HQL转换为MR流程
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#hive_1">
+    Hive和数据库比较
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_1">
+    内部表和外部表
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#4by">
+    4个By区别
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_2">
+    系统函数
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#udfudtf">
+    自定义UDF、UDTF函数
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_3">
+    窗口函数
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#hive_2">
+    Hive优化
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#hive_3">
+    Hive解决数据倾斜方法
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#hivett">
+    Hive里边字段的分隔符用的什么？为什么用\t？有遇到过字段里边有\t的情况吗，怎么处理的？
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#tez">
+    Tez引擎优点？
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#mysql">
+    MySQL元数据备份
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#unionunion-all">
+    Union与Union all区别
+  </a>
+</li>
+</ul>
+</nav>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="../Datax/">
@@ -312,6 +397,77 @@
 <div class="md-sidebar__scrollwrap">
 <div class="md-sidebar__inner">
 <nav aria-label="Table of contents" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#hivehqlmr">
+    Hive的架构及HQL转换为MR流程
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#hive_1">
+    Hive和数据库比较
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_1">
+    内部表和外部表
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#4by">
+    4个By区别
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_2">
+    系统函数
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#udfudtf">
+    自定义UDF、UDTF函数
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_3">
+    窗口函数
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#hive_2">
+    Hive优化
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#hive_3">
+    Hive解决数据倾斜方法
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#hivett">
+    Hive里边字段的分隔符用的什么？为什么用\t？有遇到过字段里边有\t的情况吗，怎么处理的？
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#tez">
+    Tez引擎优点？
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#mysql">
+    MySQL元数据备份
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#unionunion-all">
+    Union与Union all区别
+  </a>
+</li>
+</ul>
 </nav>
 </div>
 </div>
@@ -321,7 +477,221 @@
 <a class="md-content__button md-icon" href="https://github.com/maomao199691/Python_Code.git/edit/master/docs/home/项目涉及技术/Hive.md" title="Edit this page">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25Z"></path></svg>
 </a>
-<h1>Hive</h1>
+<h1 id="hive">Hive</h1>
+<h2 id="hivehqlmr">Hive的架构及HQL转换为MR流程</h2>
+<p>  Hive元数据默认存储在derby数据库，不支持多客户端访问，所以将元数据存储在MySQl，支持多客户端访问。</p>
+<p><center><strong>Hive的derby数据库</strong></center></p>
+<p><a class="glightbox" data-desc-position="bottom" data-description="" data-height="auto" data-title="" data-width="100%" href="https://s2.loli.net/2022/10/13/dhTQ3XFP1jRKJEM.png"><img alt="trigger" src="https://s2.loli.net/2022/10/13/dhTQ3XFP1jRKJEM.png" width="width"/></a></p>
+<p><center><strong>HQL编译为MR任务流程</strong></center></p>
+<p><a class="glightbox" data-desc-position="bottom" data-description="" data-height="auto" data-title="" data-width="100%" href="https://s2.loli.net/2022/10/13/SZCWpEPQGjLtU26.png"><img alt="trigger" src="https://s2.loli.net/2022/10/13/SZCWpEPQGjLtU26.png" width="width"/></a></p>
+<p><center><strong>HQL转换为MR核心流程</strong></center></p>
+<p><a class="glightbox" data-desc-position="bottom" data-description="" data-height="auto" data-title="" data-width="100%" href="https://s2.loli.net/2022/10/13/px9e4GyOvSRJjKU.png"><img alt="trigger" src="https://s2.loli.net/2022/10/13/px9e4GyOvSRJjKU.png" width="width"/></a></p>
+<h2 id="hive_1">Hive和数据库比较</h2>
+<p>  Hive 和数据库除了拥有类似的查询语言，再无类似之处。</p>
+<p><strong>1）数据存储位置</strong></p>
+<p>  Hive 存储在 HDFS 。数据库将数据保存在块设备或者本地文件系统中。</p>
+<p><strong>2）数据更新</strong></p>
+<p>  Hive中不建议对数据的改写。而数据库中的数据通常是需要经常进行修改的， </p>
+<p><strong>3）执行延迟</strong></p>
+<p>  Hive 执行延迟较高。数据库的执行延迟较低。当然，这个是有条件的，即数据规模较小，当数据规模大到超过数据库的处理能力的时候，Hive的并行计算显然能体现出优势。</p>
+<p><strong>4）数据规模</strong></p>
+<p>  Hive支持很大规模的数据计算；数据库可以支持的数据规模较小。</p>
+<h2 id="_1">内部表和外部表</h2>
+<p>  元数据、原始数据</p>
+<p><strong>1）删除数据时：</strong></p>
+<p>  内部表：元数据、原始数据，全删除</p>
+<p>  外部表：元数据 只删除</p>
+<p><strong>2）在公司生产环境下，什么时候创建内部表，什么时候创建外部表？</strong></p>
+<p>  在公司中绝大多数场景都是外部表。</p>
+<p>  自己使用的临时表，才会创建内部表；</p>
+<h2 id="4by">4个By区别</h2>
+<p>  （1）Order By：全局排序，只有一个Reducer；</p>
+<p>  （2）Sort By：分区内有序；</p>
+<p>  （3）Distrbute By：类似MR中Partition，进行分区，结合sort by使用。</p>
+<p>  （4） Cluster By：当Distribute by和Sorts by字段相同时，可以使用Cluster by方式。Cluster by除了具有Distribute by的功能外还兼具Sort by的功能。但是排序只能是升序排序，不能指定排序规则为ASC或者DESC。</p>
+<p>   在生产环境中Order By用的比较少，容易导致OOM。</p>
+<p>   在生产环境中Sort By + Distrbute By用的多。</p>
+<h2 id="_2">系统函数</h2>
+<p>1）date_add、date_sub函数（加减日期）</p>
+<p>2）next_day函数（周指标相关）</p>
+<p>3）date_format函数（根据格式整理日期）</p>
+<p>4）last_day函数（求当月最后一天日期）</p>
+<p>5）CONCAT、CONCAT_WS、COLLECT_SET</p>
+<p>6）EXPLODE </p>
+<p>7）get_json_object解析json函数</p>
+<p>8）NVL（表达式1，表达式2）</p>
+<p>  如果表达式1为空值，NVL返回值为表达式2的值，否则返回表达式1的值。</p>
+<h2 id="udfudtf">自定义UDF、UDTF函数</h2>
+<p><strong>1）在项目中是否自定义过UDF、UDTF函数，以及用他们处理了什么问题，及自定义步骤？</strong></p>
+<p>  （1）用UDF函数解析公共字段；用UDTF函数解析事件字段。</p>
+<p>  （2）自定义UDF：继承UDF，重写evaluate方法</p>
+<p>  （3）自定义UDTF：继承自GenericUDTF，重写3个方法：initialize（自定义输出的列名和类型），process（将结果返回forward(result)），close</p>
+<p><strong>2）为什么要自定义UDF/UDTF？</strong></p>
+<p>  （1）因为自定义函数，可以自己埋点Log打印日志，出错或者数据异常，方便调试。</p>
+<p>  （2）引入第三方jar包时，也需要。</p>
+<h2 id="_3">窗口函数</h2>
+<p><strong>1）Rank</strong></p>
+<p>（1）RANK() 排序相同时会重复，总数不会变</p>
+<p>（2）DENSE_RANK() 排序相同时会重复，总数会减少</p>
+<p>（3）ROW_NUMBER() 会根据顺序计算</p>
+<p><strong>2） OVER()：</strong></p>
+<p>指定分析函数工作的数据窗口大小，这个数据窗口大小可能会随着行的变而变化</p>
+<p>（1）CURRENT ROW：当前行</p>
+<p>（2）n PRECEDING：往前n行数据</p>
+<p>（3） n FOLLOWING：往后n行数据</p>
+<p>（4）UNBOUNDED：起点，UNBOUNDED PRECEDING 表示从前面的起点， UNBOUNDED FOLLOWING表示到后面的终点</p>
+<p>（5） LAG(col,n)：往前第n行数据</p>
+<p>（6）LEAD(col,n)：往后第n行数据</p>
+<p>（7） NTILE(n)：把有序分区中的行分发到指定数据的组中，各个组有编号，编号从1开始，对于每一行，NTILE返回此行所属的组的编号。注意：n必须为int类型。</p>
+<p><strong>3）手写：分组TopN、行转列、列转行</strong></p>
+<h2 id="hive_2">Hive优化</h2>
+<p><strong>1）MapJoin</strong></p>
+<p>  如果不指定MapJoin或者不符合MapJoin的条件，那么Hive解析器会将Join操作转换成Common Join，即：在Reduce阶段完成join。容易发生数据倾斜。可以用MapJoin把小表全部加载到内存在map端进行join，避免reducer处理。</p>
+<p><strong>2）行列过滤</strong></p>
+<p>  列处理：在SELECT中，只拿需要的列，如果有，尽量使用分区过滤，少用SELECT *。</p>
+<p>  行处理：在分区剪裁中，当使用外关联时，如果将副表的过滤条件写在Where后面，那么就会先全表关联，之后再过滤。 </p>
+<p><strong>3）列式存储</strong></p>
+<p><strong>4）采用分区技术</strong></p>
+<p><strong>5）合理设置Map数</strong></p>
+<p>  mapred.min.split.size: 指的是数据的最小分割单元大小；min的默认值是1B</p>
+<p>  mapred.max.split.size: 指的是数据的最大分割单元大小；max的默认值是256MB</p>
+<p>  通过调整max可以起到调整map数的作用，减小max可以增加map数，增大max可以减少map数。</p>
+<p>  需要提醒的是，直接调整mapred.map.tasks这个参数是没有效果的。</p>
+<p>  <a href="https://www.cnblogs.com/swordfall/p/11037539.html">https://www.cnblogs.com/swordfall/p/11037539.html</a></p>
+<p><strong>6）合理设置Reduce数</strong></p>
+<p>  Reduce个数并不是越多越好</p>
+<p>  （1）过多的启动和初始化Reduce也会消耗时间和资源；</p>
+<p>  （2）另外，有多少个Reduce，就会有多少个输出文件，如果生成了很多个小文件，那么如果这些小文件作为下一个任务的输入，则也会出现小文件过多的问题；</p>
+<p>  在设置Reduce个数的时候也需要考虑这两个原则：处理大数据量利用合适的Reduce数；使单个Reduce任务处理数据量大小要合适；</p>
+<p><strong>7）小文件如何产生的？</strong></p>
+<p>  （1）动态分区插入数据，产生大量的小文件，从而导致map数量剧增；</p>
+<p>  （2）reduce数量越多，小文件也越多（reduce的个数和输出文件是对应的）；</p>
+<p>  （3）数据源本身就包含大量的小文件。</p>
+<p><strong>8）小文件解决方案</strong></p>
+<p>  （1）在Map执行前合并小文件，减少Map数：CombineHiveInputFormat具有对小文件进行合并的功能（系统默认的格式）。HiveInputFormat没有对小文件合并功能。</p>
+<p>  <strong>（2）merge</strong></p>
+<p>// 输出合并小文件</p>
+<pre><code class="language-java">SET hive.merge.mapfiles = true; -- 默认true，在map-only任务结束时合并小文件
+
+SET hive.merge.mapredfiles = true; -- 默认false，在map-reduce任务结束时合并小文件
+
+SET hive.merge.size.per.task = 268435456; -- 默认256M
+
+SET hive.merge.smallfiles.avgsize = 16777216; -- 当输出文件的平均大小小于16m该值时，启动一个独立的map-reduce任务进行文件merge
+</code></pre>
+<p><strong>（3）开启JVM重用</strong></p>
+<p>  set mapreduce.job.jvm.numtasks=10</p>
+<p><strong>9）开启map端combiner（不影响最终业务逻辑）</strong></p>
+<p>  set hive.map.aggr=true；</p>
+<p><strong>10）压缩（选择快的）</strong></p>
+<p>  设置map端输出、中间结果压缩。（不完全是解决数据倾斜的问题，但是减少了IO读写和网络传输，能提高很多效率）</p>
+<pre><code class="language-java">set hive.exec.compress.intermediate=true --启用中间数据压缩
+
+set mapreduce.map.output.compress=true --启用最终数据压缩
+
+set mapreduce.map.outout.compress.codec=…; --设置压缩方式
+</code></pre>
+<p><strong>11）采用tez引擎或者spark引擎</strong></p>
+<h2 id="hive_3">Hive解决数据倾斜方法</h2>
+<p><strong>1）怎么产生的数据倾斜？</strong></p>
+<p><strong>  （1）不同数据类型关联产生数据倾斜</strong></p>
+<p>  情形：比如用户表中user_id字段为int，log表中user_id字段string类型。当按照user_id进行两个表的Join操作时。</p>
+<p>解决方式：把数字类型转换成字符串类型</p>
+<p>select * from users a</p>
+<p>left outer join logs b</p>
+<p>on a.usr_id = cast(b.user_id as string)</p>
+<p>bug记录：<a href="https://www.jianshu.com/p/2181e00d74dc"><strong>https://www.jianshu.com/p/2181e00d74dc</strong></a></p>
+<p><strong>  （2）控制空值分布</strong></p>
+<p>  在生产环境经常会用大量空值数据进入到一个reduce中去，导致数据倾斜。</p>
+<p>  解决办法：</p>
+<p>  自定义分区，将为空的key转变为字符串加随机数或纯随机数，将因空值而造成倾斜的数据分不到多个Reducer。</p>
+<p>  注意：对于异常值如果不需要的话，最好是提前在where条件里过滤掉，这样可以使计算量大大减少</p>
+<p><strong>2）单表</strong> <strong>--  group by id</strong></p>
+<p>  (1) 按照id分组计算count值</p>
+<p>     -&gt; 单个Key</p>
+<p>     -&gt; 多个Key</p>
+<p>   (2) 单个Key</p>
+<p>    加随机数，双重聚合</p>
+<p>    配置参数，双重聚合 set hive.groupby.skewindata = true;</p>
+<p>    过滤出这个Key单独处理</p>
+<p>    Map -side </p>
+<p>  (3) 多个Key</p>
+<p>    增加Reducer个数，一定程度上解决问题</p>
+<p>  自定义分区器</p>
+<p>  加随机数，双重聚合</p>
+<p>  配置参数，双重聚合 set hive.groupby.skewindata = true;</p>
+<p>  Map -side</p>
+<p><strong>3）JOIN ON关联字段</strong></p>
+<p>  (1) 大表JOIN小表   mapJoin     避免了Reducer</p>
+<p>  (2) 大表JOIN大表   A表加随机数  B表扩容  聚合</p>
+<p><center><strong>未经优化的大表与小表JOIN</strong></center></p>
+<p><a class="glightbox" data-desc-position="bottom" data-description="" data-height="auto" data-title="" data-width="100%" href="https://s2.loli.net/2022/10/13/BQO8uZN1idSMpXV.png"><img alt="trigger" src="https://s2.loli.net/2022/10/13/BQO8uZN1idSMpXV.png" width="width"/></a></p>
+<p><center><strong>优化后的大表与小表JOIN</strong></center></p>
+<p><a class="glightbox" data-desc-position="bottom" data-description="" data-height="auto" data-title="" data-width="100%" href="https://s2.loli.net/2022/10/13/aUHSNTCIDd65vAo.png"><img alt="trigger" src="https://s2.loli.net/2022/10/13/aUHSNTCIDd65vAo.png" width="width"/></a></p>
+<pre><code class="language-sql">--方式一：cast(floor(rand() * 2) as int)可以取随机数0或者1
+select
+    t1.id,
+    t1.name,
+    t2.id,
+    t2.name
+from
+    (select 
+        id,
+        concat(id,'_',cast(floor(rand() * 2) as int)) id_s,
+        name 
+    from a)t1
+join
+(select id,concat(id,'_','0') id_s,name from b
+union all
+select id,concat(id,'_','1') id_s,name from b)t2;
+
+
+--方式二：cast(ceiling(rand() * 2) as int)可以取随机数1或者1=2
+select
+    t1.id,
+    t1.name,
+    t2.id,
+    t2.name
+from 
+    (select 
+        id,
+        concat(id,'_',cast(ceiling(rand() * 2) as int)) id_s,
+        name 
+    from a)t1
+join
+(select id,concat(id,'_','1') id_s,name from b
+union all
+select id,concat(id,'_','2') id_s,name from b)t2
+on t1.id_s=t2.id_s;
+
+</code></pre>
+<h2 id="hivett">Hive里边字段的分隔符用的什么？为什么用\t？有遇到过字段里边有\t的情况吗，怎么处理的？</h2>
+<p>  hive 默认的字段分隔符为ascii码的控制符\001（^A）,建表的时候用fields terminated by
+'\001'。注意：如果采用\t或者\001等为分隔符，需要要求前端埋点和javaEE后台传递过来的数据必须不能出现该分隔符，通过<strong>代码规范约束</strong>。一旦传输过来的数据含有分隔符，需要在前一级数据中转义或者替换（ETL）。</p>
+<h2 id="tez">Tez引擎优点？</h2>
+<p>  Tez可以将多个有依赖的作业转换为一个作业，这样只需写一次HDFS，且中间节点较少，从而大大提升作业的计算性能。</p>
+<p>  Mr/tez/spark区别：</p>
+<p>  Mr引擎：多job串联，基于磁盘，落盘的地方比较多。虽然慢，但一定能跑出结果。<font color="red">一般处理，周、月、年指标。</font></p>
+<p>  Spark引擎：虽然在Shuffle过程中也落盘，但是并不是所有算子都需要Shuffle，尤其是多算子过程，中间过程不落盘  DAG有向无环图。 兼顾了可靠性和效率。<font color="red">一般处理天指标。</font></p>
+<p>  Tez引擎：完全基于内存。  注意：如果数据量特别大，慎重使用。容易OOM。<font color="red">一般用于快速出结果，数据量比较小的场景。</font></p>
+<h2 id="mysql">MySQL元数据备份</h2>
+<p>  元数据备份（重点，如数据损坏，可能整个集群无法运行，至少要保证每日零点之后备份到其它服务器两个复本）。</p>
+<p><strong>2）MySQL utf8超过字节数问题</strong></p>
+<p>  MySQL的utf8编码最多存储3个字节，当数据中存在表情号、特色符号时会占用超过3个字节数的字节，那么会出现错误 Incorrect string value: '\xF0\x9F\x91\x91\xE5\xB0...'</p>
+<p>  解决办法：将utf8修改为utf8mb4。</p>
+<p>  首先修改库的基字符集和数据库排序规则。</p>
+<p><center><strong>改变数据库排序规则</strong></center></p>
+<p><a class="glightbox" data-desc-position="bottom" data-description="" data-height="auto" data-title="" data-width="100%" href="https://s2.loli.net/2022/10/13/YIRe5ZPGyktMw4o.png"><img alt="trigger" src="https://s2.loli.net/2022/10/13/YIRe5ZPGyktMw4o.png" width="width"/></a></p>
+<p>  再使用 SHOW VARIABLES LIKE '%char%'; 命令查看参数</p>
+<p><center><strong>数据库查看命令SHOW_VARIABLSE</strong></center></p>
+<p><a class="glightbox" data-desc-position="bottom" data-description="" data-height="auto" data-title="" data-width="100%" href="https://s2.loli.net/2022/10/13/yRWPomfEnM1OcI6.png"><img alt="trigger" src="https://s2.loli.net/2022/10/13/yRWPomfEnM1OcI6.png" width="width"/></a></p>
+<p>  确保这几个参数的value值为utf8mb4 如果不是使用set命令修改</p>
+<p>  如：set character_set_server = utf8mb4;</p>
+<h2 id="unionunion-all">Union与Union all区别</h2>
+<p>  （1）union会将联合的结果集去重，效率较union all差</p>
+<p>  （2）union all不会对结果集去重，所以效率高</p>
+<script async="" crossorigin="anonymous" data-category="General" data-category-id="DIC_kwDOILD1rs4CR4oA" data-emit-metadata="0" data-input-position="bottom" data-lang="zh-CN" data-mapping="pathname" data-reactions-enabled="1" data-repo="maomao199691/discuss" data-repo-id="R_kgDOILD1rg" data-strict="0" data-theme="light" src="https://giscus.app/client.js">
+</script>
 </article>
 </div>
 </div>
@@ -382,5 +752,8 @@
 </div>
 <script id="__config" type="application/json">{"base": "../../..", "features": [], "search": "../../../assets/javascripts/workers/search.5bf1dace.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}}</script>
 <script src="../../../assets/javascripts/bundle.078830c0.min.js"></script>
+<script src="../../../javascripts/mathjax.js"></script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 <script>document$.subscribe(() => {const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom"});})</script></body>
 </html>

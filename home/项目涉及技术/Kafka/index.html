@@ -29,6 +29,9 @@
 <input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
 <label class="md-overlay" for="__drawer"></label>
 <div data-md-component="skip">
+<a class="md-skip" href="#kafka">
+          Skip to content
+        </a>
 </div>
 <div data-md-component="announce">
 </div>
@@ -119,14 +122,19 @@
         大数据技术之高频面试题
       </a>
 </li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../%E5%85%B6%E4%BB%96/%E5%AE%9E%E6%97%B6%E6%95%B0%E4%BB%93%E8%A7%84%E5%88%92/">
+        实时数仓规划
+      </a>
+</li>
 <li class="md-nav__item md-nav__item--active md-nav__item--nested">
-<input checked="" class="md-nav__toggle md-toggle" data-md-toggle="__nav_1_2" id="__nav_1_2" type="checkbox"/>
-<label class="md-nav__link" for="__nav_1_2">
+<input checked="" class="md-nav__toggle md-toggle" data-md-toggle="__nav_1_3" id="__nav_1_3" type="checkbox"/>
+<label class="md-nav__link" for="__nav_1_3">
           项目涉及技术
           <span class="md-nav__icon md-icon"></span>
 </label>
 <nav aria-label="项目涉及技术" class="md-nav" data-md-level="2">
-<label class="md-nav__title" for="__nav_1_2">
+<label class="md-nav__title" for="__nav_1_3">
 <span class="md-nav__icon md-icon"></span>
           项目涉及技术
         </label>
@@ -158,9 +166,201 @@
 </li>
 <li class="md-nav__item md-nav__item--active">
 <input class="md-nav__toggle md-toggle" data-md-toggle="toc" id="__toc" type="checkbox"/>
+<label class="md-nav__link md-nav__link--active" for="__toc">
+          Kafka
+          <span class="md-nav__icon md-icon"></span>
+</label>
 <a class="md-nav__link md-nav__link--active" href="./">
         Kafka
       </a>
+<nav aria-label="Table of contents" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#kafak">
+    Kafak架构
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#kafka_1">
+    Kafka的机器数量
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_1">
+    副本数设定
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#kafka_2">
+    Kafka日志保存时间
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#kafka_3">
+    Kafka中数据量计算
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_2">
+    磁盘选择
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_3">
+    内存选择
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#cpu">
+    CPU选择
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_4">
+    网络选择
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#kafka_4">
+    Kafka监控
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#kakfa">
+    Kakfa分区数
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#topic">
+    多少个Topic
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#kafkaisr">
+    Kafka的ISR副本同步队列
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#kafka_5">
+    Kafka分区分配策略
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#kafka_6">
+    Kafka挂掉
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#kafka_7">
+    Kafka丢不丢数据
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#kafka_8">
+    Kafka数据重复
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_5">
+    数据有序
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_6">
+    数据乱序
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_7">
+    服役新节点退役旧节点
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#leader-partition">
+    Leader Partition选举规则
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_8">
+    手动调整分区副本存储
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_9">
+    增加分区
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_10">
+    增加副本因子
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#kafka_9">
+    Kafka过期数据清理
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_11">
+    数据乱序
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#kafka_10">
+    Kafka高效读写数据
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_12">
+    自动创建主题
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_13">
+    消费者再平衡的条件
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#offset">
+    指定Offset消费
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_14">
+    指定时间消费
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#kafka_11">
+    Kafka数据积压
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_15">
+    如何提升吞吐量
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#kafka_12">
+    Kafka单条日志传输大小
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#kafka_13">
+    Kafka消费者角度考虑是拉取数据还是推送数据
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#kafka_14">
+    Kafka参数优化
+  </a>
+</li>
+</ul>
+</nav>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="../Hive/">
@@ -312,6 +512,192 @@
 <div class="md-sidebar__scrollwrap">
 <div class="md-sidebar__inner">
 <nav aria-label="Table of contents" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#kafak">
+    Kafak架构
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#kafka_1">
+    Kafka的机器数量
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_1">
+    副本数设定
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#kafka_2">
+    Kafka日志保存时间
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#kafka_3">
+    Kafka中数据量计算
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_2">
+    磁盘选择
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_3">
+    内存选择
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#cpu">
+    CPU选择
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_4">
+    网络选择
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#kafka_4">
+    Kafka监控
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#kakfa">
+    Kakfa分区数
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#topic">
+    多少个Topic
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#kafkaisr">
+    Kafka的ISR副本同步队列
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#kafka_5">
+    Kafka分区分配策略
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#kafka_6">
+    Kafka挂掉
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#kafka_7">
+    Kafka丢不丢数据
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#kafka_8">
+    Kafka数据重复
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_5">
+    数据有序
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_6">
+    数据乱序
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_7">
+    服役新节点退役旧节点
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#leader-partition">
+    Leader Partition选举规则
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_8">
+    手动调整分区副本存储
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_9">
+    增加分区
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_10">
+    增加副本因子
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#kafka_9">
+    Kafka过期数据清理
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_11">
+    数据乱序
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#kafka_10">
+    Kafka高效读写数据
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_12">
+    自动创建主题
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_13">
+    消费者再平衡的条件
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#offset">
+    指定Offset消费
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_14">
+    指定时间消费
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#kafka_11">
+    Kafka数据积压
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_15">
+    如何提升吞吐量
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#kafka_12">
+    Kafka单条日志传输大小
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#kafka_13">
+    Kafka消费者角度考虑是拉取数据还是推送数据
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#kafka_14">
+    Kafka参数优化
+  </a>
+</li>
+</ul>
 </nav>
 </div>
 </div>
@@ -321,7 +707,627 @@
 <a class="md-content__button md-icon" href="https://github.com/maomao199691/Python_Code.git/edit/master/docs/home/项目涉及技术/Kafka.md" title="Edit this page">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25Z"></path></svg>
 </a>
-<h1>Kafka</h1>
+<h1 id="kafka">Kafka</h1>
+<h2 id="kafak">Kafak架构</h2>
+<p>  生产者、Broker、消费者、Zookeeper；</p>
+<p>  注意：Zookeeper中保存Broker id和消费者offsets等信息，但是没有生产者信息。</p>
+<p><center><strong>kafka发送消息流程</strong></center></p>
+<p><a class="glightbox" data-desc-position="bottom" data-description="" data-height="auto" data-title="" data-width="100%" href="https://s2.loli.net/2022/08/25/Yvd8Pyn9LAwhzlC.png"><img alt="trigger" src="https://s2.loli.net/2022/08/25/Yvd8Pyn9LAwhzlC.png" width="width"/></a></p>
+<p><center><strong>KafkaBroker总体工作流程</strong></center></p>
+<p><a class="glightbox" data-desc-position="bottom" data-description="" data-height="auto" data-title="" data-width="100%" href="https://s2.loli.net/2022/08/25/Py354OAbJMViXao.png"><img alt="trigger" src="https://s2.loli.net/2022/08/25/Py354OAbJMViXao.png" width="width"/></a></p>
+<p><center><strong>消费者组初始化流程</strong></center></p>
+<p><a class="glightbox" data-desc-position="bottom" data-description="" data-height="auto" data-title="" data-width="100%" href="https://s2.loli.net/2022/08/25/XwG7oMDsiqlmFgO.png"><img alt="trigger" src="https://s2.loli.net/2022/08/25/XwG7oMDsiqlmFgO.png" width="width"/></a></p>
+<p><center><strong>消费者组详细消费流程</strong></center></p>
+<p><a class="glightbox" data-desc-position="bottom" data-description="" data-height="auto" data-title="" data-width="100%" href="https://s2.loli.net/2022/10/13/kDoMdKTHOJlCqtb.png"><img alt="trigger" src="https://s2.loli.net/2022/10/13/kDoMdKTHOJlCqtb.png" width="width"/></a></p>
+<h2 id="kafka_1">Kafka的机器数量</h2>
+<p>  Kafka机器数量 = 2 *（峰值生产速度 * 副本数 / 100）+ 1</p>
+<h2 id="_1">副本数设定</h2>
+<p>  一般我们设置成2个或3个，很多企业设置为2个。</p>
+<p>  副本的优势：提高可靠性；副本劣势：增加了网络IO传输</p>
+<h2 id="kafka_2">Kafka日志保存时间</h2>
+<p> 默认保存7天；生产环境建议3天</p>
+<h2 id="kafka_3">Kafka中数据量计算</h2>
+<p>  每天总数据量100g，每天产生1亿条日志，10000万/24/60/60=1150条/每秒钟</p>
+<p>  平均每秒钟：1150条</p>
+<p>  低谷每秒钟：50条</p>
+<p>  高峰每秒钟：1150条 *（2-20倍）= 2300条 - 23000条</p>
+<p>  每条日志大小：0.5k - 2k（取1k）</p>
+<p>  每秒多少数据量：2.0M - 20MB</p>
+<h2 id="_2">磁盘选择</h2>
+<p>  kafka底层主要是顺序写，固态硬盘和机械硬盘的顺序写速度差不多。</p>
+<p>  建议选择普通的机械硬盘。</p>
+<p>  每天总数据量：1亿条 * 1k ≈ 100g</p>
+<p>  100g * 副本2 * 保存时间3天 / 0.7 ≈ 1T</p>
+<p>  建议三台服务器硬盘总大小，大于等于1T。</p>
+<h2 id="_3">内存选择</h2>
+<p>  Kafka内存组成：堆内存 + 页缓存</p>
+<p><strong>1）Kafka堆内存建议每个节点：10g ~ 15g</strong> </p>
+<p> 在kafka-server-start.sh中修改</p>
+<pre><code class="language-shell">if [ "x$KAFKA_HEAP_OPTS" = "x" ]; then
+
+    export KAFKA_HEAP_OPTS="-Xmx10G -Xms10G"
+
+fi
+</code></pre>
+<p>  （1）查看Kafka进程号</p>
+<pre><code class="language-shell">[maomaolong@linux 001 kafka]$ jps
+
+2321 Kafka
+
+5255 Jps
+
+1931 QuorumPeerMain
+</code></pre>
+<p>  （2）根据Kafka进程号，查看Kafka的GC情况</p>
+<pre><code class="language-shell">[maomaolong@linux 001 kafka]$ jstat -gc **2321** 1s 10
+
+ S0C    S1C    S0U    S1U      EC       EU        OC         OU       MC     MU    CCSC   CCSU   YGC     YGCT    FGC    FGCT     GCT   
+
+ 0.0   7168.0  0.0   7168.0 103424.0 60416.0  1986560.0   148433.5  52092.0 46656.1 6780.0 6202.2     13    0.531   0      0.000    0.531
+
+ 0.0   7168.0  0.0   7168.0 103424.0 60416.0  1986560.0   148433.5  52092.0 46656.1 6780.0 6202.2     13    0.531   0      0.000    0.531
+
+ 0.0   7168.0  0.0   7168.0 103424.0 60416.0  1986560.0   148433.5  52092.0 46656.1 6780.0 6202.2     13    0.531   0      0.000    0.531
+
+ 0.0   7168.0  0.0   7168.0 103424.0 60416.0  1986560.0   148433.5  52092.0 46656.1 6780.0 6202.2     13    0.531   0      0.000    0.531
+
+ 0.0   7168.0  0.0   7168.0 103424.0 60416.0  1986560.0   148433.5  52092.0 46656.1 6780.0 6202.2     13    0.531   0      0.000    0.531
+
+ 0.0   7168.0  0.0   7168.0 103424.0 61440.0  1986560.0   148433.5  52092.0 46656.1 6780.0 6202.2     13    0.531   0      0.000    0.531
+
+ 0.0   7168.0  0.0   7168.0 103424.0 61440.0  1986560.0   148433.5  52092.0 46656.1 6780.0 6202.2     13    0.531   0      0.000    0.531
+
+ 0.0   7168.0  0.0   7168.0 103424.0 61440.0  1986560.0   148433.5  52092.0 46656.1 6780.0 6202.2     13    0.531   0      0.000    0.531
+
+ 0.0   7168.0  0.0   7168.0 103424.0 61440.0  1986560.0   148433.5  52092.0 46656.1 6780.0 6202.2     13    0.531   0      0.000    0.531
+
+ 0.0   7168.0  0.0   7168.0 103424.0 61440.0  1986560.0   148433.5  52092.0 46656.1 6780.0 6202.2     13    0.531   0      0.000    0.531
+</code></pre>
+<p>  参数说明：</p>
+<p>    YGC：年轻代垃圾回收次数；</p>
+<p>  （3）根据Kafka进程号，查看Kafka的堆内存</p>
+<pre><code class="language-shell">[maomaolong@linux 001 kafka]$ jmap -heap 2321
+
+… …
+
+Heap Usage:
+
+G1 Heap:
+
+   regions  = 2048
+
+   capacity = 2147483648 (2048.0MB)
+
+   used     = 246367744 (234.95458984375MB)
+
+   free     = 1901115904 (1813.04541015625MB)
+
+   11.472392082214355% used
+</code></pre>
+<p><strong>2）页缓存：</strong></p>
+<p>  页缓存是Linux系统服务器的内存。我们只需要保证1个segment（1g）中25%的数据在内存中就好。</p>
+<p>  每个节点页缓存大小 =（分区数 * 1g * 25%）/ 节点数。例如10个分区，页缓存大小=（10 * 1g * 25%）/ 3 ≈ 1g</p>
+<p>  建议服务器内存大于等于11G。</p>
+<h2 id="cpu">CPU选择</h2>
+<p>  num.io.threads = 8  负责写磁盘的线程数，整个参数值要占总核数的50%。</p>
+<p>  num.replica.fetchers = 1 副本拉取线程数，这个参数占总核数的50%的1/3。</p>
+<p>  num.network.threads = 3  数据传输线程数，这个参数占总核数的50%的2/3。</p>
+<p>  24CPU        建议32个cpu core。</p>
+<h2 id="_4">网络选择</h2>
+<p>  网络带宽 = 峰值吞吐量 ≈ 20MB/s   选择千兆网卡即可。</p>
+<p>  100Mbps单位是bit；10M/s单位是byte ; 1byte = 8bit，100Mbps/8 = 12.5M/s。</p>
+<p>  一般百兆的网卡（100Mbps）、千兆的网卡（1000Mbps）、万兆的网卡（10000Mbps）。</p>
+<h2 id="kafka_4">Kafka监控</h2>
+<p>  公司自己开发的监控器；</p>
+<p>  开源的监控器：KafkaManager、KafkaMonitor、KafkaEagle</p>
+<h2 id="kakfa">Kakfa分区数</h2>
+<p>  （1）创建一个只有1个分区的topic。</p>
+<p>  （2）测试这个topic的producer吞吐量和consumer吞吐量。</p>
+<p>  （3）假设他们的值分别是Tp和Tc，单位可以是MB/s。</p>
+<p>  （4）然后假设总的目标吞吐量是Tt，那么分区数 = Tt / min（Tp，Tc）。</p>
+<p>   例如：producer吞吐量 = 20m/s；consumer吞吐量 = 50m/s，期望吞吐量100m/s；</p>
+<p>   分区数 = 100 / 20 = 5分区</p>
+<p>   分区数一般设置为：3-10个</p>
+<p>   分区数不是越多越好，也不是越少越好，需要搭建完集群，进行压测，再灵活调整分区个数。</p>
+<h2 id="topic">多少个Topic</h2>
+<p>  通常情况：多少个日志类型就多少个Topic。也有对日志类型进行合并的。</p>
+<h2 id="kafkaisr">Kafka的ISR副本同步队列</h2>
+<p> ISR（In-Sync Replicas），副本同步队列。如果Follower长时间未向Leader发送通信请求或同步数据，则该Follower将被踢出ISR。该时间阈值由<strong>replica.lag.time.max.ms</strong>参数设定，默认30s。</p>
+<p>  任意一个维度超过阈值都会把Follower剔除出ISR，存入OSR（Outof-Sync Replicas）列表，新加入的Follower也会先存放在OSR中。</p>
+<p>  Kafka分区中的所有副本统称为AR = ISR + OSR</p>
+<h2 id="kafka_5">Kafka分区分配策略</h2>
+<p><strong>1）生产端分区分配</strong></p>
+<p><center><strong>生产端分区分配</strong></center></p>
+<p><a class="glightbox" data-desc-position="bottom" data-description="" data-height="auto" data-title="" data-width="100%" href="https://s2.loli.net/2022/10/13/WOL4fCBQeljkuIm.png"><img alt="trigger" src="https://s2.loli.net/2022/10/13/WOL4fCBQeljkuIm.png" width="width"/></a></p>
+<p>  希望把mysql中某张表的数据发送到一个分区。可以以表名为key进行发送。</p>
+<p><strong>2）消费端分区分配</strong></p>
+<p><center><strong>分区分配策略之Range</strong></center></p>
+<p><a class="glightbox" data-desc-position="bottom" data-description="" data-height="auto" data-title="" data-width="100%" href="https://s2.loli.net/2022/10/13/2MvCIDs6eapSAPj.png"><img alt="trigger" src="https://s2.loli.net/2022/10/13/2MvCIDs6eapSAPj.png" width="width"/></a></p>
+<p><center><strong>分区分配策略之RoundRobin</strong></center></p>
+<p><a class="glightbox" data-desc-position="bottom" data-description="" data-height="auto" data-title="" data-width="100%" href="https://s2.loli.net/2022/10/13/8cQ3VLOgqjouyzF.png"><img alt="trigger" src="https://s2.loli.net/2022/10/13/8cQ3VLOgqjouyzF.png" width="width"/></a></p>
+<p>  粘性分区规则：尽可能均衡的随机分配</p>
+<h2 id="kafka_6">Kafka挂掉</h2>
+<p>在生产环境中，如果某个Kafka节点挂掉。</p>
+<p>正常处理办法：</p>
+<p>  （1）先尝试重新启动一下，如果能启动正常，那直接解决。</p>
+<p>  （2）如果重启不行，考虑增加内存、增加CPU、网络带宽。</p>
+<p>  （3）如果将kafka整个节点误删除，如果副本数大于等于2，可以按照服役新节点的方式重新服役一个新节点，并执行负载均衡。</p>
+<p>  （4）Flume缓存 + 日志服务器有备份</p>
+<h2 id="kafka_7">Kafka丢不丢数据</h2>
+<p><strong>1）producer角度</strong></p>
+<p>  acks=0，生产者发送过来数据就不管了，可靠性差，效率高；</p>
+<p>  acks=1，生产者发送过来数据Leader应答，可靠性中等，效率中等；</p>
+<p>  acks=-1，生产者发送过来数据Leader和ISR队列里面所有Follwer应答，可靠性高，效率低；</p>
+<p>  在生产环境中，acks=0很少使用；acks=1，一般用于传输普通日志，允许丢个别数据；acks=-1，一般用于传输和钱相关的数据，对可靠性要求比较高的场景。</p>
+<p><strong>2）broker角度</strong></p>
+<p>  副本数大于等于2</p>
+<p>  min.insync.replicas大于等于2</p>
+<h2 id="kafka_8">Kafka数据重复</h2>
+<p>  精确一次 = 幂等性 + 事务 + 至少一次（ ack = -1 +  分区副本数 &gt;= 2  +  ISR最小副本数量 &gt;= 2）。</p>
+<p><strong>1）幂等性原理</strong></p>
+<p><center><strong>幂等性原理</strong></center></p>
+<p><a class="glightbox" data-desc-position="bottom" data-description="" data-height="auto" data-title="" data-width="100%" href="https://s2.loli.net/2022/10/13/2YoWjQ8wLR3Sitq.png"><img alt="trigger" src="https://s2.loli.net/2022/10/13/2YoWjQ8wLR3Sitq.png" width="width"/></a></p>
+<p><strong>2）幂等性配置参数</strong></p>
+<table>
+<thead>
+<tr>
+<th>参数名称</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>enable.idempotence</td>
+<td>是否开启幂等性，默认true，表示开启幂等性。</td>
+</tr>
+</tbody>
+</table>
+<p><strong>3）Kafka的事务一共有如下5个API</strong></p>
+<pre><code class="language-java">// 1初始化事务
+
+void initTransactions();
+
+// 2开启事务
+void beginTransaction() throws ProducerFencedException;
+
+// 3在事务内提交已经消费的偏移量（主要用于消费者）
+void sendOffsetsToTransaction(Map&lt;TopicPartition, OffsetAndMetadata&gt; offsets,
+
+        String consumerGroupId) throws ProducerFencedException;
+
+
+// 4提交事务
+void commitTransaction() throws ProducerFencedException;
+
+// 5放弃事务（类似于回滚事务的操作）
+void abortTransaction() throws ProducerFencedException;
+</code></pre>
+<p><strong>4）总结</strong></p>
+<p>  <strong>（1）生产者角度</strong></p>
+<ul>
+<li>
+<p>acks设置为-1 （acks=-1）。</p>
+</li>
+<li>
+<p>幂等性（enable.idempotence = true） + 事务 。</p>
+</li>
+</ul>
+<p>  <strong>（2）broker服务端角度</strong></p>
+<ul>
+<li>
+<p>分区副本大于等于2 （--replication-factor 2）。</p>
+</li>
+<li>
+<p>ISR里应答的最小副本数量大于等于2 （min.insync.replicas = 2）。</p>
+</li>
+</ul>
+<p>  <strong>（3）消费者</strong></p>
+<ul>
+<li>
+<p>事务 + 手动提交offset （enable.auto.commit = false）。</p>
+</li>
+<li>
+<p>消费者输出的目的地必须支持事务（MySQL、Kafka）。</p>
+</li>
+</ul>
+<h2 id="_5">数据有序</h2>
+<p><center><strong>数据有序</strong></center></p>
+<p><a class="glightbox" data-desc-position="bottom" data-description="" data-height="auto" data-title="" data-width="100%" href="https://s2.loli.net/2022/10/13/FpudLB6RQ5t3ng8.png"><img alt="trigger" src="https://s2.loli.net/2022/10/13/FpudLB6RQ5t3ng8.png" width="width"/></a></p>
+<h2 id="_6">数据乱序</h2>
+<p><center><strong>数据乱序</strong></center></p>
+<p><a class="glightbox" data-desc-position="bottom" data-description="" data-height="auto" data-title="" data-width="100%" href="https://s2.loli.net/2022/10/13/LOp7KR2DotWMgGx.png"><img alt="trigger" src="https://s2.loli.net/2022/10/13/LOp7KR2DotWMgGx.png" width="width"/></a></p>
+<h2 id="_7">服役新节点退役旧节点</h2>
+<p>  以通过bin/kafka-reassign-partitions.sh脚本服役和退役节点。</p>
+<h2 id="leader-partition">Leader Partition选举规则</h2>
+<p>  在isr中存活为前提，按照AR中排在前面的优先。例如ar[1,0,2], isr [1，0，2]，那么leader就会按照1，0，2的顺序轮询</p>
+<h2 id="_8">手动调整分区副本存储</h2>
+<p> 如果发生负载不均匀情况，可以手动调整分区副本存储</p>
+<h2 id="_9">增加分区</h2>
+<p>  可以通过命令行的方式增加分区，但是分区数只能增加，不能减少。</p>
+<h2 id="_10">增加副本因子</h2>
+<p>  只能手动增加副本因子，不能通过命令行调整。</p>
+<h2 id="kafka_9">Kafka过期数据清理</h2>
+<p>  日志清理的策略只有delete和compact两种</p>
+<p><strong>1）delete日志删除：将过期数据删除</strong></p>
+<ul>
+<li>log.cleanup.policy = delete    所有数据启用删除策略</li>
+</ul>
+<p>  （1）基于时间：默认打开。以segment中所有记录中的最大时间戳作为该文件时间戳。</p>
+<p>  （2）基于大小：默认关闭。超过设置的所有日志总大小，删除最早的segment。</p>
+<p>   log.retention.bytes，默认等于-1，表示无穷大。</p>
+<p>  <strong>思考：</strong>如果一个segment中有一部分数据过期，一部分没有过期，怎么处理？</p>
+<h2 id="_11">数据乱序</h2>
+<p><center><strong>segment数据过期处理</strong></center></p>
+<p><a class="glightbox" data-desc-position="bottom" data-description="" data-height="auto" data-title="" data-width="100%" href="https://s2.loli.net/2022/10/13/Aim4GnpV8LoWx9U.png"><img alt="trigger" src="https://s2.loli.net/2022/10/13/Aim4GnpV8LoWx9U.png" width="width"/></a></p>
+<p><strong>2）compact日志压缩</strong></p>
+<p><center><strong>compact日志压缩</strong></center></p>
+<p><a class="glightbox" data-desc-position="bottom" data-description="" data-height="auto" data-title="" data-width="100%" href="https://s2.loli.net/2022/10/13/7IElPQzvtFGskiL.png"><img alt="trigger" src="https://s2.loli.net/2022/10/13/7IElPQzvtFGskiL.png" width="width"/></a></p>
+<h2 id="kafka_10">Kafka高效读写数据</h2>
+<p><strong>1）Kafka本身是分布式集群，可以采用分区技术，并行度高</strong></p>
+<p><strong>2）读数据采用稀疏索引，可以快速定位要消费的数据</strong></p>
+<p><strong>3）顺序写磁盘</strong></p>
+<p>  Kafka的producer生产数据，要写入到log文件中，写的过程是一直追加到文件末端，为顺序写。<strong>官网有数据表明</strong>，同样的磁盘，顺序写能到600M/s，而随机写只有100K/s。这与磁盘的机械机构有关，顺序写之所以快，是因为其省去了大量磁头寻址的时间。</p>
+<p><center><strong>顺序写磁盘</strong></center></p>
+<p><a class="glightbox" data-desc-position="bottom" data-description="" data-height="auto" data-title="" data-width="100%" href="https://s2.loli.net/2022/10/13/7IPlqrduf68B9Rs.png"><img alt="trigger" src="https://s2.loli.net/2022/10/13/7IPlqrduf68B9Rs.png" width="width"/></a></p>
+<p><strong>4）页缓存 +零拷贝技术</strong></p>
+<p><center><strong>页缓存 +零拷贝技术</strong></center></p>
+<p><a class="glightbox" data-desc-position="bottom" data-description="" data-height="auto" data-title="" data-width="100%" href="https://s2.loli.net/2022/10/13/7iq5eD6pMNzXL1B.png"><img alt="trigger" src="https://s2.loli.net/2022/10/13/7iq5eD6pMNzXL1B.png" width="width"/></a></p>
+<h2 id="_12">自动创建主题</h2>
+<p>  如果broker端配置参数 <font color="red">auto.create.topics.enable</font> 设置为true（默认值是true），那么当生产者向一个未创建的主题发送消息时，会自动创建一个分区数为num.partitions（默认值为1）、副本因子为default.replication.factor（默认值为1）的主题。除此之外，当一个消费者开始从未知主题中读取消息时，或者当任意一个客户端向未知主题发送元数据请求时，都会自动创建一个相应主题。这种创建主题的方式是非预期的，增加了主题管理和维护的难度。<font color="red">生产环境建议将该参数设置为false</font>。</p>
+<p>  （1）向一个没有提前创建five主题发送数据</p>
+<pre><code class="language-shell">[maomaolong@linux001 kafka]$ bin/kafka-console-producer.sh --bootstrap-server hadoop102:9092 --topic five
+
+\&gt;hello world
+</code></pre>
+<p>  （2）查看five主题的详情</p>
+<pre><code class="language-shell">[maomaolong@linux001 kafka]$ bin/kafka-topics.sh --bootstrap-server hadoop102:9092 --describe --topic five
+</code></pre>
+<h2 id="_13">消费者再平衡的条件</h2>
+<p><center><strong>消费者组初始化流程</strong></center></p>
+<p><a class="glightbox" data-desc-position="bottom" data-description="" data-height="auto" data-title="" data-width="100%" href="https://s2.loli.net/2022/10/13/BLhY9um3d8aiUJW.png"><img alt="trigger" src="https://s2.loli.net/2022/10/13/BLhY9um3d8aiUJW.png" width="width"/></a></p>
+<table>
+<thead>
+<tr>
+<th>参数名称</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>session.timeout.ms</td>
+<td>Kafka消费者和coordinator之间连接超时时间，默认45s。超过该值，该消费者被移除，消费者组执行再平衡。</td>
+</tr>
+<tr>
+<td>max.poll.interval.ms</td>
+<td>消费者处理消息的最大时长，默认是5分钟。超过该值，该消费者被移除，消费者组执行再平衡。</td>
+</tr>
+</tbody>
+</table>
+<h2 id="offset">指定Offset消费</h2>
+<p>可以在任意offset处消费数据。</p>
+<pre><code class="language-shell">kafkaConsumer.seek(topic, 1000);
+</code></pre>
+<h2 id="_14">指定时间消费</h2>
+<p>可以通过时间来消费数据。</p>
+<pre><code class="language-java">HashMap&lt;TopicPartition, Long&gt; timestampToSearch = new HashMap&lt;&gt;();
+
+timestampToSearch.put(topicPartition, System.currentTimeMillis() - 1 * 24 * 3600 * 1000);
+
+kafkaConsumer.offsetsForTimes(timestampToSearch);
+</code></pre>
+<h2 id="kafka_11">Kafka数据积压</h2>
+<p>  （1）如果是Kafka消费能力不足，则可以考虑增加Topic的分区数，并且同时提升消费组的消费者数量，消费者数 = 分区数。（两者缺一不可）</p>
+<p>  增加分区数；</p>
+<pre><code>[maomaolong@linux001 kafka]$ bin/kafka-topics.sh --bootstrap-server hadoop102:9092 --alter --topic first --partitions 3
+</code></pre>
+<p>  （2）如果是下游的数据处理不及时：提高每批次拉取的数量。批次拉取数据过少（拉取数据/处理时间 &lt; 生产速度），使处理的数据小于生产的数据，也会造成数据积压。</p>
+<table>
+<thead>
+<tr>
+<th>参数名称</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>fetch.max.bytes</td>
+<td>默认Default:  52428800（50 m）。消费者获取服务器端一批消息最大的字节数。如果服务器端一批次的数据大于该值（50m）仍然可以拉取回来这批数据，因此，这不是一个绝对最大值。一批次的大小受message.max.bytes （broker config）or max.message.bytes （topic config）影响。</td>
+</tr>
+<tr>
+<td>max.poll.records</td>
+<td>一次poll拉取数据返回消息的最大条数，默认是500条</td>
+</tr>
+</tbody>
+</table>
+<h2 id="_15">如何提升吞吐量</h2>
+<p>  如何提升吞吐量？</p>
+<p><strong>1）提升生产吞吐量</strong></p>
+<p>  （1）buffer.memory：发送消息的缓冲区大小，默认值是32m，可以增加到64m。</p>
+<p>  （2）batch.size：默认是16k。如果batch设置太小，会导致频繁网络请求，吞吐量下降；如果batch太大，会导致一条消息需要等待很久才能被发送出去，增加网络延时。</p>
+<p>  （3）linger.ms，这个值默认是0，意思就是消息必须立即被发送。一般设置一个5-100毫秒。如果linger.ms设置的太小，会导致频繁网络请求，吞吐量下降；如果linger.ms太长，会导致一条消息需要等待很久才能被发送出去，增加网络延时。</p>
+<p>  （4）compression.type：默认是none，不压缩，但是也可以使用lz4压缩，效率还是不错的，压缩之后可以减小数据量，提升吞吐量，但是会加大producer端的CPU开销。</p>
+<p><strong>2）增加分区</strong></p>
+<p><strong>3）消费者提高吞吐量</strong></p>
+<p>  （1）调整fetch.max.bytes大小，默认是50m。</p>
+<p>  （2）调整max.poll.records大小，默认是500条。</p>
+<h2 id="kafka_12">Kafka单条日志传输大小</h2>
+<p>  Kafka对于消息体的大小默认为单条最大值是1M但是在我们应用场景中，常常会出现一条消息大于1M，如果不对Kafka进行配置。则会出现生产者无法将消息推送到Kafka或消费者无法去消费Kafka里面的数据，这时我们就要对Kafka进行以下配置：server.properties</p>
+<table>
+<thead>
+<tr>
+<th>参数名称</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>message.max.bytes</td>
+<td>默认1m，broker端接收每个批次消息最大值。</td>
+</tr>
+<tr>
+<td>max.request.size</td>
+<td>默认1m，生产者发往broker每个请求消息最大值。针对topic级别设置消息体的大小。</td>
+</tr>
+<tr>
+<td>replica.fetch.max.bytes</td>
+<td>默认1m，副本同步数据，每个批次消息最大值。</td>
+</tr>
+<tr>
+<td>fetch.max.bytes</td>
+<td>默认Default:  52428800（50 m）。消费者获取服务器端一批消息最大的字节数。如果服务器端一批次的数据大于该值（50m）仍然可以拉取回来这批数据，因此，这不是一个绝对最大值。一批次的大小受message.max.bytes （broker config）or max.message.bytes （topic config）影响。</td>
+</tr>
+</tbody>
+</table>
+<h2 id="kafka_13">Kafka消费者角度考虑是拉取数据还是推送数据</h2>
+<p>  拉取数据</p>
+<h2 id="kafka_14">Kafka参数优化</h2>
+<p>重点调优参数：</p>
+<p>  （1）buffer.memory 32m</p>
+<p>  （2）batch.size：16k</p>
+<p>  （3）linger.ms默认0  调整 5-100ms</p>
+<p>  （4）compression.type采用压缩 snappy</p>
+<p>  （5）消费者端调整fetch.max.bytes大小，默认是50m。</p>
+<p>  （6）消费者端调整max.poll.records大小，默认是500条。</p>
+<p>  （7）单条日志大小：<strong>message.max.bytes、max.request.size、replica.fetch.max.bytes</strong>适当调整2-10m</p>
+<p>  （8）Kafka堆内存建议每个节点：10g ~ 15g </p>
+<p>  在kafka-server-start.sh中修改</p>
+<pre><code class="language-xml">if [ "x$KAFKA_HEAP_OPTS" = "x" ]; then
+   export KAFKA_HEAP_OPTS="-Xmx10G -Xms10G"
+fi
+</code></pre>
+<p>  （9）增加CPU核数</p>
+<p>  num.io.threads = 8  负责写磁盘的线程数，整个参数值要占总核数的50%。  12</p>
+<p>  num.replica.fetchers = 1 副本拉取线程数，这个参数占总核数的50%的1/3。  4 </p>
+<p>  num.network.threads = 3  数据传输线程数，这个参数占总核数的50%的2/3。 8</p>
+<p>  （10）日志保存时间log.retention.hours 3天</p>
+<p>  （11）副本数  调整为2</p>
+<p><strong>1）生产者</strong></p>
+<table>
+<thead>
+<tr>
+<th>参数名称</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>replica.lag.time.max.ms</td>
+<td>ISR中，如果Follower长时间未向Leader发送通信请求或同步数据，则该Follower将被踢出ISR。该时间阈值，默认30s。</td>
+</tr>
+<tr>
+<td>auto.leader.rebalance.enable</td>
+<td>默认是true。 自动Leader Partition 平衡。建议关闭。</td>
+</tr>
+<tr>
+<td>leader.imbalance.per.broker.percentage</td>
+<td>默认是10%。每个broker允许的不平衡的leader的比率。如果每个broker超过了这个值，控制器会触发leader的平衡。</td>
+</tr>
+<tr>
+<td>leader.imbalance.check.interval.seconds</td>
+<td>默认值300秒。检查leader负载是否平衡的间隔时间。</td>
+</tr>
+<tr>
+<td>log.segment.bytes</td>
+<td>Kafka中log日志是分成一块块存储的，此配置是指log日志划分 成块的大小，默认值1G。</td>
+</tr>
+<tr>
+<td>log.index.interval.bytes</td>
+<td>默认4kb，kafka里面每当写入了4kb大小的日志（.log），然后就往index文件里面记录一个索引。</td>
+</tr>
+<tr>
+<td>log.retention.hours</td>
+<td>Kafka中数据保存的时间，默认7天。</td>
+</tr>
+<tr>
+<td>log.retention.minutes</td>
+<td>Kafka中数据保存的时间，分钟级别，默认关闭。</td>
+</tr>
+<tr>
+<td>log.retention.ms</td>
+<td>Kafka中数据保存的时间，毫秒级别，默认关闭。</td>
+</tr>
+<tr>
+<td>log.retention.check.interval.ms</td>
+<td>检查数据是否保存超时的间隔，默认是5分钟。</td>
+</tr>
+<tr>
+<td>log.retention.bytes</td>
+<td>默认等于-1，表示无穷大。超过设置的所有日志总大小，删除最早的segment。</td>
+</tr>
+<tr>
+<td>log.cleanup.policy</td>
+<td>默认是delete，表示所有数据启用删除策略；   如果设置值为compact，表示所有数据启用压缩策略。</td>
+</tr>
+<tr>
+<td>num.io.threads</td>
+<td>默认是8。负责写磁盘的线程数。整个参数值要占总核数的50%。</td>
+</tr>
+<tr>
+<td>num.replica.fetchers</td>
+<td>默认是1。副本拉取线程数，这个参数占总核数的50%的1/3</td>
+</tr>
+<tr>
+<td>num.network.threads</td>
+<td>默认是3。数据传输线程数，这个参数占总核数的50%的2/3 。</td>
+</tr>
+<tr>
+<td>log.flush.interval.messages</td>
+<td>强制页缓存刷写到磁盘的条数，默认是long的最大值，9223372036854775807。一般不建议修改，交给系统自己管理。</td>
+</tr>
+<tr>
+<td>log.flush.interval.ms</td>
+<td>每隔多久，刷数据到磁盘，默认是null。一般不建议修改，交给系统自己管理。</td>
+</tr>
+</tbody>
+</table>
+<p><strong>2）broker</strong></p>
+<table>
+<thead>
+<tr>
+<th>参数名称</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>replica.lag.time.max.ms</td>
+<td>ISR中，如果Follower长时间未向Leader发送通信请求或同步数据，则该Follower将被踢出ISR。该时间阈值，默认30s。</td>
+</tr>
+<tr>
+<td>auto.leader.rebalance.enable</td>
+<td>默认是true。   自动Leader   Partition 平衡。</td>
+</tr>
+<tr>
+<td>leader.imbalance.per.broker.percentage</td>
+<td>默认是10%。每个broker允许的不平衡的leader的比率。如果每个broker超过了这个值，控制器会触发leader的平衡。</td>
+</tr>
+<tr>
+<td>leader.imbalance.check.interval.seconds</td>
+<td>默认值300秒。检查leader负载是否平衡的间隔时间。</td>
+</tr>
+<tr>
+<td>log.segment.bytes</td>
+<td>Kafka中log日志是分成一块块存储的，此配置是指log日志划分 成块的大小，默认值1G。</td>
+</tr>
+<tr>
+<td>log.index.interval.bytes</td>
+<td>默认4kb，kafka里面每当写入了4kb大小的日志（.log），然后就往index文件里面记录一个索引。</td>
+</tr>
+<tr>
+<td>log.retention.hours</td>
+<td>Kafka中数据保存的时间，默认7天。</td>
+</tr>
+<tr>
+<td>log.retention.minutes</td>
+<td>Kafka中数据保存的时间，分钟级别，默认关闭。</td>
+</tr>
+<tr>
+<td>log.retention.ms</td>
+<td>Kafka中数据保存的时间，毫秒级别，默认关闭。</td>
+</tr>
+<tr>
+<td>log.retention.check.interval.ms</td>
+<td>检查数据是否保存超时的间隔，默认是5分钟。</td>
+</tr>
+<tr>
+<td>log.retention.bytes</td>
+<td>默认等于-1，表示无穷大。超过设置的所有日志总大小，删除最早的segment。</td>
+</tr>
+<tr>
+<td>log.cleanup.policy</td>
+<td>默认是delete，表示所有数据启用删除策略；   如果设置值为compact，表示所有数据启用压缩策略。</td>
+</tr>
+<tr>
+<td>num.io.threads</td>
+<td>默认是8。负责写磁盘的线程数。整个参数值要占总核数的50%。</td>
+</tr>
+<tr>
+<td>num.replica.fetchers</td>
+<td>副本拉取线程数，这个参数占总核数的50%的1/3</td>
+</tr>
+<tr>
+<td>num.network.threads</td>
+<td>默认是3。数据传输线程数，这个参数占总核数的50%的2/3 。</td>
+</tr>
+<tr>
+<td>log.flush.interval.messages</td>
+<td>强制页缓存刷写到磁盘的条数，默认是long的最大值，9223372036854775807。一般不建议修改，交给系统自己管理。</td>
+</tr>
+<tr>
+<td>log.flush.interval.ms</td>
+<td>每隔多久，刷数据到磁盘，默认是null。一般不建议修改，交给系统自己管理。</td>
+</tr>
+</tbody>
+</table>
+<p><strong>3）消费者</strong></p>
+<table>
+<thead>
+<tr>
+<th>参数名称</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>bootstrap.servers</td>
+<td>向Kafka集群建立初始连接用到的host/port列表。</td>
+</tr>
+<tr>
+<td>key.deserializer和value.deserializer</td>
+<td>指定接收消息的key和value的反序列化类型。一定要写全类名。</td>
+</tr>
+<tr>
+<td>group.id</td>
+<td>标记消费者所属的消费者组。</td>
+</tr>
+<tr>
+<td>enable.auto.commit</td>
+<td>默认值为true，消费者会自动周期性地向服务器提交偏移量。</td>
+</tr>
+<tr>
+<td>auto.commit.interval.ms</td>
+<td>如果设置了   enable.auto.commit 的值为true， 则该值定义了消费者偏移量向Kafka提交的频率，默认5s。</td>
+</tr>
+<tr>
+<td>auto.offset.reset</td>
+<td>当Kafka中没有初始偏移量或当前偏移量在服务器中不存在（如，数据被删除了），该如何处理？ earliest：自动重置偏移量到最早的偏移量。   latest：默认，自动重置偏移量为最新的偏移量。 none：如果消费组原来的（previous）偏移量不存在，则向消费者抛异常。 anything：向消费者抛异常。</td>
+</tr>
+<tr>
+<td>offsets.topic.num.partitions</td>
+<td>__consumer_offsets的分区数，默认是50个分区。</td>
+</tr>
+<tr>
+<td>heartbeat.interval.ms</td>
+<td>Kafka消费者和coordinator之间的心跳时间，默认3s。   该条目的值必须小于   session.timeout.ms ，也不应该高于 session.timeout.ms 的1/3。</td>
+</tr>
+<tr>
+<td>session.timeout.ms</td>
+<td>Kafka消费者和coordinator之间连接超时时间，默认45s。超过该值，该消费者被移除，消费者组执行再平衡。</td>
+</tr>
+<tr>
+<td>max.poll.interval.ms</td>
+<td>消费者处理消息的最大时长，默认是5分钟。超过该值，该消费者被移除，消费者组执行再平衡。</td>
+</tr>
+<tr>
+<td>fetch.min.bytes</td>
+<td>默认1个字节。消费者获取服务器端一批消息最小的字节数。</td>
+</tr>
+<tr>
+<td>fetch.max.wait.ms</td>
+<td>默认500ms。如果没有从服务器端获取到一批数据的最小字节数。该时间到，仍然会返回数据。</td>
+</tr>
+<tr>
+<td>fetch.max.bytes</td>
+<td>默认Default:  52428800（50 m）。消费者获取服务器端一批消息最大的字节数。如果服务器端一批次的数据大于该值（50m）仍然可以拉取回来这批数据，因此，这不是一个绝对最大值。一批次的大小受message.max.bytes （broker config）or max.message.bytes （topic config）影响。</td>
+</tr>
+<tr>
+<td>max.poll.records</td>
+<td>一次poll拉取数据返回消息的最大条数，默认是500条。</td>
+</tr>
+</tbody>
+</table>
+<script async="" crossorigin="anonymous" data-category="General" data-category-id="DIC_kwDOILD1rs4CR4oA" data-emit-metadata="0" data-input-position="bottom" data-lang="zh-CN" data-mapping="pathname" data-reactions-enabled="1" data-repo="maomao199691/discuss" data-repo-id="R_kgDOILD1rg" data-strict="0" data-theme="light" src="https://giscus.app/client.js">
+</script>
 </article>
 </div>
 </div>
@@ -382,5 +1388,8 @@
 </div>
 <script id="__config" type="application/json">{"base": "../../..", "features": [], "search": "../../../assets/javascripts/workers/search.5bf1dace.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}}</script>
 <script src="../../../assets/javascripts/bundle.078830c0.min.js"></script>
+<script src="../../../javascripts/mathjax.js"></script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 <script>document$.subscribe(() => {const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom"});})</script></body>
 </html>
