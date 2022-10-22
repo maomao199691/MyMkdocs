@@ -836,8 +836,8 @@
 <p><a class="glightbox" data-desc-position="bottom" data-description="" data-height="auto" data-title="" data-width="100%" href="https://s2.loli.net/2022/10/13/yDzKYgiOxsPfNS8.png"><img alt="trigger" src="https://s2.loli.net/2022/10/13/yDzKYgiOxsPfNS8.png" width="width"/></a></p>
 <p><center><strong>HashShuffle流程</strong></center></p>
 <p><a class="glightbox" data-desc-position="bottom" data-description="" data-height="auto" data-title="" data-width="100%" href="https://s2.loli.net/2022/10/13/1ElmfWPxjFVzyqe.png"><img alt="trigger" src="https://s2.loli.net/2022/10/13/1ElmfWPxjFVzyqe.png" width="width"/></a></p>
-<p>未经过优化的shuffle，每一个shuffleMap Task生成一个磁盘blockFile文件。所以，如果上游有</p>
-<p>1000个shuffleMapTask ，下游有100个ReduceTask，会生成1000 * 100=10w个磁盘文件，所以这种shuffle操作,会生成大量的磁盘文件，性能很差，所以spark在0.8的时候做了性能优——ShuffleGroup。
+<p>未经过优化的shuffle，每一个shuffleMap Task生成一个磁盘blockFile文件。所以，如果上游有
+1000个shuffleMapTask ，下游有100个ReduceTask，会生成1000 * 100=10w个磁盘文件，所以这种shuffle操作,会生成大量的磁盘文件，性能很差，所以spark在0.8的时候做了性能优——ShuffleGroup。
 <center><strong>优化后的HashShuffle流程</strong></center></p>
 <p><a class="glightbox" data-desc-position="bottom" data-description="" data-height="auto" data-title="" data-width="100%" href="https://s2.loli.net/2022/10/13/Y1EP9VkxOiXAJUD.png"><img alt="trigger" src="https://s2.loli.net/2022/10/13/Y1EP9VkxOiXAJUD.png" width="width"/></a></p>
 <p>经过优化之后的hashshuffle处理过程，是有每一个cpu core上面运行的多个shufflemaptask，为下游的一个reduce task创建一个buffer缓冲区 ，一个磁盘文件，多次写入的多被合并，所以，此时如果上游有1000个shufflemaptask，cpucore 50个，reducetask是100个，生成的磁盘问价50 * 100 = 5k ，生成的磁盘文件数量要比第一种少很多。同时把在一个cpu core处理的过程，我们称之为一个shuffle-group。</p>
