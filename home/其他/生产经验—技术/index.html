@@ -29,6 +29,9 @@
 <input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
 <label class="md-overlay" for="__drawer"></label>
 <div data-md-component="skip">
+<a class="md-skip" href="#_1">
+          Skip to content
+        </a>
 </div>
 <div data-md-component="announce">
 </div>
@@ -202,8 +205,18 @@
       </a>
 </li>
 <li class="md-nav__item">
+<a class="md-nav__link" href="../../%E9%A1%B9%E7%9B%AE%E6%B6%89%E5%8F%8A%E6%8A%80%E6%9C%AF/%E6%95%B0%E6%8D%AE%E5%80%BE%E6%96%9C/">
+        数据倾斜
+      </a>
+</li>
+<li class="md-nav__item">
 <a class="md-nav__link" href="../../%E9%A1%B9%E7%9B%AE%E6%B6%89%E5%8F%8A%E6%8A%80%E6%9C%AF/Flink/">
         Flink
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../%E9%A1%B9%E7%9B%AE%E6%B6%89%E5%8F%8A%E6%8A%80%E6%9C%AF/Flink%E5%AE%9E%E6%97%B6%E9%A1%B9%E7%9B%AE%E4%BC%98%E5%8C%96/">
+        Flink实时项目优化
       </a>
 </li>
 <li class="md-nav__item">
@@ -246,18 +259,50 @@
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="../%E7%94%9F%E4%BA%A7%E7%BB%8F%E9%AA%8C%E2%80%94%E6%B5%8B%E8%AF%95%E4%B8%8A%E7%BA%BF%E7%9B%B8%E5%85%B3/">
-        生产经验—测试上线相关
+        生产经验--测试上线相关
       </a>
 </li>
 <li class="md-nav__item md-nav__item--active">
 <input class="md-nav__toggle md-toggle" data-md-toggle="toc" id="__toc" type="checkbox"/>
+<label class="md-nav__link md-nav__link--active" for="__toc">
+          生产经验—技术
+          <span class="md-nav__icon md-icon"></span>
+</label>
 <a class="md-nav__link md-nav__link--active" href="./">
         生产经验—技术
       </a>
+<nav aria-label="Table of contents" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#61">
+    6.1 可视化报表工具
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#62">
+    6.2 集群监控工具
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#63">
+    6.3 项目中遇到的问题怎么解决的（重点*）
+  </a>
+</li>
+</ul>
+</nav>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="../%E7%94%9F%E4%BA%A7%E7%BB%8F%E9%AA%8C%E2%80%94%E7%83%AD%E7%82%B9%E9%97%AE%E9%A2%98/">
         生产经验—热点问题
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../%E6%95%B0%E6%8D%AE%E8%B4%A8%E9%87%8F%E7%AE%A1%E7%90%86/">
+        数据质量
       </a>
 </li>
 <li class="md-nav__item">
@@ -317,6 +362,27 @@
 <div class="md-sidebar__scrollwrap">
 <div class="md-sidebar__inner">
 <nav aria-label="Table of contents" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#61">
+    6.1 可视化报表工具
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#62">
+    6.2 集群监控工具
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#63">
+    6.3 项目中遇到的问题怎么解决的（重点*）
+  </a>
+</li>
+</ul>
 </nav>
 </div>
 </div>
@@ -326,14 +392,59 @@
 <a class="md-content__button md-icon" href="https://github.com/maomao199691/Python_Code.git/edit/master/docs/home/其他/生产经验—技术.md" title="Edit this page">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25Z"></path></svg>
 </a>
-<h1>生产经验—技术</h1>
+<h1 id="_1">生产经验—技术</h1>
+<h2 id="61">6.1 可视化报表工具</h2>
+<p>Echarts（百度开源）、Kibana（开源）、Tableau（功能强大的收费软件）、Superset（功能一般免费）、QuickBI（阿里云收费的离线）、DataV（阿里云收费的实时）suga（百度，收费）
+<center><strong>可视化报表工具</strong></center></p>
+<p><a class="glightbox" data-desc-position="bottom" data-description="" data-height="auto" data-title="" data-width="100%" href="https://i.postimg.cc/VktHmnyf/image.jpg"><img alt="trigger" src="https://i.postimg.cc/VktHmnyf/image.jpg" width="width"/></a>
+​                                                  </p>
+<h2 id="62">6.2 集群监控工具</h2>
+<p>Zabbix+ Grafana   Prometheus&amp;Grafana监控  睿象云</p>
+<h2 id="63">6.3 项目中遇到的问题怎么解决的（重点<strong>*</strong>）</h2>
+<p>Shell 中Flume停止脚本</p>
+<p>Hadoop宕机</p>
+<p>Hadoop解决数据倾斜方法</p>
+<p>集群资源分配参数（项目中遇到的问题）</p>
+<p>HDFS小文件处理</p>
+<p>Hadoop优化</p>
+<p>Flume挂掉</p>
+<p>Flume优化</p>
+<p>Kafka挂掉</p>
+<p>Kafka丢失</p>
+<p>Kafka数据重复</p>
+<p>Kafka消息数据积压</p>
+<p>Kafk乱序</p>
+<p>Kafka顺序</p>
+<p>Kafka优化（提高吞吐量）</p>
+<p>Kafka底层怎么保证高效读写</p>
+<p>Kafka单条日志传输大小</p>
+<p>自定义UDF、UDTF函数</p>
+<p>Hive优化</p>
+<p>Hive解决数据倾斜方法</p>
+<p>Hive on Spark优化</p>
+<p>疑难指标编写（7天内连续3次活跃、1 7 30指标、路径分析、用户留存率、最近7/30日各品牌复购率、最近30天发布的优惠券的补贴率、 同时在线人数）</p>
+<p>Datax空值、调优</p>
+<p>DS任务挂了怎么办？</p>
+<p>DS故障报警</p>
+<p>Spark数据倾斜</p>
+<p>Spark优化</p>
+<p>Spark任务怎么切分的</p>
+<p>SparkStreaming精确一次性消费</p>
+<p>Flink 数据倾斜</p>
+<p>Flink水位线</p>
+<p>Flink反压</p>
+<p>Flink处理函数</p>
+<p>Flink  SQL </p>
+<p>Flink多流join</p>
+<script async="" crossorigin="anonymous" data-category="General" data-category-id="DIC_kwDOILD1rs4CR4oA" data-emit-metadata="0" data-input-position="bottom" data-lang="zh-CN" data-mapping="pathname" data-reactions-enabled="1" data-repo="maomao199691/discuss" data-repo-id="R_kgDOILD1rg" data-strict="0" data-theme="light" src="https://giscus.app/client.js">
+</script>
 </article>
 </div>
 </div>
 </main>
 <footer class="md-footer">
 <nav aria-label="Footer" class="md-footer__inner md-grid">
-<a aria-label="Previous: 生产经验—测试上线相关" class="md-footer__link md-footer__link--prev" href="../%E7%94%9F%E4%BA%A7%E7%BB%8F%E9%AA%8C%E2%80%94%E6%B5%8B%E8%AF%95%E4%B8%8A%E7%BA%BF%E7%9B%B8%E5%85%B3/" rel="prev">
+<a aria-label="Previous: 生产经验--测试上线相关" class="md-footer__link md-footer__link--prev" href="../%E7%94%9F%E4%BA%A7%E7%BB%8F%E9%AA%8C%E2%80%94%E6%B5%8B%E8%AF%95%E4%B8%8A%E7%BA%BF%E7%9B%B8%E5%85%B3/" rel="prev">
 <div class="md-footer__button md-icon">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"></path></svg>
 </div>
@@ -342,7 +453,7 @@
 <span class="md-footer__direction">
                 Previous
               </span>
-              生产经验—测试上线相关
+              生产经验--测试上线相关
             </div>
 </div>
 </a>

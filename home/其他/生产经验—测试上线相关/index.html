@@ -7,7 +7,7 @@
 <meta content="width=device-width,initial-scale=1" name="viewport"/>
 <link href="../../../assets/images/favicon.png" rel="icon"/>
 <meta content="mkdocs-1.4.0, mkdocs-material-8.5.6" name="generator"/>
-<title>生产经验—测试上线相关 - 大数据成神之路</title>
+<title>生产经验--测试上线相关 - 大数据成神之路</title>
 <link href="../../../assets/stylesheets/main.20d9efc8.min.css" rel="stylesheet"/>
 <link href="../../../assets/stylesheets/palette.cbb835fc.min.css" rel="stylesheet"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
@@ -29,6 +29,9 @@
 <input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
 <label class="md-overlay" for="__drawer"></label>
 <div data-md-component="skip">
+<a class="md-skip" href="#-">
+          Skip to content
+        </a>
 </div>
 <div data-md-component="announce">
 </div>
@@ -50,7 +53,7 @@
 <div class="md-header__topic" data-md-component="header-topic">
 <span class="md-ellipsis">
             
-              生产经验—测试上线相关
+              生产经验--测试上线相关
             
           </span>
 </div>
@@ -202,8 +205,18 @@
       </a>
 </li>
 <li class="md-nav__item">
+<a class="md-nav__link" href="../../%E9%A1%B9%E7%9B%AE%E6%B6%89%E5%8F%8A%E6%8A%80%E6%9C%AF/%E6%95%B0%E6%8D%AE%E5%80%BE%E6%96%9C/">
+        数据倾斜
+      </a>
+</li>
+<li class="md-nav__item">
 <a class="md-nav__link" href="../../%E9%A1%B9%E7%9B%AE%E6%B6%89%E5%8F%8A%E6%8A%80%E6%9C%AF/Flink/">
         Flink
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../%E9%A1%B9%E7%9B%AE%E6%B6%89%E5%8F%8A%E6%8A%80%E6%9C%AF/Flink%E5%AE%9E%E6%97%B6%E9%A1%B9%E7%9B%AE%E4%BC%98%E5%8C%96/">
+        Flink实时项目优化
       </a>
 </li>
 <li class="md-nav__item">
@@ -246,9 +259,94 @@
 </li>
 <li class="md-nav__item md-nav__item--active">
 <input class="md-nav__toggle md-toggle" data-md-toggle="toc" id="__toc" type="checkbox"/>
+<label class="md-nav__link md-nav__link--active" for="__toc">
+          生产经验--测试上线相关
+          <span class="md-nav__icon md-icon"></span>
+</label>
 <a class="md-nav__link md-nav__link--active" href="./">
-        生产经验—测试上线相关
+        生产经验--测试上线相关
       </a>
+<nav aria-label="Table of contents" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_1">
+    测试相关
+  </a>
+<nav aria-label="测试相关" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_2">
+    公司有多少台测试服务器？
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_3">
+    测试环境什么样？
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_4">
+    测试数据哪来的？
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#sql">
+    如何保证写的sql正确性（重点）
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_5">
+    测试之后如何上线？
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_6">
+    项目实际工作流程
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_7">
+    项目中实现一个需求大概多长时间
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#3">
+    项目在3年内迭代次数，每一个项目具体是如何迭代的。公司版本迭代多久一次，迭代到哪个版本
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#55">
+    5.5 项目开发中每天做什么事
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#56">
+    5.6 实时项目数据计算
+  </a>
+<nav aria-label="5.6 实时项目数据计算" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#561-cpu">
+    5.6.1 跑实时任务，怎么分配内存和CPU资源
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#562">
+    5.6.2 跑实时任务，每天数据量多少？
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="../%E7%94%9F%E4%BA%A7%E7%BB%8F%E9%AA%8C%E2%80%94%E6%8A%80%E6%9C%AF/">
@@ -258,6 +356,11 @@
 <li class="md-nav__item">
 <a class="md-nav__link" href="../%E7%94%9F%E4%BA%A7%E7%BB%8F%E9%AA%8C%E2%80%94%E7%83%AD%E7%82%B9%E9%97%AE%E9%A2%98/">
         生产经验—热点问题
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../%E6%95%B0%E6%8D%AE%E8%B4%A8%E9%87%8F%E7%AE%A1%E7%90%86/">
+        数据质量
       </a>
 </li>
 <li class="md-nav__item">
@@ -317,6 +420,85 @@
 <div class="md-sidebar__scrollwrap">
 <div class="md-sidebar__inner">
 <nav aria-label="Table of contents" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_1">
+    测试相关
+  </a>
+<nav aria-label="测试相关" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_2">
+    公司有多少台测试服务器？
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_3">
+    测试环境什么样？
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_4">
+    测试数据哪来的？
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#sql">
+    如何保证写的sql正确性（重点）
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_5">
+    测试之后如何上线？
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_6">
+    项目实际工作流程
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_7">
+    项目中实现一个需求大概多长时间
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#3">
+    项目在3年内迭代次数，每一个项目具体是如何迭代的。公司版本迭代多久一次，迭代到哪个版本
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#55">
+    5.5 项目开发中每天做什么事
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#56">
+    5.6 实时项目数据计算
+  </a>
+<nav aria-label="5.6 实时项目数据计算" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#561-cpu">
+    5.6.1 跑实时任务，怎么分配内存和CPU资源
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#562">
+    5.6.2 跑实时任务，每天数据量多少？
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
 </nav>
 </div>
 </div>
@@ -326,7 +508,82 @@
 <a class="md-content__button md-icon" href="https://github.com/maomao199691/Python_Code.git/edit/master/docs/home/其他/生产经验—测试上线相关.md" title="Edit this page">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25Z"></path></svg>
 </a>
-<h1>生产经验—测试上线相关</h1>
+<h1 id="-">生产经验--测试上线相关</h1>
+<h2 id="_1">测试相关</h2>
+<h3 id="_2">公司有多少台测试服务器？</h3>
+<p>测试服务器一般三台</p>
+<h3 id="_3">测试环境什么样？</h3>
+<p>有钱的公司和生产环境电脑配置一样。</p>
+<p>一般公司测试环境的配置是生产的一半。</p>
+<h3 id="_4">测试数据哪来的？</h3>
+<p>一部分自己写Java程序自己造（更灵活），一部分从生产环境上取一部分（更真实）。</p>
+<h3 id="sql">如何保证写的sql正确性（重点）</h3>
+<p>先在MySQL的业务库里面把结果计算出来；在给你在ads层计算的结果进行比较；</p>
+<p>  需要造一些特定的测试数据，测试。</p>
+<p>  从生产环境抓取一部分数据，数据有多少你是知道的，运算完毕应该符合你的预期。</p>
+<p>  离线数据和实时数据分析的结果比较。（日活1万  实时10100），倾向取离线。        </p>
+<p>算法异构</p>
+<h3 id="_5">测试之后如何上线？</h3>
+<p>大公司：上线的时候，将脚本打包，提交git。先发邮件抄送经理和总监，运维。运维负责上线。</p>
+<p>小公司：跟项目经理说一下，项目经理技术把关，项目经理通过了就可以上线了。风险意识。</p>
+<p>所谓的上线就是编写脚本，并在DolphinScheduler中进行作业调度。</p>
+<h2 id="_6">项目实际工作流程</h2>
+<p>以下是<strong>活跃用户</strong>需求的整体开发流程。</p>
+<p>产品经理负责收集需求：需求来源与客户反馈、老板的意见</p>
+<p><strong>第1步：确定指标的业务口径</strong></p>
+<p>由产品经理主导，找到提出该指标的运营负责人沟通。首先要问清楚<strong>指标是怎么定义的</strong>，比如活跃用户是指启动过APP的用户。设备id 还是用户id。</p>
+<p>原型图</p>
+<p>邮件/需求文档-》不要口头</p>
+<p><strong>第2步：需求评审</strong></p>
+<p>由产品经理主导设计原型，对于活跃主题，我们最终要展示的是<strong>最近</strong><strong>n</strong><strong>天的活跃用户数变化趋势</strong> ，效果如下图所示。此处<strong>大数据开发工程师、后端开发工程师、前端开发工程师一同参与</strong>，一起说明整个功能的价值和详细的操作流程，确保大家理解的一致。                                                  </p>
+<p>工期：</p>
+<p>接口：</p>
+<p>   数据格式、发送时间频率、字段类型、数据量、责任人。</p>
+<p><strong>第3步：大数据开发</strong></p>
+<p>大数据开发工程师，通过数据同步的工具如Flume、Datax、Maxwell等将数据同步到ODS层，然后就是一层一层的通过SQL计算到DWD、DWS层，最后形成可为应用直接服务的数据填充到ADS层。</p>
+<p><strong>第4步：后端开发</strong></p>
+<p>后端工程师负责，为大数据工程师提供业务数据接口；</p>
+<p>同时还负责读取ADS层分析后，写入MySQL中的数据。</p>
+<p><strong>第5步：前端开发</strong></p>
+<p>前端工程师负责，前端埋点。</p>
+<p>对分析后的结果数据进行可视化展示。</p>
+<p><strong>第6步：联调</strong></p>
+<p>此时大<strong>数据开发工程师、前端开发工程师、后端开发工程师</strong>都要参与进来。此时会要求大数据开发工程师基于历史的数据执行计算任务，大数据开发工程师承担数据准确性的校验。前后端解决用户操作的相关BUG保证不出现低级的问题完成自测。</p>
+<p><strong>第7步：测试</strong></p>
+<p>测试工程师对整个大数据系统进行测试。测试的手段包括，边界值、等价类等。</p>
+<p>提交测试异常的软件有：<strong>禅道、</strong><strong>bugzila</strong>（测试人员记录测试问题1.0，输入是什么，结果是什么，跟预期不一样-&gt;需要开发人员解释，是一个bug，下一个版本解决1.1-&gt;测试人员再测试。测试1.1ok-&gt;测试经理关闭bug）</p>
+<p>1周开发写代码 =》2周测试时间</p>
+<p><strong>第8步：上线</strong></p>
+<p>运维工程师会配合我们的前后端开发工程师更新最新的版本到服务器。此时产品经理要找到该指标的负责人长期跟进指标的准确性。重要的指标还要每过一个周期内部再次验证，从而保证数据的准确性。</p>
+<h2 id="_7">项目中实现一个需求大概多长时间</h2>
+<p>刚入职第一个需求大概需要7天左右。</p>
+<p>对业务熟悉后，平均一天一个需求。</p>
+<p>影响时间的因素：测试服务器购买获取环境准备、对业务熟悉、开会讨论需求、表的权限申请、测试等。新员工培训（公司规章制度、代码规范）</p>
+<h2 id="3">项目在3年内迭代次数，每一个项目具体是如何迭代的。公司版本迭代多久一次，迭代到哪个版本</h2>
+<p>瀑布式开发、敏捷开发。</p>
+<p>差不多一个月会迭代一次。每月都有节日（元旦、春节、情人节、3.8妇女节、端午节、618、国庆、中秋、1111/6.1/5.1、生日、周末）新产品、新区域。</p>
+<p>就产品或我们提出优化需求，然后评估时间。每周我们都会开会做下周计划和本周总结。（日报、周报、月报、季度报、年报）需求1周的时间，周三一定完成。周四周五（帮同事写代码、自己学习工作额外的技术）。</p>
+<p>5.1.2</p>
+<p>5是大版本号：必须是重大升级    </p>
+<p>1：一般是核心模块变动</p>
+<p>2：一般版本变化</p>
+<h2 id="55">5.5 项目开发中每天做什么事</h2>
+<p>（1）新需求（活动、优化、新产品、新市场）。  60%</p>
+<p>（2）故障分析：数仓的任何步骤出现问题，需要查看问题，比如日活，月活下降或快速上升等。20%</p>
+<p>（3）新技术的预言（比如湖仓一体   数据湖   doris  实时数据质量监控）10%</p>
+<p>（4）其临时任务  10%</p>
+<p>（5）晨会-》10做操-》讨论中午吃什么-》12点出去吃1点-》睡到2点-》3点茶歇水果-》晚上吃啥-》吃加班餐-》开会-》晚上6点吃饭-》7点开始干活-10点-》11点</p>
+<h2 id="56">5.6 实时项目数据计算</h2>
+<h3 id="561-cpu">5.6.1 跑实时任务，怎么分配内存和CPU资源</h3>
+<p>128m数据对应1g内存。</p>
+<p>1个Kafka分区对应1个CPU。</p>
+<p>1CU   1CPU   4g内存</p>
+<h3 id="562">5.6.2 跑实时任务，每天数据量多少？</h3>
+<p>用户行为：实时任务用到了用户行为多少张表（20g） 100g/5张表 </p>
+<p>业务数据：实时任务用到了业务数据多少张表（34m）  1g/30张表</p>
+<p>活动、风控、销售、流量</p>
+<script async="" crossorigin="anonymous" data-category="General" data-category-id="DIC_kwDOILD1rs4CR4oA" data-emit-metadata="0" data-input-position="bottom" data-lang="zh-CN" data-mapping="pathname" data-reactions-enabled="1" data-repo="maomao199691/discuss" data-repo-id="R_kgDOILD1rg" data-strict="0" data-theme="light" src="https://giscus.app/client.js">
+</script>
 </article>
 </div>
 </div>

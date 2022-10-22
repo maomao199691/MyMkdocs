@@ -29,6 +29,9 @@
 <input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
 <label class="md-overlay" for="__drawer"></label>
 <div data-md-component="skip">
+<a class="md-skip" href="#_1">
+          Skip to content
+        </a>
 </div>
 <div data-md-component="announce">
 </div>
@@ -202,8 +205,18 @@
       </a>
 </li>
 <li class="md-nav__item">
+<a class="md-nav__link" href="../../%E9%A1%B9%E7%9B%AE%E6%B6%89%E5%8F%8A%E6%8A%80%E6%9C%AF/%E6%95%B0%E6%8D%AE%E5%80%BE%E6%96%9C/">
+        数据倾斜
+      </a>
+</li>
+<li class="md-nav__item">
 <a class="md-nav__link" href="../../%E9%A1%B9%E7%9B%AE%E6%B6%89%E5%8F%8A%E6%8A%80%E6%9C%AF/Flink/">
         Flink
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../%E9%A1%B9%E7%9B%AE%E6%B6%89%E5%8F%8A%E6%8A%80%E6%9C%AF/Flink%E5%AE%9E%E6%97%B6%E9%A1%B9%E7%9B%AE%E4%BC%98%E5%8C%96/">
+        Flink实时项目优化
       </a>
 </li>
 <li class="md-nav__item">
@@ -246,7 +259,7 @@
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="../%E7%94%9F%E4%BA%A7%E7%BB%8F%E9%AA%8C%E2%80%94%E6%B5%8B%E8%AF%95%E4%B8%8A%E7%BA%BF%E7%9B%B8%E5%85%B3/">
-        生产经验—测试上线相关
+        生产经验--测试上线相关
       </a>
 </li>
 <li class="md-nav__item">
@@ -256,8 +269,44 @@
 </li>
 <li class="md-nav__item md-nav__item--active">
 <input class="md-nav__toggle md-toggle" data-md-toggle="toc" id="__toc" type="checkbox"/>
+<label class="md-nav__link md-nav__link--active" for="__toc">
+          生产经验—热点问题
+          <span class="md-nav__icon md-icon"></span>
+</label>
 <a class="md-nav__link md-nav__link--active" href="./">
         生产经验—热点问题
+      </a>
+<nav aria-label="Table of contents" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#atlas">
+    元数据管理（Atlas血缘系统）
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#griffin">
+    数据质量监控（Griffin）
+  </a>
+<nav aria-label="数据质量监控（Griffin）" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_2">
+    监控原则
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../%E6%95%B0%E6%8D%AE%E8%B4%A8%E9%87%8F%E7%AE%A1%E7%90%86/">
+        数据质量
       </a>
 </li>
 <li class="md-nav__item">
@@ -317,6 +366,31 @@
 <div class="md-sidebar__scrollwrap">
 <div class="md-sidebar__inner">
 <nav aria-label="Table of contents" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#atlas">
+    元数据管理（Atlas血缘系统）
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#griffin">
+    数据质量监控（Griffin）
+  </a>
+<nav aria-label="数据质量监控（Griffin）" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_2">
+    监控原则
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
 </nav>
 </div>
 </div>
@@ -326,7 +400,51 @@
 <a class="md-content__button md-icon" href="https://github.com/maomao199691/Python_Code.git/edit/master/docs/home/其他/生产经验—热点问题.md" title="Edit this page">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25Z"></path></svg>
 </a>
-<h1>生产经验—热点问题</h1>
+<h1 id="_1">生产经验—热点问题</h1>
+<h2 id="atlas">元数据管理（Atlas血缘系统）</h2>
+<p>insert into table ads_user</p>
+<p>select id, name from dws_user</p>
+<p>依赖关系能够做到：表级别和字段级别</p>
+<p>用处：作业执行失败，评估他的影响范围。 主要用于表比较多的公司。</p>
+<p>版本问题：</p>
+<p>0.84版本：2019-06-21</p>
+<p>2.0版本：2019-05-13</p>
+<p>框架版本：</p>
+<p>​        Apache   0.84    2.0  2.1 </p>
+<p>​        CDH  2.0
+<center><strong>元数据管理</strong></center></p>
+<p><a class="glightbox" data-desc-position="bottom" data-description="" data-height="auto" data-title="" data-width="100%" href="https://i.postimg.cc/P5BbfRW9/image.jpg"><img alt="trigger" src="https://i.postimg.cc/P5BbfRW9/image.jpg" width="width"/></a> </p>
+<h2 id="griffin">数据质量监控（Griffin）</h2>
+<h3 id="_2">监控原则</h3>
+<p><strong>1）单表数据量监控</strong></p>
+<p>一张表的记录数在一个已知的范围内，或者上下浮动不会超过某个阈值</p>
+<p>n  SQL结果：var 数据量 = select count（*）from 表 where 时间等过滤条件</p>
+<p>n  报警触发条件设置：如果数据量不在[数值下限, 数值上限]， 则触发报警</p>
+<p>n  同比增加：如果((本周的数据量 - 上周的数据量)/上周的数据量*100)不在 [比例下线，比例上限]，则触发报警</p>
+<p>n  环比增加：如果((今天的数据量 - 昨天的数据量)/昨天的数据量*100)不在 [比例下线，比例上限]，则触发报警</p>
+<p>n  报警触发条件设置一定要有。如果没有配置的阈值，不能做监控</p>
+<p>日活、周活、月活、留存（日周月）、转化率（日、周、月）GMV（日、周、月）</p>
+<p>复购率（日周月）  30%</p>
+<p><strong>2）单表空值检测</strong></p>
+<p>某个字段为空的记录数在一个范围内，或者占总量的百分比在某个阈值范围内</p>
+<p>n  目标字段：选择要监控的字段，不能选“无”</p>
+<p>n  SQL结果：var 异常数据量 = select count(*) from 表 where 目标字段 is null</p>
+<p>n  单次检测：如果（异常数据量）不在[数值下限, 数值上限]，则触发报警</p>
+<p><strong>3）单表重复值检测</strong></p>
+<p>一个或多个字段是否满足某些规则</p>
+<p>n  目标字段：第一步先正常统计条数；select count(*) form 表；</p>
+<p>n  第二步，去重统计；select count(*) from 表 group by 某个字段</p>
+<p>n  第一步的值和第二步不的值做减法，看是否在上下线阀值之内</p>
+<p>n  单次检测：如果（异常数据量）不在[数值下限, 数值上限]， 则触发报警</p>
+<p><strong>4）单表值域检测</strong></p>
+<p>一个或多个字段没有重复记录</p>
+<p>n  目标字段：选择要监控的字段，支持多选</p>
+<p>n  检测规则：填写“目标字段”要满足的条件。其中<span class="arithmatex">\(1表示第一个目标字段，\)</span>2表示第二个目标字段，以此类推。上图中的“检测规则”经过渲染后变为“delivery_fee = delivery_fee_base+delivery_fee_extra”</p>
+<p>n  阈值配置与“空值检测”相同</p>
+<p><strong>5）跨表数据量对比</strong></p>
+<p>主要针对同步流程，监控两张表的数据量是否一致</p>
+<p>n  SQL结果：count（本表） - count（关联表）</p>
+<p>n  阈值配置与“空值检测”相同</p>
 </article>
 </div>
 </div>
@@ -346,13 +464,13 @@
             </div>
 </div>
 </a>
-<a aria-label="Next: 实时数仓项目" class="md-footer__link md-footer__link--next" href="../%E5%AE%9E%E6%97%B6%E6%95%B0%E4%BB%93%E9%A1%B9%E7%9B%AE/" rel="next">
+<a aria-label="Next: 数据质量" class="md-footer__link md-footer__link--next" href="../%E6%95%B0%E6%8D%AE%E8%B4%A8%E9%87%8F%E7%AE%A1%E7%90%86/" rel="next">
 <div class="md-footer__title">
 <div class="md-ellipsis">
 <span class="md-footer__direction">
                 Next
               </span>
-              实时数仓项目
+              数据质量
             </div>
 </div>
 <div class="md-footer__button md-icon">
