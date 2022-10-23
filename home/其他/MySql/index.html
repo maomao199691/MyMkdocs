@@ -29,6 +29,9 @@
 <input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
 <label class="md-overlay" for="__drawer"></label>
 <div data-md-component="skip">
+<a class="md-skip" href="#mysql">
+          Skip to content
+        </a>
 </div>
 <div data-md-component="announce">
 </div>
@@ -119,19 +122,14 @@
         大数据技术之高频面试题
       </a>
 </li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../%E5%AE%9E%E6%97%B6%E6%95%B0%E4%BB%93%E8%A7%84%E5%88%92/">
-        实时数仓规划
-      </a>
-</li>
 <li class="md-nav__item md-nav__item--nested">
-<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_1_3" id="__nav_1_3" type="checkbox"/>
-<label class="md-nav__link" for="__nav_1_3">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_1_2" id="__nav_1_2" type="checkbox"/>
+<label class="md-nav__link" for="__nav_1_2">
           项目涉及技术
           <span class="md-nav__icon md-icon"></span>
 </label>
 <nav aria-label="项目涉及技术" class="md-nav" data-md-level="2">
-<label class="md-nav__title" for="__nav_1_3">
+<label class="md-nav__title" for="__nav_1_2">
 <span class="md-nav__icon md-icon"></span>
           项目涉及技术
         </label>
@@ -291,9 +289,46 @@
 </li>
 <li class="md-nav__item md-nav__item--active">
 <input class="md-nav__toggle md-toggle" data-md-toggle="toc" id="__toc" type="checkbox"/>
+<label class="md-nav__link md-nav__link--active" for="__toc">
+          MySql
+          <span class="md-nav__icon md-icon"></span>
+</label>
 <a class="md-nav__link md-nav__link--active" href="./">
         MySql
       </a>
+<nav aria-label="Table of contents" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#myisaminnodb">
+    MyISAM与InnoDB的区别
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_1">
+    索引优化
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#b-treebtree">
+    b-tree和b+tree的区别
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#redis">
+    redis是单线程的，为什么那么快
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#mysql_1">
+    MySQL的事务
+  </a>
+</li>
+</ul>
+</nav>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="../JVM/">
@@ -332,6 +367,37 @@
 <div class="md-sidebar__scrollwrap">
 <div class="md-sidebar__inner">
 <nav aria-label="Table of contents" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#myisaminnodb">
+    MyISAM与InnoDB的区别
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_1">
+    索引优化
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#b-treebtree">
+    b-tree和b+tree的区别
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#redis">
+    redis是单线程的，为什么那么快
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#mysql_1">
+    MySQL的事务
+  </a>
+</li>
+</ul>
 </nav>
 </div>
 </div>
@@ -341,7 +407,108 @@
 <a class="md-content__button md-icon" href="https://github.com/maomao199691/Python_Code.git/edit/master/docs/home/其他/MySql.md" title="Edit this page">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25Z"></path></svg>
 </a>
-<h1>MySql</h1>
+<h1 id="mysql">MySql</h1>
+<h2 id="myisaminnodb">MyISAM与InnoDB的区别</h2>
+<table>
+<thead>
+<tr>
+<th><strong>对比项</strong></th>
+<th><strong>MyISAM</strong></th>
+<th><strong>InnoDB</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>外键</strong></td>
+<td><strong>不支持</strong></td>
+<td><strong>支持</strong></td>
+</tr>
+<tr>
+<td><strong>事务</strong></td>
+<td><strong>不支持</strong></td>
+<td><strong>支持</strong></td>
+</tr>
+<tr>
+<td><strong>行表锁</strong></td>
+<td><strong>表锁，即使操作一条记录也会锁住整个表，不适合高并发的操作</strong></td>
+<td><strong>行锁,操作时只锁某一行，不对其它行有影响，适合高并发的操作</strong></td>
+</tr>
+<tr>
+<td><strong>缓存</strong></td>
+<td><strong>只缓存索引，不缓存真实数据</strong></td>
+<td><strong>不仅缓存索引还要缓存真实数据，对内存要求较高，而且内存大小对性能有决定性的影响</strong></td>
+</tr>
+</tbody>
+</table>
+<h2 id="_1">索引优化</h2>
+<p><strong>数据结构：B+Tree</strong></p>
+<p>  一般来说能够达到range就可以算是优化了 idx name_deptId</p>
+<p><strong>口诀（两个法则加6种索引失效的情况）</strong></p>
+<p>  全值匹配我最爱，最左前缀要遵守；</p>
+<p>  带头大哥不能死，中间兄弟不能断；</p>
+<p>  索引列上少计算，范围之后全失效；</p>
+<p>  LIKE百分写最右，覆盖索引不写*；</p>
+<p>  不等空值还有OR，索引影响要注意；</p>
+<p>  VAR引号不可丢，SQL优化有诀窍。</p>
+<h2 id="b-treebtree">b-tree和b+tree的区别</h2>
+<p>  （1）B-树的关键字、索引和记录是放在一起的， B+树的非叶子节点中只有关键字和指向下一个节点的索引，记录只放在叶子节点中。</p>
+<p>  （2）在B-树中，越靠近根节点的记录查找时间越快，只要找到关键字即可确定记录的存在；而B+树中每个记录的查找时间基本是一样的，都需要从根节点走到叶子节点，而且在叶子节点中还要再比较关键字。</p>
+<h2 id="redis">redis是单线程的，为什么那么快</h2>
+<p>  （1）完全基于内存，绝大部分请求是纯粹的内存操作，非常快速。</p>
+<p>  （2）数据结构简单，对数据操作也简单，Redis中的数据结构是专门进行设计的</p>
+<p>  （3）采用单线程，避免了不必要的上下文切换和竞争条件，也不存在多进程或者多线程导致的切换而消耗 CPU，不用去考虑各种锁的问题，不存在加锁释放锁操作，没有因为可能出现死锁而导致的性能消耗</p>
+<p>  （4）使用多路I/O复用模型，非阻塞IO</p>
+<p>  （5）使用底层模型不同，它们之间底层实现方式以及与客户端之间通信的应用协议不一样，Redis直接自己构建了VM 机制 ，因为一般的系统调用系统函数的话，会浪费一定的时间去移动和请求</p>
+<h2 id="mysql_1">MySQL的事务</h2>
+<p>1）事务的基本要素（ACID）</p>
+<p>  （1）原子性（Atomicity）：事务开始后所有操作，要么全部做完，要么全部不做，不可能停滞在中间环节。事务执行过程中出错，会回滚到事务开始前的状态，所有的操作就像没有发生一样。也就是说事务是一个不可分割的整体，就像化学中学过的原子，是物质构成的基本单位</p>
+<p>  （2）一致性（Consistency）：事务开始前和结束后，数据库的完整性约束没有被破坏 。比如A向B转账，不可能A扣了钱，B却没收到。</p>
+<p>  （3）隔离性（Isolation）：同一时间，只允许一个事务请求同一数据，不同的事务之间彼此没有任何干扰。比如A正在从一张银行卡中取钱，在A取钱的过程结束前，B不能向这张卡转账。</p>
+<p>  （4）持久性（Durability）：事务完成后，事务对数据库的所有更新将被保存到数据库，不能回滚。
+2）事务的并发问题</p>
+<p>  （1）脏读：事务A读取了事务B更新的数据，然后B回滚操作，那么A读取到的数据是脏数据</p>
+<p>  （2）不可重复读：事务 A 多次读取同一数据，事务 B 在事务A多次读取的过程中，对数据作了更新并提交，导致事务A多次读取同一数据时，结果 不一致</p>
+<p>  （3）幻读：系统管理员A将数据库中所有学生的成绩从具体分数改为ABCDE等级，但是系统管理员B就在这个时候插入了一条具体分数的记录，当系统管理员A改结束后发现还有一条记录没有改过来，就好像发生了幻觉一样，这就叫幻读。</p>
+<p>小结：不可重复读的和幻读很容易混淆，不可重复读侧重于修改，幻读侧重于新增或删除。解决不可重复读的问题只需锁住满足条件的行，解决幻读需要锁表</p>
+<p>3）MySQL事务隔离级别</p>
+<table>
+<thead>
+<tr>
+<th>事务隔离级别</th>
+<th>脏读</th>
+<th>不可重复读</th>
+<th>幻读</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>读未提交（read-uncommitted）</td>
+<td>是</td>
+<td>是</td>
+<td>是</td>
+</tr>
+<tr>
+<td>不可重复读（read-committed）</td>
+<td>否</td>
+<td>是</td>
+<td>是</td>
+</tr>
+<tr>
+<td>可重复读（repeatable-read）</td>
+<td>否</td>
+<td>否</td>
+<td>是</td>
+</tr>
+<tr>
+<td>串行化（serializable）</td>
+<td>否</td>
+<td>否</td>
+<td>否</td>
+</tr>
+</tbody>
+</table>
+<script async="" crossorigin="anonymous" data-category="General" data-category-id="DIC_kwDOILD1rs4CR4oA" data-emit-metadata="0" data-input-position="bottom" data-lang="zh-CN" data-mapping="pathname" data-reactions-enabled="1" data-repo="maomao199691/discuss" data-repo-id="R_kgDOILD1rg" data-strict="0" data-theme="light" src="https://giscus.app/client.js">
+</script>
 </article>
 </div>
 </div>

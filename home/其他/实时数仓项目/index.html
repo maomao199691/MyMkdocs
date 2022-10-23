@@ -29,6 +29,9 @@
 <input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
 <label class="md-overlay" for="__drawer"></label>
 <div data-md-component="skip">
+<a class="md-skip" href="#_1">
+          Skip to content
+        </a>
 </div>
 <div data-md-component="announce">
 </div>
@@ -119,19 +122,14 @@
         大数据技术之高频面试题
       </a>
 </li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../%E5%AE%9E%E6%97%B6%E6%95%B0%E4%BB%93%E8%A7%84%E5%88%92/">
-        实时数仓规划
-      </a>
-</li>
 <li class="md-nav__item md-nav__item--nested">
-<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_1_3" id="__nav_1_3" type="checkbox"/>
-<label class="md-nav__link" for="__nav_1_3">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_1_2" id="__nav_1_2" type="checkbox"/>
+<label class="md-nav__link" for="__nav_1_2">
           项目涉及技术
           <span class="md-nav__icon md-icon"></span>
 </label>
 <nav aria-label="项目涉及技术" class="md-nav" data-md-level="2">
-<label class="md-nav__title" for="__nav_1_3">
+<label class="md-nav__title" for="__nav_1_2">
 <span class="md-nav__icon md-icon"></span>
           项目涉及技术
         </label>
@@ -276,9 +274,141 @@
 </li>
 <li class="md-nav__item md-nav__item--active">
 <input class="md-nav__toggle md-toggle" data-md-toggle="toc" id="__toc" type="checkbox"/>
+<label class="md-nav__link md-nav__link--active" for="__toc">
+          实时数仓项目
+          <span class="md-nav__icon md-icon"></span>
+</label>
 <a class="md-nav__link md-nav__link--active" href="./">
         实时数仓项目
       </a>
+<nav aria-label="Table of contents" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#ods">
+    数据采集到ods层做了哪些事
+  </a>
+<nav aria-label="数据采集到ods层做了哪些事" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_2">
+    前端埋点的行为数据为什么又采集一份？
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#kafka">
+    为什么选择kafka？
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#maxwell">
+    为什么用maxwell？历史数据同步怎么保证一致性？
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#kafka_1">
+    kafka保存多久？如果需要以前的数据怎么办？
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#ods_1">
+    ods层
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#dwddim">
+    dwd+dim层
+  </a>
+<nav aria-label="dwd+dim层" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#hbase">
+    存储位置，为什么维度表存Hbase？
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_3">
+    埋点行为数据分流
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_4">
+    业务数据动态分流
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#dwm">
+    dwm层
+  </a>
+<nav aria-label="dwm层" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#dwm_1">
+    为什么要加一个dwm层？
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#join">
+    事实表与事实表join
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#join_1">
+    事实表与维度表join
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_5">
+    怎么保证缓存一致性
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#dws">
+    dws层
+  </a>
+<nav aria-label="dws层" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#clickhouse">
+    为什么选择ClickHouse
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_6">
+    轻度聚合
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#ads">
+    ads层
+  </a>
+<nav aria-label="ads层" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_7">
+    实现方案
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="../JavaSE/">
@@ -332,6 +462,132 @@
 <div class="md-sidebar__scrollwrap">
 <div class="md-sidebar__inner">
 <nav aria-label="Table of contents" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#ods">
+    数据采集到ods层做了哪些事
+  </a>
+<nav aria-label="数据采集到ods层做了哪些事" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_2">
+    前端埋点的行为数据为什么又采集一份？
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#kafka">
+    为什么选择kafka？
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#maxwell">
+    为什么用maxwell？历史数据同步怎么保证一致性？
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#kafka_1">
+    kafka保存多久？如果需要以前的数据怎么办？
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#ods_1">
+    ods层
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#dwddim">
+    dwd+dim层
+  </a>
+<nav aria-label="dwd+dim层" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#hbase">
+    存储位置，为什么维度表存Hbase？
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_3">
+    埋点行为数据分流
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_4">
+    业务数据动态分流
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#dwm">
+    dwm层
+  </a>
+<nav aria-label="dwm层" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#dwm_1">
+    为什么要加一个dwm层？
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#join">
+    事实表与事实表join
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#join_1">
+    事实表与维度表join
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_5">
+    怎么保证缓存一致性
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#dws">
+    dws层
+  </a>
+<nav aria-label="dws层" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#clickhouse">
+    为什么选择ClickHouse
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_6">
+    轻度聚合
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#ads">
+    ads层
+  </a>
+<nav aria-label="ads层" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_7">
+    实现方案
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
 </nav>
 </div>
 </div>
@@ -341,7 +597,116 @@
 <a class="md-content__button md-icon" href="https://github.com/maomao199691/Python_Code.git/edit/master/docs/home/其他/实时数仓项目.md" title="Edit this page">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25Z"></path></svg>
 </a>
-<h1>实时数仓项目</h1>
+<h1 id="_1">实时数仓项目</h1>
+<h2 id="ods">数据采集到ods层做了哪些事</h2>
+<h3 id="_2">前端埋点的行为数据为什么又采集一份？</h3>
+<p>  时效性</p>
+<p>  kafka保存3天，磁盘够：原来1T，现在2T，没压力</p>
+<h3 id="kafka">为什么选择kafka？</h3>
+<p>  实时写、实时读</p>
+<p>  =》 消息队列适合，其他数据库受不了</p>
+<h3 id="maxwell">为什么用maxwell？历史数据同步怎么保证一致性？</h3>
+<p>  flinkcdc在20年7月才发布</p>
+<p>  canal与maxwell区别： </p>
+<p>    maxwell支持同步历史数据</p>
+<p>    maxwell支持断点还原（存在元数据库）</p>
+<p>    数据格式更轻量</p>
+<p>  保证至少一次，不丢</p>
+<h3 id="kafka_1">kafka保存多久？如果需要以前的数据怎么办？</h3>
+<p>  跟离线项目保持一致：3天</p>
+<p>  我们的项目不需要，如果需要的话可以去数据库或Hive现查，ClickHouse也有历史的宽表数据</p>
+<h2 id="ods_1">ods层</h2>
+<p>（1）存储原始数据</p>
+<p>  2个topic ： </p>
+<p>    埋点的行为数据 ods_base_log</p>
+<p>    业务数据 ods_base_db</p>
+<p>（2）业务数据的有序性： </p>
+<p>  maxwell配置，指定生产者分区的key为 table</p>
+<h2 id="dwddim">dwd+dim层</h2>
+<h3 id="hbase">存储位置，为什么维度表存Hbase？</h3>
+<p>事实表存Kafka、维度表存Hbase</p>
+<p>基于热存储加载维表的join方案：</p>
+<p>  随机查</p>
+<p>  长远考虑</p>
+<p>  适合实时读写</p>
+<h3 id="_3">埋点行为数据分流</h3>
+<p>（1）修复新老访客（选择性）：以前是前端试别新老访客，不够准确</p>
+<p>（2）分流：侧输出流</p>
+<p>  分了3个topic： 启动、页面、曝光</p>
+<h3 id="_4">业务数据动态分流</h3>
+<p>（1）动态分流： 将事实表写入kafka的dwd层，将维度表写入hbase。为了避免因表的变化而重启Flink任务，在mysql存一张表来动态配置。</p>
+<p>   动态实现：使用广播状态</p>
+<p>    =》 读取一张配置表 ===》 维护这张配置表</p>
+<p>      source来源  sink写到哪   操作类型  字段   主键    扩展</p>
+<p>      =》实时获取配置表的变化 ==》CDC工具 </p>
+<p>         =》 FlinkCDC</p>
+<p>          =》 使用了sql的方式，去同步这张配置表</p>
+<p>            =》sql的数据格式比较方便</p>
+<p>（2）怎么写HBase：借助phoenix </p>
+<p>  没有做维度退化</p>
+<p>  维表数据量小、变化频率慢</p>
+<p>（3）Hbase的rowkey怎么设计的？有没有数据热点问题？</p>
+<p>  最大的维表：用户维表 </p>
+<p>    =》百万日活，2000万注册用户为例，1条平均1k：2000万*1k=约20G</p>
+<p>  使用Phoenix创建的盐表，避免数据热点问题</p>
+<p>  <a href="https://developer.aliyun.com/article/532313">https://developer.aliyun.com/article/532313</a></p>
+<h2 id="dwm">dwm层</h2>
+<h3 id="dwm_1">为什么要加一个dwm层？</h3>
+<p>  DWM层主要服务DWS，因为部分需求直接从DWD层到DWS层中间会有一定的计算量，而且这部分计算的结果很有可能被多个DWS层主题复用，所以部分DWD层会形成一层DWM，我们这里主要涉及业务</p>
+<ul>
+<li>
+<p>访问UV计算</p>
+</li>
+<li>
+<p>跳出明细计算</p>
+</li>
+<li>
+<p>订单宽表</p>
+</li>
+<li>
+<p>支付宽表</p>
+</li>
+</ul>
+<h3 id="join">事实表与事实表join</h3>
+<p>  （1）事实表与事实表的双流join,使用了interval join</p>
+<p>  （2）Join不上的数据怎么办？</p>
+<p>  在flink中的流join大体分为两种，一种是基于时间窗口的join（Time Windowed Join），比如join、coGroup等。另一种是基于状态缓存的join（Temporal Table Join），比如intervalJoin。</p>
+<p>  这里选用intervalJoin，因为相比较窗口join，intervalJoin使用更简单，而且避免了应匹配的数据处于不同窗口的问题。intervalJoin目前只有一个问题，就是还不支持left join。</p>
+<p>  但是我们这里是订单主表与订单从表之间的关联不需要left join，所以intervalJoin是较好的选择。</p>
+<h3 id="join_1">事实表与维度表join</h3>
+<p>  维度关联采用了热存储加载的join方案，实际上就是在流中查询存储在hbase中的数据表。但是即使通过主键的方式查询，hbase速度的查询也是不及流之间的join。外部数据源的查询常常是流式计算的性能瓶颈，所以在这个基础上还有进行一定的优化。</p>
+<p><strong>1）使用了旁路缓存</strong></p>
+<p>  旁路缓存模式是一种非常常见的按需分配缓存的模式。如图，任何请求优先访问缓存，缓存命中，直接获得数据返回请求。如果未命中则，查询数据库，同时把结果写入缓存以备后续请求使用。</p>
+<p><center><strong>旁路缓存</strong></center></p>
+<p><a class="glightbox" data-desc-position="bottom" data-description="" data-height="auto" data-title="" data-width="100%" href="https://i.postimg.cc/MHKkZ8xV/image.png#pic_left"><img alt="trigger" src="https://i.postimg.cc/MHKkZ8xV/image.png#pic_left" width="width"/></a></p>
+<p><strong>2）异步IO</strong></p>
+<p>Flink 在1.2中引入了Async I/O，在异步模式下，将IO操作异步化，单个并行可以连续发送多个请求，哪个请求先返回就先处理，从而在连续的请求间不需要阻塞式等待，大大提高了流处理效率。</p>
+<p>Async I/O 是阿里巴巴贡献给社区的一个呼声非常高的特性，解决与外部系统交互时网络延迟成为了系统瓶颈的问题。
+<center><strong>异步IO</strong></center></p>
+<p><a class="glightbox" data-desc-position="bottom" data-description="" data-height="auto" data-title="" data-width="100%" href="https://i.postimg.cc/mgWvhMbT/IO.png#pic_left"><img alt="trigger" src="https://i.postimg.cc/mgWvhMbT/IO.png#pic_left" width="width"/></a></p>
+<p>异步查询实际上是把维表的查询操作托管给单独的线程池完成，这样不会因为某一个查询造成阻塞，单个并行可以连续发送多个请求，提高并发效率。</p>
+<p>这种方式特别针对涉及网络IO的操作，减少因为请求等待带来的消耗。</p>
+<h3 id="_5">怎么保证缓存一致性</h3>
+<p>​    当我们获取到维表更新的数据，也就是拿到维度表操作类型为update时：</p>
+<p>​    （1）更新Hbase的同时，删除redis里对应的之前缓存的数据</p>
+<p>​    （2）redis设置了过期时间：24小时</p>
+<h2 id="dws">dws层</h2>
+<h3 id="clickhouse">为什么选择ClickHouse</h3>
+<p>（1）适合大宽表、数据量多、聚合统计分析 =》 快</p>
+<p>​    （2）宽表已经不再需要join，很合适</p>
+<h3 id="_6">轻度聚合</h3>
+<p>​        （1）DWS层要应对很多实时查询，如果是完全的明细那么查询的压力是非常大的。将更多的实时数据以主题的方式组合起来便于管理，同时也能减少维度查询的次数。</p>
+<p>​        （2）开一个小窗口，5s的滚动窗口</p>
+<p>​        （3）同时减轻了写ClickHouse的压力，减少后续聚合的时间</p>
+<p>​    （4）几张表？ 表名、字段</p>
+<p>​        访客、商品、地区、关键词</p>
+<h2 id="ads">ads层</h2>
+<h3 id="_7">实现方案</h3>
+<p>​        为可视化大屏服务，提供一个数据接口用来查询ClickHouse中的数据。    </p>
+<p><center><strong>可视化大屏服务</strong></center></p>
+<p><a class="glightbox" data-desc-position="bottom" data-description="" data-height="auto" data-title="" data-width="100%" href="https://i.postimg.cc/280HNZVH/image.png"><img alt="trigger" src="https://i.postimg.cc/280HNZVH/image.png" width="width"/></a></p>
+<script async="" crossorigin="anonymous" data-category="General" data-category-id="DIC_kwDOILD1rs4CR4oA" data-emit-metadata="0" data-input-position="bottom" data-lang="zh-CN" data-mapping="pathname" data-reactions-enabled="1" data-repo="maomao199691/discuss" data-repo-id="R_kgDOILD1rg" data-strict="0" data-theme="light" src="https://giscus.app/client.js">
+</script>
 </article>
 </div>
 </div>
